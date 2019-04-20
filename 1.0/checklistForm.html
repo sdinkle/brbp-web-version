@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI v1.1</title>
+    <link rel="stylesheet" type="text/css" href="css/checklistForm.css">
+  </head>
+  <body>
+    <!-- Main div -->
+    <div id="main">
+
+      <!-- Instructions div -->
+      <div id="instructions" class="bodyText bottomBorder">
+        <h1>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI v1.1</h1>
+        <p>On this page, you will find a full listing of the business rules for Army DL development. Enter the name of the package you are evaluating as well as the name of the course to which it belongs.</p>
+        <p>Next, read each business rule and mark yes, no, or not applicable. Use the comment fields to any additional comments or information. When you are done, enter your name at the bottom of the page.</p>
+        <p>You will be able to generate a printable version of this checklist that you can export as a PDF to deliver to the Army.</p>
+        <p>This form serves as your organization's attestation that all business rules have been followed.</p>
+      </div> <!-- End Instructions div -->
+
+      <!-- Course information div -->
+      <div id="courseInfo" class="bodyText bottomBorder">
+        <div id="courseInfoCourseName" class="courseInfoElem">
+          <label for="courseName">Course name: </label>
+          <input type="text" id="courseName" name="courseName" required maxlength="100" size="102">
+        </div>
+        <div id="courseInfoPackageName" class="courseInfoElem">
+          <label for="packageName">Package name: </label>
+          <input type="text" id="packageName" name="packageName" required maxlength="100" size="102">
+        </div>
+      </div> <!-- End Course information div -->
+
+      <!-- Business rules div -->
+      <div id="businessRules">
+        <!-- This is where the magic happens -->
+        <p>Loading the checklist. Please wait...</p>
+      </div> <!-- End Business rules div -->
+
+      <!-- Sign and submit div -->
+      <div id="signAndSubmit" class="bodyText">
+        <label for="evaluatorName">Enter the full name of the person evaluating this form: </label>
+        <input type="text" id="evaluatorName" name="evaluatorName" required minlength="5" maxlength="50" size="50">
+        <button type="button" onclick="openChecklistOutputPopup()">Generate Checklist</button>
+      </div> <!-- End Sign and submit div -->
+
+    </div> <!-- End Main div -->
+
+    <!-- script includes -->
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script src="js/businessRules.js"></script>
+    <script src="js/checklistOutput.js"></script>
+    <script src="js/checklistForm.js"></script>
+    <!-- End script includes -->
+
+    <!-- Start the show! -->
+    <script>
+      $( constructChecklistForm() );
+    </script>
+
+  </body>
+</html>

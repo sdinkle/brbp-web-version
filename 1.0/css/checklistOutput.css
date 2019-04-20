@@ -1,0 +1,103 @@
+html, body, h1, h2, h3, h4, p, div, ul, b {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font: inherit;
+  font-size: 100%;
+}
+body {
+  background-color: inherit;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  width: 960px;
+}
+h1 {
+  display: table-cell;
+  font-size: 2.5em;
+  font-weight: 700;
+  text-align: left;
+  vertical-align: middle;
+}
+.headingSection {
+  padding: 20px 0;
+}
+.infoSection {
+  margin: 20px 0 auto;
+}
+.info p {
+  margin: 2px 0 auto;
+}
+table {
+  /*table-layout: fixed;*/
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid;
+  margin: 20px 0 auto;
+}
+caption {
+  font-size: 2.0em;
+  text-align: left;
+  font-weight: bold;
+}
+th, td {
+  padding: 0.5em;
+  border-collapse: collapse;
+  border: 1px solid;
+}
+th:nth-child(2), th:nth-child(4) {
+  width: 40%;
+}
+.ruleName p {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.ruleDescription p {
+  margin-top: 5px;
+}
+.ratingCell img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.rating_Y {
+  position: relative;
+  text-align: center;
+  color: rgb(0, 97, 0);
+  padding: 0;
+}
+.rating_Y::after {
+  content: "Y";
+}
+.rating_N {
+  position: relative;
+  text-align: center;
+  color: rgb(156, 0, 6);
+  padding: 0;
+}
+.rating_N::after {
+  content: "N";
+}
+.rating_NA {
+  position: relative;
+  text-align: center;
+  color: inherit;
+  padding: 0;
+}
+.rating_NA::after {
+  content: "N/A";
+}
+.rating_none {
+  position: relative;
+  text-align: center;
+  color: inherit;
+  padding: 0;
+}
+.rating_none::after {
+  content: "No value";
+}
+.ruleComments p {
+  margin: 5px 0;
+}

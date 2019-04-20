@@ -1,0 +1,68 @@
+html, body, h1, h2, h3, h4, p, div, ul, b {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font: inherit;
+  font-size: 100%;
+}
+body {
+  background-color: #efefef;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  width: 80%;
+  min-width: 750px;
+}
+p {
+  line-height: 1.25;
+}
+.bottomBorder {
+  margin: auto;
+  border-bottom: 1px solid;
+}
+.bodyText {
+  padding-bottom: 20px;
+  margin: 20px auto;
+}
+.bodyText h1 {
+  display: table-cell;
+  font-size: 2.5em;
+  font-weight: 700;
+  text-align: left;
+  vertical-align: middle;
+  padding-bottom: 20px;
+}
+.bodyText p {
+  margin-bottom: 20px;
+}
+.courseInfoElem {
+  padding: 2px 0;
+}
+.businessRuleSection {
+  padding-bottom: 20px;
+  margin: 20px auto;
+  border-bottom: 1px solid;
+}
+h2 {
+  padding-bottom: 0.25em;
+  font-size: 2.0em;
+  font-weight: bold;
+}
+.businessRule {
+  padding-bottom: 0.25em;
+}
+.ruleText h3 {
+  padding-bottom: 0.25em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.ruleDescriptionMarkup p {
+  margin-bottom: 20px;
+}
+.ruleDescriptionMarkup code {
+  font-size: 1.25em;
+}
+.radioGroup {
+  margin: 0.5em 0;
+}
