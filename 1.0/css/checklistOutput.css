@@ -16,10 +16,16 @@ h1 {
   font-weight: 700;
   margin-bottom: 20px;
 }
+h2 {
+  font-size: 2.0em;
+  font-weight: bold;
+  margin: 10px 0px;
+}
 .headingSection {
   padding: 20px 0;
 }
 .infoSection {
+  border-top: 1px solid;
   margin: 20px 0 auto;
 }
 .info p {
@@ -119,6 +125,3 @@ th:nth-child(4) {
 .rating_none::after {
   content: "No value";
 }
-/* .ruleComments p {
-  margin: 5px 0;
-} */
