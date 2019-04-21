@@ -26,8 +26,11 @@ function constructChecklistOutput() {
     "<body><div id='main'><div id='headingSection'><h1>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI v1.2</h1>";
 
   // Begin constructing the course information section.
+  outputHtmlString += "<div id='courseInfo' class='infoSection'>";
+  outputHtmlString += "<h2>Course and Package Information</h2>";
+
   // Construct the course name info section.
-  outputHtmlString += "<div id='courseInfo' class='infoSection'><div id='courseName' class='info'><p>Course: ";
+  outputHtmlString += "<div id='courseName' class='info'><p>Course: ";
   outputHtmlString += $('#courseName').val();
   outputHtmlString += "</p></div>";
 
