@@ -1,4 +1,4 @@
-html, body, h1, h2, h3, h4, p, div, ul, b {
+html, body, h1, h2, h3, h4, p, div, b {
   padding: 0;
   border: 0;
   margin: 0;
@@ -8,7 +8,7 @@ html, body, h1, h2, h3, h4, p, div, ul, b {
 body {
   background-color: #efefef;
   margin: 20px auto;
-  font-family: Arial, sans-serif;
+  font-family: sans-serif;
   width: 80%;
   min-width: 750px;
 }
@@ -24,18 +24,23 @@ p {
   margin: 20px auto;
 }
 .bodyText h1 {
-  display: table-cell;
   font-size: 2.5em;
   font-weight: 700;
-  text-align: left;
-  vertical-align: middle;
   padding-bottom: 20px;
 }
 .bodyText p {
   margin-bottom: 20px;
 }
 .courseInfoElem {
-  padding: 2px 0;
+  display: table;
+  margin: 4px 0;
+}
+.courseInfoElem label {
+  display: table-cell;
+  width: 17%;
+}
+.courseInfoElem input[type=text] {
+  display: table-cell;
 }
 .businessRuleSection {
   padding-bottom: 20px;
@@ -43,26 +48,36 @@ p {
   border-bottom: 1px solid;
 }
 h2 {
-  padding-bottom: 0.25em;
+  margin: 10px 0px;
   font-size: 2.0em;
   font-weight: bold;
 }
-.businessRule {
-  padding-bottom: 0.25em;
+.ruleText {
+  margin: 10px 0px;
 }
 .ruleText h3 {
-  padding-bottom: 0.25em;
-  margin-top: 0.2em;
-  margin-bottom: 0.2em;
+  margin: 10px auto;
   font-size: 1.1em;
   font-weight: bold;
 }
-.ruleDescriptionMarkup p {
-  margin-bottom: 20px;
+.ruleDescriptionMarkup p, ul {
+  margin-top: 10px;
+}
+.ruleDescriptionMarkup ul {
+  margin-bottom: 10px;
+}
+.ruleDescriptionMarkup li {
+  margin: 4px 0 auto;
 }
 .ruleDescriptionMarkup code {
   font-size: 1.25em;
 }
 .radioGroup {
-  margin: 0.5em 0;
+  margin-bottom: 4px;
+}
+.radioGroup label {
+  padding-right: 0.6em;
+}
+.radioGroup input[type=radio] {
+  margin-right: 0.2em;
 }

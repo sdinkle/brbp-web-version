@@ -1,4 +1,5 @@
 function constructChecklistForm() {
+
   // Declare variables for the various divs. These will serve as temporary handles during iteration.
   // brsDiv: Holds the outer businessRules div.
   // brSecDiv: Holds the businessRuleSection div.
@@ -16,6 +17,7 @@ function constructChecklistForm() {
   // Populate businessRules div with businessRuleSection divs.
   // Iterate over each section object in businessRulesList.
   for (var brListSecObj of businessRulesList) {
+
     // Create the id name for the current businessRuleSection div.
     var ruleSectionNameIdStr = "businessRuleSection_" + brListSecObj.ruleSectionName;
 
@@ -29,6 +31,7 @@ function constructChecklistForm() {
     // Populate businessRuleSection div with businessRule divs.
     // Iterate over each object in current businessRulesList object's rules array.
     for (var brListRuleObj of brListSecObj["rules"]) {
+
       // Create the id name for the current businessRule div.
       var ruleIdStr = convertRuleNumToIdStr(brListRuleObj.ruleNumber);
 
@@ -62,14 +65,15 @@ function constructChecklistForm() {
 
       // Build the textarea div.
       brDiv.append("<textarea id='" + ruleIdStr + "_comments' name='" + ruleIdStr + "_comments' rows='3' cols='60' maxlength='512' placeholder='Enter any additional comments here.'></textarea>");
+
     } // End businessRuleSection loop.
 
   } // End businessRulesList loop.
 
-}
+} // End constructChecklistForm()
 
 // Helper function to convert a ruleNumber in n.n.[...].n format to n-n-[...]-n format.
 // For use in assigning id names for elements.
 function convertRuleNumToIdStr(ruleNum) {
   return ruleNum.replace(/\./g, "-");
-}
+} // convertRuleNumToIdStr(ruleNum)

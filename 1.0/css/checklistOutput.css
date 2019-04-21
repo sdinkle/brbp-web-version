@@ -1,4 +1,4 @@
-html, body, h1, h2, h3, h4, p, div, ul, b {
+html, body, h1, h2, h3, h4, p, ul, div, b {
   padding: 0;
   border: 0;
   margin: 0;
@@ -12,11 +12,9 @@ body {
   width: 960px;
 }
 h1 {
-  display: table-cell;
   font-size: 2.5em;
   font-weight: 700;
-  text-align: left;
-  vertical-align: middle;
+  margin-bottom: 20px;
 }
 .headingSection {
   padding: 20px 0;
@@ -28,31 +26,54 @@ h1 {
   margin: 2px 0 auto;
 }
 table {
-  /*table-layout: fixed;*/
   width: 100%;
   border-collapse: collapse;
   border: 1px solid;
-  margin: 20px 0 auto;
+  margin: 20px 0;
 }
 caption {
   font-size: 2.0em;
   text-align: left;
   font-weight: bold;
+  padding: 5px 0px;
 }
 th, td {
   padding: 0.5em;
   border-collapse: collapse;
   border: 1px solid;
 }
-th:nth-child(2), th:nth-child(4) {
-  width: 40%;
+th:nth-child(2) {
+  width: 55%
+}
+th:nth-child(4) {
+  width: 25%;
+}
+.rule .ruleComments {
+  margin: 3px;
+}
+.rule .ruleComments p, li {
+  line-height: 1.25;
+}
+.ruleName {
+  margin-bottom: 5px;
 }
 .ruleName p {
-  margin-bottom: 5px;
   font-weight: bold;
 }
-.ruleDescription p {
+.ruleDescription {
   margin-top: 5px;
+}
+.ruleDescription p, ul {
+  margin-top: 5px;
+}
+.ruleDescription ul {
+  padding-left: 1.15em;
+}
+.ruleDescription li {
+  margin: 2px 0px;
+}
+.ruleDescription code {
+  font-size: 1.25em;
 }
 .ratingCell img {
   position: absolute;
@@ -98,6 +119,6 @@ th:nth-child(2), th:nth-child(4) {
 .rating_none::after {
   content: "No value";
 }
-.ruleComments p {
+/* .ruleComments p {
   margin: 5px 0;
-}
+} */

@@ -44,7 +44,8 @@ var businessRulesList =
       {
         ruleNumber: "1.2.2",
         ruleName: "Army Metadata Fields",
-        ruleDescriptionMarkup: "<p>All SCORM 2004 3rd Edition metadata files must be formatted to include the following fields to meet Army requirements:</p><ul>" +
+        ruleDescriptionMarkup: "<p>All SCORM 2004 3rd Edition metadata files must be formatted to include the following fields to meet Army requirements:</p>" +
+          "<ul>" +
           "<li>General Identifier Fields: Catalog; Entry</li>" +
           "<li>General Fields: Title; Language; Description; Keywords; Type of Metadata</li>" +
           "<li>Life Cycle Fields: Version; Status of Package Submittal; Proponent's Role; Proponent's Name, Address and Email; Date of Submittal</li>" +
@@ -55,7 +56,7 @@ var businessRulesList =
           "</ul>"
       }
     ]
-  },
+  }, /**** End Design Business Rules ****/
 
   /**** Development Business Rules ****/
   {
@@ -160,12 +161,15 @@ var businessRulesList =
         ruleNumber: "2.2.8",
         ruleName: "SCORM Required API Calls for Assessments",
         ruleDescriptionMarkup: "<p>Credit-producing assessment SCORM 2004 3rd Edition SCOs must at a minimum use the SCORM API as follows:</p>" +
-          "<strong>Method Calls (call at least once):</strong></p><ul>" +
+          "<p><strong>Method Calls (call at least once):</strong></p>" +
+          "<ul><code>" +
           "<li>Initialize</li>" +
           "<li>GetLastError</li>" +
           "<li>Commit</li>" +
           "<li>Terminate</li>" +
-          "</ul><p><strong>Data Model Elements (set a valid value at least once):</strong></p><ul>" +
+          "</code></ul>" +
+          "<p><strong>Data Model Elements (set a valid value at least once):</strong></p>" +
+          "<ul><code>" +
           "<li>cmi.exit</li>" +
           "<li>cmi.completion_status</li>" +
           "<li>cmi.scaled_score</li>" +
@@ -176,23 +180,26 @@ var businessRulesList =
           "<li>cmi.interactions.n.timestamp</li>" +
           "<li>cmi.interactions.n.type</li>" +
           "<li>cmi.interactions.n.result</li>" +
-          "</ul>"
+          "</code></ul>"
       },
       {
         ruleNumber: "2.2.9",
         ruleName: "SCORM Required API Calls for Non-Assessments",
         ruleDescriptionMarkup: "<p>Credit-producing non-assessment SCORM 2004 3rd Edition SCOs must at a minimum use the SCORM API as follows:</p>" +
-          "<strong>Method Calls (call at least once):</strong></p><ul>" +
+          "<p><strong>Method Calls (call at least once):</strong></p>" +
+          "<ul><code>" +
           "<li>Initialize</li>" +
           "<li>Commit</li>" +
           "<li>Terminate</li>" +
-          "</ul><p><strong>Data Model Elements (set a valid value at least once):</strong></p><ul>" +
+          "</code></ul>" +
+          "<p><strong>Data Model Elements (set a valid value at least once):</strong></p>" +
+          "<ul><code>" +
           "<li>cmi.exit</li>" +
           "<li>cmi.success_status</li>" +
           "<li>cmi.completion_status</li>" +
           "<li>cmi.location</li>" +
           "<li>cmi.session_time</li>" +
-          "</ul>"
+          "</code></ul>"
       },
       {
         ruleNumber: "2.2.10",
@@ -200,7 +207,8 @@ var businessRulesList =
         ruleDescriptionMarkup: "<p>All SCORM 2004 3rd Edition SCOs must set an appropriate navigation request using the adl.nav.request data model element during run-time.</p>"
       }
     ]
-  },
+  }, /**** End Development Business Rules ****/
+
   /**** Testing Business Rules ****/
   {
     ruleSectionName: "Testing",
@@ -228,7 +236,8 @@ var businessRulesList =
       {
         ruleNumber: "3.2.2",
         ruleName: "SCORM Conformance Testing Tools",
-        ruleDescriptionMarkup: "<p>All SCORM 2004 3rd Edition content packages and SCOs must be pass the validation tests in the following conformance testing tools:</p><ul>" +
+        ruleDescriptionMarkup: "<p>All SCORM 2004 3rd Edition content packages and SCOs must be pass the validation tests in the following conformance testing tools:</p>" +
+          "<ul>" +
           "<li>ADL SCORM 2004 3rd Edition Conformance Test Suite</li>" +
           "<li>SCORM Resource Validator</li>" +
           "<li>Metadata Editor</li>" +
@@ -256,7 +265,8 @@ var businessRulesList =
         ruleDescriptionMarkup: "<p>All SCORM 2004 3rd Edition content packages and SCOs must produce a passing result using the Army Multi Log Parser.</p>"
       }
     ]
-  },
+  }, /**** End Testing Business Rules ****/
+
   /**** Delivery Business Rules ****/
   {
     ruleSectionName: "Delivery",
@@ -287,5 +297,5 @@ var businessRulesList =
         ruleDescriptionMarkup: "<p>All SCOs delivered to the Army must also be accompanied by proof of passing results from Army SCORM 2004 3rd Edition conformance testing tools.</p>"
       }
     ]
-  }
+  } /**** End Delivery Business Rules ****/
 ];

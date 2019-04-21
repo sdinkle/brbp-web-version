@@ -14,16 +14,23 @@ function openChecklistOutputPopup() {
 }
 
 function constructChecklistOutput() {
+
   // Declare the string that contains the page HTML and begin constructing the webpage.
   var outputHtmlString = "<!DOCTYPE HTML><html><head><title>Business Rules Checklist</title><link rel='stylesheet' type='text/css' href='css/checklistOutput.css'></head>" +
     "<body><div id='main'><div id='headingSection'><h1>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI v1.1</h1>";
 
-  // Construct the course information section.
-  outputHtmlString += "<div id='courseInfo' class='infoSection'><span id='courseName' class='info'><p>Course: ";
+  // Begin constructing the course information section.
+  // Construct the course name info section.
+  outputHtmlString += "<div id='courseInfo' class='infoSection'><div id='courseName' class='info'><p>Course: ";
   outputHtmlString += $('#courseName').val();
-  outputHtmlString += "</p></span><span id='packageName' class='info'><p>Package: ";
+  outputHtmlString += "</p></div>";
+
+  // Construct the package name info section.
+  outputHtmlString += "<div id='packageName' class='info'><p>Package: ";
   outputHtmlString += $('#packageName').val();
-  outputHtmlString += "</p></span></div></div>";
+
+  // Finish constructing the course information section.
+  outputHtmlString += "</p></div></div></div>";
 
   // Declare variables for the divs that will be iterated over.
   // brSecDivList: Will hold the outer businessRules div.
@@ -43,6 +50,7 @@ function constructChecklistOutput() {
 
   // Iterate over each business rule section.
   for (var i = 0; i < brSecDivList.length; i++) {
+
     // Grab each businessRule div and stuff them into a list.
     brDivList = brSecDivList.eq(i).children();
 
@@ -57,6 +65,7 @@ function constructChecklistOutput() {
 
     // Iterate over each business rule within the given business rule section.
     for (var j = 1; j < brDivList.length; j++) {
+
       // Grab the current businessRule div.
       brDiv = brDivList[j];
 
@@ -65,25 +74,43 @@ function constructChecklistOutput() {
       rName = brDiv.getElementsByClassName("ruleName")[0].innerHTML;
       rDescMarkup = brDiv.getElementsByClassName("ruleDescriptionMarkup")[0].innerHTML;
 
-      // Construct the row for the given business rule.
+      // Begin constructing the row for the given business rule.
+      // Construct the rule number cell.
       outputHtmlString += "<th scope='row'><p>";
       outputHtmlString += rNumber;
       outputHtmlString += "</p></th>";
-      outputHtmlString += "<td><span class='ruleName'><p>";
+
+      // Begin constructing the rule cell.
+      outputHtmlString += "<td><div class='rule'>";
+
+      // Construct the rule name.
+      outputHtmlString += "<div class='ruleName'><p>";
       outputHtmlString += rName;
-      outputHtmlString += "</p></span>";
-      outputHtmlString += "<span class='ruleDescription'>";
+      outputHtmlString += "</p></div>";
+
+      // Construct the rule description.
+      outputHtmlString += "<div class='ruleDescription'>";
       outputHtmlString += rDescMarkup;
-      outputHtmlString += "</span></td>";
-      // outputHtmlString += "<td class='ratingCell" + getRatingCellMarkup( getRadioCheckedValue(brDiv.id+"_radio") ) + "</td>";
-      outputHtmlString += "<td class='ratingCell" + getRatingCellMarkup( getRadioCheckedValue(brDiv.id+"_radio") ) + "</td>";
+      outputHtmlString += "</div>";
+
+      // Finish constructing the rule cell.
+      outputHtmlString += "</div></td>";
+
+      // Construct the rating cell.
+      outputHtmlString += "<td class='ratingCell" + getRatingCellMarkup(brDiv.id+"_radio") + "</td>";
+
+      // Construct the comments cell.
       outputHtmlString += "<td class='ruleComments'>";
       outputHtmlString += getCommentsMarkup( brDiv.getElementsByTagName("textarea")[0] );
+
+      // Finish constructing the row.
       outputHtmlString += "</td></tr>";
+
     } // End business rule loop.
 
     // Close the current business rule section table.
     outputHtmlString += "</tbody></table>";
+
   } // End business rule section loop.
 
   // Construct the evaluation information section and close the body and html tags.
@@ -97,22 +124,25 @@ function constructChecklistOutput() {
   // Write the HTML to the popup.
   popupReference.document.write(outputHtmlString);
   popupReference.document.close();
-}
 
-// Helper function for getting the checked value of a radio component with a given name.
-// Used only in getRatingCellMarkup function. Could have anonymized this, but eh.
-function getRadioCheckedValue(radioName) {
-  var radio = document.getElementsByName(radioName);
-  for (var i=0; i<radio.length; i++) {
-    if (radio[i].checked) {
-      return radio[i].value;
-    }
-  }
-  return null;
-}
+} // End constructChecklistOutput()
 
 // Helper function to generate a rating cell's markup based on its corresponding radio button status.
-function getRatingCellMarkup(radioValue) {
+// radioName: Name of the radio component whose markup is being generated in form n-n-[...]-n_radio
+function getRatingCellMarkup(radioName) {
+
+  // Get the checked value of a radio component with the provided name.
+  var radioValue = function (name) {
+    var radio = document.getElementsByName(name);
+    for (var i=0; i<radio.length; i++) {
+      if (radio[i].checked) {
+        return radio[i].value;
+      }
+    }
+    return null;
+  }(radioName);
+
+  // Return the appropriate markup based on the returned value of the radio component.
   switch (radioValue) {
     case 'Y':
       return " rating_Y'><img src='img/green.gif'>";
@@ -123,12 +153,16 @@ function getRatingCellMarkup(radioValue) {
     default:
       return " rating_none'>";
   }
-}
+} // End getRatingCellMarkup(radioName)
 
 // Helper function to convert the contents of a comment box to valid HTML.
-// Expects a textarea element as input.
+// commentElement: Comment box whose contents will be converted to HTML. Expects a textarea element as input.
 function getCommentsMarkup(commentElement) {
+
+  // Encase the entire comment in <p> tags.
   var commentsStr = "<p>" + commentElement.value + "</p>";
+
+  // Replace any LFs or CRLFs with a closing followed by an opening <p> tag.
   var lineBreakRegex = /\r?\n+/g;
   return commentsStr.replace(lineBreakRegex,"</p><p>");
 }
