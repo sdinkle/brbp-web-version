@@ -22,8 +22,11 @@ function constructChecklistOutput() {
   outputHtmlString += "<title>BRBP_" + $('#packageName').val() + "</title>";
 
   // Continue constructing the webpage.
-  outputHtmlString += "<link rel='stylesheet' type='text/css' href='css/checklistOutput.css'></head>" +
-    "<body><div id='main'><div id='headingSection'><h1>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI v1.2</h1>";
+  outputHtmlString += "<link rel='stylesheet' type='text/css' href='css/checklistOutput.css'></head>";
+  outputHtmlString += "<body><div id='main'>";
+
+  // Construct the main heading.
+  outputHtmlString += "<div id='headingSection'><h1>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI v1.2</h1>";
 
   // Begin constructing the course information section.
   outputHtmlString += "<div id='courseInfo' class='infoSection'>";
@@ -127,8 +130,10 @@ function constructChecklistOutput() {
   outputHtmlString += $('#evaluatorName').val();
   outputHtmlString += "</p></span><span id='evaluationDate' class='info'><p>Date: ";
   outputHtmlString += new Date().toDateString();
-  outputHtmlString += "</p></span></div>";
-  outputHtmlString += "</body></html>";
+  outputHtmlString += "</p></span>";
+
+  // Finish constructing the webpage.
+  outputHtmlString += "</div></body></html>";
 
   // Write the HTML to the popup.
   popupReference.document.write(outputHtmlString);
