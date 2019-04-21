@@ -10,26 +10,25 @@ body {
   margin: 20px auto;
   font-family: sans-serif;
   width: 80%;
-  min-width: 750px;
+  min-width: 720px;
+  max-width: 960px;
 }
 p {
   line-height: 1.25;
 }
-.bottomBorder {
-  margin: auto;
-  border-bottom: 1px solid;
-}
-.bodyText {
-  padding-bottom: 20px;
-  margin: 20px auto;
-}
-.bodyText h1 {
+h1 {
   font-size: 2.5em;
   font-weight: 700;
-  padding-bottom: 20px;
-}
-.bodyText p {
   margin-bottom: 20px;
+}
+p {
+  margin: 20px 0px;
+}
+#instructions, #courseInfo {
+  border-bottom: 1px solid;
+}
+#courseInfo {
+  padding-bottom: 20px;
 }
 .courseInfoElem {
   display: table;
