@@ -16,7 +16,13 @@ function openChecklistOutputPopup() {
 function constructChecklistOutput() {
 
   // Declare the string that contains the page HTML and begin constructing the webpage.
-  var outputHtmlString = "<!DOCTYPE HTML><html><head><title>Business Rules Checklist</title><link rel='stylesheet' type='text/css' href='css/checklistOutput.css'></head>" +
+  var outputHtmlString = "<!DOCTYPE HTML><html><head>";
+
+  // Set title to form "BRBP_<packageName>".
+  outputHtmlString += "<title>BRBP_" + $('#packageName').val() + "</title>";
+
+  // Continue constructing the webpage.
+  outputHtmlString += "<link rel='stylesheet' type='text/css' href='css/checklistOutput.css'></head>" +
     "<body><div id='main'><div id='headingSection'><h1>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI v1.2</h1>";
 
   // Begin constructing the course information section.
