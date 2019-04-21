@@ -126,19 +126,22 @@ function constructChecklistOutput() {
 
   } // End business rule section loop.
 
-  // Begin constructing the trailing section.
-  outputHtmlString += "<div id='trailingSection'>";
-
   // Construct the evaluation information section and close the body and html tags.
-  outputHtmlString += "<div id='evaluationInfo' class='infoSection'><div id='evaluatorName' class='info'><p>Evaluator: ";
+  outputHtmlString += "<div id='evaluationInfo' class='infoSection'>";
+  outputHtmlString += "<h2>Evaluation Information</h2>";
+  outputHtmlString += "<div id='evaluatorName' class='info'><p>Evaluator: ";
   outputHtmlString += $('#evaluatorName').val();
-  outputHtmlString += "</p></div><div id='evaluationDate' class='info'><p>Date: ";
+  outputHtmlString += "</p></div>";
+  outputHtmlString += "<div id='orgName' class='info'><p>Organization: ";
+  outputHtmlString += $('#orgName').val();
+  outputHtmlString += "</p></div>";
+  outputHtmlString += "<div id='evaluationDate' class='info'><p>Date: ";
   outputHtmlString += new Date().toDateString();
   outputHtmlString += "</p></div>";
   outputHtmlString += "</div></div>";
 
   // Finish constructing the webpage.
-  outputHtmlString += "</div></body></html>";
+  outputHtmlString += "</body></html>";
 
   // Write the HTML to the popup.
   popupReference.document.write(outputHtmlString);

@@ -20,13 +20,13 @@
       <!-- Course information div -->
       <div id="courseInfo">
         <h2>Course and Package Information</h2>
-        <div id="courseInfoCourseName" class="courseInfoElem">
+        <div id="courseInfoCourseName" class="infoElem">
           <label for="courseName">Course name: </label>
-          <input type="text" id="courseName" name="courseName" required="" maxlength="100" size="80">
+          <input type="text" id="courseName" name="courseName" required maxlength="100" size="80">
         </div>
-        <div id="courseInfoPackageName" class="courseInfoElem">
+        <div id="courseInfoPackageName" class="infoElem">
           <label for="packageName">Package name: </label>
-          <input type="text" id="packageName" name="packageName" required="" maxlength="100" size="80">
+          <input type="text" id="packageName" name="packageName" required maxlength="100" size="80">
         </div>
       </div> <!-- End Course information div -->
 
@@ -124,25 +124,38 @@
 
       </div> <!-- End Business rules div -->
 
-      <!-- Sign and submit div -->
-      <div id="signAndSubmit" class="bodyText">
-        <label for="evaluatorName">Enter the full name of the person evaluating this form: </label>
-        <input type="text" id="evaluatorName" name="evaluatorName" required="" minlength="5" maxlength="50" size="50">
-        <button type="button" onclick="window.open('mockChecklistOutput.html')">Open Mock Output Page</button>
+      <!-- Evaluation information div -->
+      <div id="evaluationInfo">
+        <h2>Evaluation Information</h2>
+        <div id="evaluationInfoEvaluatorName" class="infoElem">
+          <label for="evaluatorName">Evaluator name: </label>
+          <input type="text" id="evaluatorName" name="evaluatorName" required maxlength="80" size="80">
+        </div>
+        <div id="evaluationInfoOrgName" class="infoElem">
+          <label for="orgName">Organization name: </label>
+          <input type="text" id="orgName" name="orgName" required maxlength="80" size="80">
+        </div>
       </div>
-      <!-- End Sign and submit div -->
+      <!-- End Evaluation information div -->
+
+      <!-- Submit div -->
+      <div id="submitDiv">
+        <button id="generateChecklist" type="button" onclick="window.open('mockChecklistOutput.html')">Open Mock Output Page</button>
+      </div> <!-- End Submit div -->
 
     </div> <!-- End Main div -->
 
     <!-- script includes -->
     <script src="../js/jquery-3.4.0.min.js"></script>
-    <script src="../js/businessRules.js"></script>
+    <!-- <script src="../js/businessRules.js"></script>
     <script src="../js/checklistOutput.js"></script>
-    <script src="../js/checklistForm.js"></script>
+    <script src="../js/checklistForm.js"></script> -->
     <!-- End script includes -->
+
     <!-- Start the show! -->
     <!-- <script>
       $( constructChecklistForm() );
     </script> -->
+
   </body>
 </html>

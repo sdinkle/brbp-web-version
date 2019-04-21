@@ -25,14 +25,14 @@ h2 {
   border-top: 1px solid;
   margin: 20px 0px;
 }
-#headingSection, #trailingSection {
+#headingSection {
   margin: 20px 0;
 }
 .infoSection {
   margin: 20px 0 auto;
 }
 .info p {
-  margin: 4px 0 auto;
+  margin: 2px 0 auto;
 }
 table {
   width: 100%;

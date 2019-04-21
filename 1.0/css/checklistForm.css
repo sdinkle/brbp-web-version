@@ -10,7 +10,7 @@ body {
   margin: 20px auto;
   font-family: sans-serif;
   width: 80%;
-  min-width: 720px;
+  min-width: 768px;
   max-width: 960px;
 }
 h1 {
@@ -18,38 +18,40 @@ h1 {
   font-weight: 700;
   margin-bottom: 20px;
 }
+h2 {
+  margin: 10px 0px;
+  font-size: 2.0em;
+  font-weight: bold;
+}
 p, ul {
   margin: 10px 0px;
 }
 p {
   line-height: 1.25;
 }
-#instructions, #courseInfo {
+#instructions, #courseInfo, #evaluationInfo {
   border-bottom: 1px solid;
 }
-#courseInfo {
+#courseInfo, #evaluationInfo {
   padding-bottom: 10px;
 }
-.courseInfoElem {
+.infoElem {
   display: table;
   margin: 4px 0;
 }
-.courseInfoElem label {
+.infoElem label, input[type=text] {
   display: table-cell;
+}
+#courseInfo .infoElem label {
   width: 17%;
 }
-.courseInfoElem input[type=text] {
-  display: table-cell;
+#evaluationInfo .infoElem label {
+  width: 20%;
 }
 .businessRuleSection {
   padding-bottom: 20px;
   margin: 20px auto;
   border-bottom: 1px solid;
-}
-h2 {
-  margin: 10px 0px;
-  font-size: 2.0em;
-  font-weight: bold;
 }
 .ruleText {
   margin: 10px 0px;
@@ -74,4 +76,7 @@ h2 {
 }
 .radioGroup input[type=radio] {
   margin-right: 0.2em;
+}
+#submitDiv {
+  margin: 20px 0px;
 }
