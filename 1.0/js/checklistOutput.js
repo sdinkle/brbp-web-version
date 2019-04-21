@@ -25,8 +25,9 @@ function constructChecklistOutput() {
   outputHtmlString += "<link rel='stylesheet' type='text/css' href='css/checklistOutput.css'></head>";
   outputHtmlString += "<body><div id='main'>";
 
-  // Construct the main heading.
+  // Construct the heading section.
   outputHtmlString += "<div id='headingSection'><h1>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI v1.2</h1>";
+  outputHtmlString += "<div class='separator'></div>"
 
   // Begin constructing the course information section.
   outputHtmlString += "<div id='courseInfo' class='infoSection'>";
@@ -125,12 +126,16 @@ function constructChecklistOutput() {
 
   } // End business rule section loop.
 
+  // Begin constructing the trailing section.
+  outputHtmlString += "<div id='trailingSection'>";
+
   // Construct the evaluation information section and close the body and html tags.
-  outputHtmlString += "<div id='nameAndDate' class='infoSection'><span id='evaluatorName' class='info'><p>Evaluator: ";
+  outputHtmlString += "<div id='evaluationInfo' class='infoSection'><div id='evaluatorName' class='info'><p>Evaluator: ";
   outputHtmlString += $('#evaluatorName').val();
-  outputHtmlString += "</p></span><span id='evaluationDate' class='info'><p>Date: ";
+  outputHtmlString += "</p></div><div id='evaluationDate' class='info'><p>Date: ";
   outputHtmlString += new Date().toDateString();
-  outputHtmlString += "</p></span>";
+  outputHtmlString += "</p></div>";
+  outputHtmlString += "</div></div>";
 
   // Finish constructing the webpage.
   outputHtmlString += "</div></body></html>";
