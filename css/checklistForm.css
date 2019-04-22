@@ -32,8 +32,14 @@ p {
 #instructions, #courseInfo, #evaluationInfo {
   border-bottom: 1px solid;
 }
-#courseInfo, #evaluationInfo {
+#instructions {
   padding-bottom: 10px;
+}
+#courseInfo, #evaluationInfo {
+  padding-bottom: 20px;
+}
+#courseInfo {
+  margin: 20px 0px;
 }
 .infoElem {
   display: table;
