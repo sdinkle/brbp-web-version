@@ -11,10 +11,21 @@
       <!-- Instructions div -->
       <div id="instructions">
         <h1>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI v1.2</h1>
-        <p>On this page, you will find a full listing of the business rules for Army DL development. Enter the name of the package you are evaluating as well as the name of the course to which it belongs.</p>
-        <p>Next, read each business rule and mark yes, no, or not applicable. Use the comment fields to any additional comments or information. When you are done, enter your name at the bottom of the page.</p>
-        <p>You will be able to generate a printable version of this checklist that you can export as a PDF to deliver to the Army.</p>
-        <p>This form serves as your organization's attestation that all business rules have been followed.</p>
+        <p>This web form is an online version of the <a href="https://tadlp.github.io/brbp/docs/brbp-checklist">Army BRBP SCORM 2004 CMI Checklist</a>. It is intended to be used by the vendor's designated point-of-contact upon completing development of a DL product before submission to the Army.</p>
+        <p>The web form contains fields for the following information:</p>
+        <ul>
+          <li><strong>Course name:</strong> Enter the name of the course to which the package being evaluated belongs.</li>
+          <li><strong>Package name:</strong> Enter the name of the package being evaluated. It is advised to keep this short but clear. For example, if the course is called "Captain's Career Course", use verbiage such as "CCC Module 1 Exam" or "CCC Module 1 Lesson 1" rather than full package titles.</li>
+          <li><strong>Business Rules:</strong> Each of the business rules outlined in the Army Business Rules and Best Practices Guide for SCORM 2004 CMI DL Development is presented with the following:</li>
+            <ul>
+              <li><strong>Rating:</strong> Select Yes if the rule has been satisfied, No if it has not, or N/A if the rule does not apply to the package.</li>
+              <li><strong>Additional comments:</strong> Enter any extra comments into the text field provided. If No or N/A was selected above, use this field to explain why those ratings were selected.</li>
+            </ul>
+          <li><strong>Evaluator name:</strong> Enter the name of the person performing the final evaluation on this package.</li>
+          <li><strong>Organization name:</strong> Enter the name of the organization that the person named above represents.</li>
+        </ul>
+        <p>Upon completing the web form, the evaluator can generate a pre-formatted checklist that should be saved as a PDF (through the browser's Print function) and included as part of the package's deliverables.</p>
+        <p><strong>Please note:</strong> It is <em>strongly</em> recommended that you access this form using a browser other than Internet Explorer. Using IE may cause issues with the formatting of certain elements in the form and its output.</p>
       </div> <!-- End Instructions div -->
 
       <!-- Course information div -->
@@ -52,6 +63,7 @@
 
       <!-- Submit div -->
       <div id="submitDiv">
+        <p>The output from this form serves as your organization's attestation that all of the above information is true.</p>
         <button id="generateChecklist" type="button" onclick="openChecklistOutputPopup()">Generate Checklist</button>
       </div> <!-- End Sign and submit div -->
 

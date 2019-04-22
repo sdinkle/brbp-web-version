@@ -23,11 +23,22 @@ h2 {
   font-size: 2.0em;
   font-weight: bold;
 }
+h3 {
+  margin: 10px auto;
+  font-size: 1.5em;
+  font-weight: bold;
+}
 p, ul {
   margin: 10px 0px;
 }
-p {
+p, li {
   line-height: 1.25;
+}
+li {
+    margin: 4px 0 auto;
+}
+code {
+  font-size: 1.25em;
 }
 #instructions, #courseInfo, #evaluationInfo {
   border-bottom: 1px solid;
@@ -59,20 +70,11 @@ p {
   margin: 20px auto;
   border-bottom: 1px solid;
 }
+.businessRule {
+  padding-bottom: 10px;
+}
 .ruleText {
   margin: 10px 0px;
-}
-.ruleText h3 {
-  margin: 10px auto;
-  font-size: 1.1em;
-  font-weight: bold;
-}
-.ruleDescriptionMarkup li {
-  margin: 4px 0 auto;
-  line-height: 1.25;
-}
-.ruleDescriptionMarkup code {
-  font-size: 1.25em;
 }
 .radioGroup {
   margin-bottom: 4px;

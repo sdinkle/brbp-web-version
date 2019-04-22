@@ -57,6 +57,10 @@ function constructChecklistForm() {
       brDiv.append("<div id='" + ruleIdStr + "_radioGroup' class='radioGroup'>");
       brRadioDiv = $("#" + ruleIdStr + "_radioGroup");
 
+      // Build the "Rating" label.
+      brRadioDiv.append("<label for='" + ruleIdStr + "_radioGroup'>Rating:</label>");
+      // <label for="1-1-1_radioGroup">Rating:</label>
+
       // Build the "Yes" radio item.
       brRadioDiv.append("<input type='radio' id='" + ruleIdStr + "_radio_y' name='" + ruleIdStr + "_radio' value='Y'>");
       brRadioDiv.append("<label for='" + ruleIdStr + "_radio_y'>Yes</label>");
@@ -70,7 +74,8 @@ function constructChecklistForm() {
       brRadioDiv.append("<label for='" + ruleIdStr + "_radio_na'>N/A</label>");
 
       // Build the textarea div.
-      brDiv.append("<textarea id='" + ruleIdStr + "_comments' name='" + ruleIdStr + "_comments' rows='3' cols='60' maxlength='512' placeholder='Enter any additional comments here.'></textarea>");
+      brDiv.append("<label for='" + ruleIdStr + "_comments'>Additional comments:</label><br>")
+      brDiv.append("<textarea id='" + ruleIdStr + "_comments' name='" + ruleIdStr + "_comments' rows='3' cols='60' maxlength='512'></textarea>");
 
     } // End businessRuleSection loop.
 
