@@ -16,7 +16,10 @@ function constructChecklistForm() {
 
   // Populate businessRules div with businessRuleSection divs.
   // Iterate over each section object in businessRulesList.
-  for (var brListSecObj of businessRulesList) {
+  for (var i = 0; i < businessRulesList.length; i++) {
+
+    // Store the business rule list section object.
+    var brListSecObj = businessRulesList[i];
 
     // Create the id name for the current businessRuleSection div.
     var ruleSectionNameIdStr = "businessRuleSection_" + brListSecObj.ruleSectionName;
@@ -30,7 +33,10 @@ function constructChecklistForm() {
 
     // Populate businessRuleSection div with businessRule divs.
     // Iterate over each object in current businessRulesList object's rules array.
-    for (var brListRuleObj of brListSecObj["rules"]) {
+    for (var j = 0; j < brListSecObj["rules"].length; j++) {
+
+      // Store the business rule list rule object.
+      var brListRuleObj = brListSecObj["rules"][j];
 
       // Create the id name for the current businessRule div.
       var ruleIdStr = convertRuleNumToIdStr(brListRuleObj.ruleNumber);
