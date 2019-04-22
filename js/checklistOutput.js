@@ -70,6 +70,17 @@ function constructChecklistOutput() {
     // Store current rule section name.
     rSecName = brDivList.eq(0)[0].getElementsByClassName("ruleSectionName")[0].innerHTML;
 
+    // Construct the div for the current section.
+    outputHtmlString += "<div id='rulesTable" + rSecName + "'";
+
+    // If this isn't the last table, page break after the div.
+    if (i < brSecDivList.length - 1) {
+      outputHtmlString += " class='pageBreakAfter'";
+    }
+
+    // Finish the opening div tag.
+    outputHtmlString += ">";
+
     // Construct the table and headings for the given business rule category.
     outputHtmlString += "<table><caption>";
     outputHtmlString += rSecName;
@@ -121,8 +132,8 @@ function constructChecklistOutput() {
 
     } // End business rule loop.
 
-    // Close the current business rule section table.
-    outputHtmlString += "</tbody></table>";
+    // Close the current business rule section table and div.
+    outputHtmlString += "</tbody></table></div>";
 
   } // End business rule section loop.
 

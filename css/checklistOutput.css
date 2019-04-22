@@ -129,7 +129,7 @@ th:nth-child(4) {
   content: "No value";
 }
 @media print {
-  table {
+  .pageBreakAfter {
     break-after: page;
   }
 }
