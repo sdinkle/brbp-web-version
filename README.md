@@ -13,4 +13,4 @@ The web form contains fields for the following information:
 
 Upon completing the web form, the evaluator can generate a pre-formatted checklist that should be saved as a PDF (through the browser's Print function). This PDF will be included as part of the package deliverables.
 
-⭐ [Access the Army Business Rules Online Checklist for SCORM 2004 3rd Edition CMI v1.2](https://sdinkle.github.io/brbp-web-version/)
+⭐ [Access the Army Business Rules Online Checklist for SCORM 2004 3rd Edition CMI v1.2](https://tadlp.github.io/online-br-checklist/)
