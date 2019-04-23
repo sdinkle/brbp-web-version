@@ -106,4 +106,4 @@ $('input[type=text]').keyup(function(e) {
       $('#generateChecklist').prop('disabled', true);
     }
   }
-})
+});

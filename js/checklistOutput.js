@@ -88,7 +88,7 @@ function constructChecklistOutput() {
     outputHtmlString += "<tr><th scope='col'>Rule No.</th><th scope='col'>Rule Description</th><th scope='col'>Rating</th><th scope='col'>Comments</th></tr></thead><tbody><tr>";
 
     // Iterate over each business rule within the given business rule section.
-    for (var j = 1; j < brDivList.length; j++) {
+    for (var j = 0; j < brDivList.length; j++) {
 
       // Grab the current businessRule div.
       brDiv = brDivList[j];
