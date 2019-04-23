@@ -65,10 +65,10 @@ function constructChecklistOutput() {
   for (var i = 0; i < brSecDivList.length; i++) {
 
     // Grab each businessRule div and stuff them into a list.
-    brDivList = brSecDivList.eq(i).children();
+    brDivList = brSecDivList.eq(i).children().eq(1).children();
 
     // Store current rule section name.
-    rSecName = brDivList.eq(0)[0].getElementsByClassName("ruleSectionName")[0].innerHTML;
+    rSecName = brSecDivList.eq(0).children()[0].getElementsByClassName("ruleSectionName")[0].innerHTML;
 
     // Construct the div for the current section.
     outputHtmlString += "<div id='rulesTable" + rSecName + "'";
@@ -84,7 +84,7 @@ function constructChecklistOutput() {
     // Construct the table and headings for the given business rule category.
     outputHtmlString += "<table><caption>";
     outputHtmlString += rSecName;
-    outputHtmlString += " Business Rules</caption><thead>";
+    outputHtmlString += "</caption><thead>";
     outputHtmlString += "<tr><th scope='col'>Rule No.</th><th scope='col'>Rule Description</th><th scope='col'>Rating</th><th scope='col'>Comments</th></tr></thead><tbody><tr>";
 
     // Iterate over each business rule within the given business rule section.

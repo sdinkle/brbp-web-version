@@ -5,41 +5,54 @@
     <link rel="stylesheet" type="text/css" href="css/checklistForm.css">
   </head>
   <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+          <img src="img/army_u_logo.png" alt="The Army University">
+          <h1>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI v1.2</h1>
+      </div>
+    </header>
     <!-- Main div -->
     <div id="main">
-
-      <!-- Instructions div -->
-      <div id="instructions">
-        <h1>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI v1.2</h1>
-        <p>This web form is an online version of the <a href="https://tadlp.github.io/brbp/docs/brbp-checklist">Army BRBP SCORM 2004 CMI Checklist</a>. It is intended to be used by the vendor's designated point-of-contact upon completing development of a DL product before submission to the Army.</p>
-        <p>The web form contains fields for the following information:</p>
-        <ul>
-          <li><strong>Course name:</strong> Enter the name of the course to which the package being evaluated belongs.</li>
-          <li><strong>Package name:</strong> Enter the name of the package being evaluated. It is advised to keep this short but clear. For example, if the course is called "Captain's Career Course", use verbiage such as "CCC Module 1 Exam" or "CCC Module 1 Lesson 1" rather than full package titles.</li>
-          <li><strong>Business Rules:</strong> Each of the business rules outlined in the Army Business Rules and Best Practices Guide for SCORM 2004 CMI DL Development is presented with the following:</li>
+      <!-- Instructions -->
+      <section id="instructions">
+        <div class="section-title">
+          <h2>Instructions</h2>
+        </div>
+        <div class="section-body">
+            <p>This web form is an online version of the <a href="https://tadlp.github.io/brbp/docs/brbp-checklist">Army BRBP SCORM 2004 CMI Checklist</a>. It is intended to be used by the vendor's designated point-of-contact upon completing development of a DL product before submission to the Army.</p>
+            <p>The web form contains fields for the following information:</p>
             <ul>
-              <li><strong>Rating:</strong> Select Yes if the rule has been satisfied, No if it has not, or N/A if the rule does not apply to the package.</li>
-              <li><strong>Additional comments:</strong> Enter any extra comments into the text field provided. If No or N/A was selected above, use this field to explain why those ratings were selected.</li>
+              <li><strong>Course name:</strong> Enter the name of the course to which the package being evaluated belongs.</li>
+              <li><strong>Package name:</strong> Enter the name of the package being evaluated. It is advised to keep this short but clear. For example, if the course is called "Captain's Career Course", use verbiage such as "CCC Module 1 Exam" or "CCC Module 1 Lesson 1" rather than full package titles.</li>
+              <li><strong>Business Rules:</strong> Each of the business rules outlined in the Army Business Rules and Best Practices Guide for SCORM 2004 CMI DL Development is presented with the following:</li>
+                <ul>
+                  <li><strong>Rating:</strong> Select Yes if the rule has been satisfied, No if it has not, or N/A if the rule does not apply to the package.</li>
+                  <li><strong>Additional comments:</strong> Enter any extra comments into the text field provided. If No or N/A was selected above, use this field to explain why those ratings were selected.</li>
+                </ul>
+              <li><strong>Evaluator name:</strong> Enter the name of the person performing the final evaluation on this package.</li>
+              <li><strong>Organization name:</strong> Enter the name of the organization that the person named above represents.</li>
             </ul>
-          <li><strong>Evaluator name:</strong> Enter the name of the person performing the final evaluation on this package.</li>
-          <li><strong>Organization name:</strong> Enter the name of the organization that the person named above represents.</li>
-        </ul>
-        <p>Upon completing the web form, the evaluator can generate a pre-formatted checklist that should be saved as a PDF (through the browser's Print function) and included as part of the package's deliverables.</p>
-        <p><strong>Please note:</strong> It is <em>strongly</em> recommended that you access this form using a browser other than Internet Explorer. Using IE may cause issues with the formatting of certain elements in the form and its output.</p>
-      </div> <!-- End Instructions div -->
+            <p>Upon completing the web form, the evaluator can generate a pre-formatted checklist that should be saved as a PDF (through the browser's Print function) and included as part of the package's deliverables.</p>
+        </div>
+      </section> <!-- End Instructions -->
 
-      <!-- Course information div -->
-      <div id="courseInfo">
-        <h2>Course and Package Information</h2>
-        <div id="courseInfoCourseName" class="infoElem">
-          <label for="courseName">Course name:</label>
-          <input type="text" id="courseName" name="courseName" required maxlength="100" size="80">
+      <!-- Course information -->
+      <section id="courseInfo">
+        <div class="section-title">
+          <h2>Course and Package Information</h2>
         </div>
-        <div id="courseInfoPackageName" class="infoElem">
-          <label for="packageName">Package name:</label>
-          <input type="text" id="packageName" name="packageName" required maxlength="100" size="80">
+        <div class="section-body">
+            <div id="courseInfoCourseName" class="infoElem">
+              <label for="courseName">Course name</label>
+              <input type="text" id="courseName" name="courseName" required maxlength="100" size="80" placeholder="Enter course name">
+            </div>
+            <div id="courseInfoPackageName" class="infoElem">
+              <label for="packageName">Package name</label>
+              <input type="text" id="packageName" name="packageName" required maxlength="100" size="80" placeholder="Enter package name">
+            </div>
         </div>
-      </div> <!-- End Course information div -->
+      </section> <!-- End Course information -->
 
       <!-- Business rules div -->
       <div id="businessRules">
@@ -47,27 +60,31 @@
         <p>Loading the checklist. Please wait...</p>
       </div> <!-- End Business rules div -->
 
-      <!-- Evaluation information div -->
-      <div id="evaluationInfo">
-        <h2>Evaluation Information</h2>
-        <div id="evaluationInfoEvaluatorName" class="infoElem">
-          <label for="evaluatorName">Evaluator name:</label>
-          <input type="text" id="evaluatorName" name="evaluatorName" required="" maxlength="80" size="80">
+      <!-- Evaluation information -->
+      <section id="evaluationInfo">
+        <div class="section-title">
+            <h2>Evaluation Information</h2>
         </div>
-        <div id="evaluationInfoOrgName" class="infoElem">
-          <label for="orgName">Organization name:</label>
-          <input type="text" id="orgName" name="orgName" required="" maxlength="80" size="80">
+        <div class="section-body">
+            <div id="evaluationInfoEvaluatorName" class="infoElem">
+              <label for="evaluatorName">Evaluator name</label>
+              <input type="text" id="evaluatorName" name="evaluatorName" required="" maxlength="80" size="80" placeholder="Enter evaluator name">
+            </div>
+            <div id="evaluationInfoOrgName" class="infoElem">
+              <label for="orgName">Organization name</label>
+              <input type="text" id="orgName" name="orgName" required="" maxlength="80" size="80" placeholder="Enter evaluator organization">
+            </div>
         </div>
-      </div>
-      <!-- End Evaluation information div -->
+      </section>
+      <!-- End Evaluation information -->
 
       <!-- Submit div -->
       <div id="submitDiv">
-        <p>The output from this form serves as your organization's attestation that all of the above information is true.</p>
-        <button id="generateChecklist" type="button" onclick="openChecklistOutputPopup()">Generate Checklist</button>
+        <p><strong>NOTE: The output from this form serves as your organization's attestation that all of the above information is true.</strong></p>
+        <button id="generateChecklist" type="button" disabled onclick="openChecklistOutputPopup()">Generate Checklist</button>
       </div> <!-- End Sign and submit div -->
 
-    </div> <!-- End Main div -->
+    </div> <!-- End Main div-->
 
     <!-- script includes -->
     <script src="js/jquery-3.4.0.min.js"></script>

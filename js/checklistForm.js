@@ -25,11 +25,13 @@ function constructChecklistForm() {
     var ruleSectionNameIdStr = "businessRuleSection_" + brListSecObj.ruleSectionName;
 
     // Begin building the businessRuleSection div.
-    brsDiv.append("<div id='" + ruleSectionNameIdStr + "' class='businessRuleSection'>");
+    brsDiv.append("<section id='" + ruleSectionNameIdStr + "' class='businessRuleSection'>");
 
     // Populate ruleSectionName span.
     brSecDiv = $("#" + ruleSectionNameIdStr);
-    brSecDiv.append("<h2><span class='ruleSectionName'>" + brListSecObj["ruleSectionName"] + "</span> Business Rules</h2>");
+    brSecDiv.append('<div class="section-title"><h2><span class="ruleSectionName">' + brListSecObj["ruleSectionName"] + ' Business Rules</h2></div>');
+    brSecDiv.append('<div class="section-body">');
+    brSecDiv = $("#" + ruleSectionNameIdStr + " > .section-body");
 
     // Populate businessRuleSection div with businessRule divs.
     // Iterate over each object in current businessRulesList object's rules array.
@@ -88,3 +90,20 @@ function constructChecklistForm() {
 function convertRuleNumToIdStr(ruleNum) {
   return ruleNum.replace(/\./g, "-");
 } // convertRuleNumToIdStr(ruleNum)
+
+// Rudimentary form validation based on 4 info fields having something in them
+// TODO: Add validation based on info fields + all BRs evaluated
+$('input[type=text]').keyup(function(e) {
+  var inputs = $('input[type=text]');
+  var numValid = 0;
+  for (var i = 0; i < inputs.length; i++) {
+    if(inputs[i].value.trim().length > 0) {
+      numValid++;
+    }
+    if(numValid == 4) {
+      $('#generateChecklist').prop('disabled', false);
+    } else {
+      $('#generateChecklist').prop('disabled', true);
+    }
+  }
+})

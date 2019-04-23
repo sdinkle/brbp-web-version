@@ -7,11 +7,56 @@ html, body, h1, h2, h3, h4, p, div, b {
 }
 body {
   background-color: #efefef;
-  margin: 20px auto;
   font-family: sans-serif;
-  width: 80%;
-  min-width: 768px;
-  max-width: 960px;
+  padding-bottom: 50px;
+}
+#main {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+section {
+  background: white;
+  border: 1px solid #999;
+  box-shadow: 0px 1px 1px #ccc;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0px;
+}
+.section-title {
+  background: #205c3b;
+  padding: 10px;
+}
+.section-title h2 {
+  margin: 0;
+  color: white;
+  font-size: 1.5em;
+}
+.section-body {
+  padding: 10px;
+}
+header {
+  background: #314232;
+  color: white;
+  padding: 10px;
+}
+header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.25em;
+  line-height: 18px;
+}
+header img {
+  height: 100%;
+  margin-right: 10px;
+}
+.header-container {
+  max-width: 1440px;
+  height: 34px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
 }
 h1 {
   font-size: 2.5em;
@@ -43,9 +88,6 @@ code {
 #instructions, #courseInfo, #evaluationInfo {
   border-bottom: 1px solid;
 }
-#instructions {
-  padding-bottom: 10px;
-}
 #courseInfo, #evaluationInfo {
   padding-bottom: 20px;
 }
@@ -53,11 +95,15 @@ code {
   margin: 20px 0px;
 }
 .infoElem {
-  display: table;
   margin: 4px 0;
 }
 .infoElem label, input[type=text] {
   display: table-cell;
+}
+input[type=text] {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 1.25em;
 }
 #courseInfo .infoElem label {
   width: 17%;
@@ -65,13 +111,28 @@ code {
 #evaluationInfo .infoElem label {
   width: 20%;
 }
+#submitDiv {
+  text-align: center;
+}
+#generateChecklist {
+  padding: 20px;
+  font-size: 1.25em;
+}
 .businessRuleSection {
   padding-bottom: 20px;
   margin: 20px auto;
   border-bottom: 1px solid;
 }
+.businessRuleSection .section-title {
+  background: #314232;
+}
 .businessRule {
   padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.businessRule:last-child {
+  border: none;
+  padding-bottom: 0;
 }
 .ruleText {
   margin: 10px 0px;
@@ -85,6 +146,6 @@ code {
 .radioGroup input[type=radio] {
   margin-right: 0.2em;
 }
-#submitDiv {
-  margin: 20px 0px;
+#instructions .section-title {
+  background: #324e84;
 }
