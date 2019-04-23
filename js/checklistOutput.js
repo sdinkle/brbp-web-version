@@ -68,7 +68,7 @@ function constructChecklistOutput() {
     brDivList = brSecDivList.eq(i).children().eq(1).children();
 
     // Store current rule section name.
-    rSecName = brSecDivList.eq(0).children()[0].getElementsByClassName("ruleSectionName")[0].innerHTML;
+    rSecName = brSecDivList.eq(i).children()[0].getElementsByClassName("ruleSectionName")[0].innerHTML;
 
     // Construct the div for the current section.
     outputHtmlString += "<div id='rulesTable" + rSecName + "'";
