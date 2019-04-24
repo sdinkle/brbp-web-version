@@ -204,7 +204,7 @@ var businessRulesList =
       {
         ruleNumber: "2.2.10",
         ruleName: "SCORM Navigation Request",
-        ruleDescriptionMarkup: "<p>All SCORM 2004 3rd Edition SCOs must set an appropriate navigation request using the adl.nav.request data model element during run-time.</p>"
+        ruleDescriptionMarkup: "<p>All SCORM 2004 3rd Edition SCOs must set an appropriate navigation request using the <code>adl.nav.request</code> data model element during run-time.</p>"
       }
     ]
   }, /**** End Development Business Rules ****/
