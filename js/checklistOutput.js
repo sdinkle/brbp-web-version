@@ -26,11 +26,11 @@ function constructChecklistOutput() {
   outputHtmlString += "<body><div id='main'>";
 
   // Construct the heading section.
-  outputHtmlString += "<div id='headingSection'><h1>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI v1.2</h1>";
+  outputHtmlString += "<section id='headingSection'><h1>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI v1.2</h1>";
   outputHtmlString += "<div class='separator'></div>"
 
   // Begin constructing the course information section.
-  outputHtmlString += "<div id='courseInfo' class='infoSection'>";
+  outputHtmlString += "<section id='courseInfo' class='infoSection'>";
   outputHtmlString += "<h2>Course and Package Information</h2>";
 
   // Construct the course name info section.
@@ -41,9 +41,10 @@ function constructChecklistOutput() {
   // Construct the package name info section.
   outputHtmlString += "<div id='packageName' class='info'><p>Package: ";
   outputHtmlString += $('#packageName').val();
+  outputHtmlString += "</p></div>";
 
-  // Finish constructing the course information section.
-  outputHtmlString += "</p></div></div></div>";
+  // Finish constructing the course information and heading sections.
+  outputHtmlString += "</section></section>";
 
   // Declare variables for the divs that will be iterated over.
   // brSecDivList: Will hold the outer businessRules div.
@@ -71,7 +72,7 @@ function constructChecklistOutput() {
     rSecName = brSecDivList.eq(i).children()[0].getElementsByClassName("ruleSectionName")[0].innerHTML;
 
     // Construct the div for the current section.
-    outputHtmlString += "<div id='rulesTable" + rSecName + "'";
+    outputHtmlString += "<section id='rulesTable" + rSecName + "'";
 
     // If this isn't the last table, page break after the div.
     if (i < brSecDivList.length - 1) {
@@ -132,13 +133,13 @@ function constructChecklistOutput() {
 
     } // End business rule loop.
 
-    // Close the current business rule section table and div.
-    outputHtmlString += "</tbody></table></div>";
+    // Close the table and current business rule section.
+    outputHtmlString += "</tbody></table></section>";
 
   } // End business rule section loop.
 
-  // Construct the evaluation information section and close the body and html tags.
-  outputHtmlString += "<div id='evaluationInfo' class='infoSection'>";
+  // Construct the evaluation information section.
+  outputHtmlString += "<section id='evaluationInfo' class='infoSection'>";
   outputHtmlString += "<h2>Evaluation Information</h2>";
   outputHtmlString += "<div id='evaluatorName' class='info'><p>Evaluator: ";
   outputHtmlString += $('#evaluatorName').val();
@@ -149,10 +150,10 @@ function constructChecklistOutput() {
   outputHtmlString += "<div id='evaluationDate' class='info'><p>Date: ";
   outputHtmlString += new Date().toDateString();
   outputHtmlString += "</p></div>";
-  outputHtmlString += "</div></div>";
+  outputHtmlString += "</section>";
 
   // Finish constructing the webpage.
-  outputHtmlString += "</body></html>";
+  outputHtmlString += "</div></body></html>";
 
   // Write the HTML to the popup.
   popupReference.document.write(outputHtmlString);
