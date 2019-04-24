@@ -2,173 +2,199 @@
 <html>
   <head>
     <title>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI (MOCKUP)</title>
+    <link rel="shortcut icon" href="../img/favicon.png">
     <link rel="stylesheet" type="text/css" href="../css/checklistForm.css">
   </head>
   <body>
 
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <img src="../img/army_u_logo.png" alt="The Army University">
+        <h1>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI (MOCKUP)</h1>
+      </div>
+    </header>
+
     <!-- Main div -->
     <div id="main">
 
-      <!-- Instructions div -->
-      <div id="instructions">
-        <h1>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI (MOCKUP)</h1>
-        <p>This web form is an online version of the <a href="https://tadlp.github.io/brbp/docs/brbp-checklist">Army BRBP SCORM 2004 CMI Checklist</a>. It is intended to be used by the vendor's designated point-of-contact upon completing development of a DL product before submission to the Army.</p>
-        <p>The web form contains fields for the following information:</p>
-        <ul>
-          <li><strong>Course name:</strong> Enter the name of the course to which the package being evaluated belongs.</li>
-          <li><strong>Package name:</strong> Enter the name of the package being evaluated. It is advised to keep this short but clear. For example, if the course is called "Captain's Career Course", use verbiage such as "CCC Module 1 Exam" or "CCC Module 1 Lesson 1" rather than full package titles.</li>
-          <li><strong>Business Rules:</strong> Each of the business rules outlined in the Army Business Rules and Best Practices Guide for SCORM 2004 CMI DL Development is presented with the following:</li>
+      <!-- Instructions -->
+      <section id="instructions">
+        <div class="section-title">
+          <h2>Instructions</h2>
+        </div>
+        <div class="section-body">
+          <p>This web form is an online version of the <a href="https://tadlp.github.io/brbp/docs/brbp-checklist" target="_blank">Army BRBP SCORM 2004 CMI Checklist</a>. It is intended for use by the ADLPA's designated point-of-contact upon completing development of a DL package before submitting it to the Army.</p>
+          <p>The web form contains fields for the following information:</p>
+          <ul>
+            <li><strong>Course name:</strong> Enter the name of the course to which the package being evaluated belongs.</li>
+            <li><strong>Package name:</strong> Enter the name of the package being evaluated. It is advised to keep this short but clear. For example, if the course is called "Captain's Career Course", use verbiage such as "CCC Module 1 Exam" or "CCC Module 1 Lesson 1" rather than full package titles.</li>
+            <li><strong>Business Rules:</strong> Each of the business rules outlined in the Army Business Rules and Best Practices Guide for SCORM 2004 CMI DL Development is presented with the following:</li>
             <ul>
               <li><strong>Rating:</strong> Select Yes if the rule has been satisfied, No if it has not, or N/A if the rule does not apply to the package.</li>
               <li><strong>Additional comments:</strong> Enter any extra comments into the text field provided. If No or N/A was selected above, use this field to explain why those ratings were selected.</li>
             </ul>
-          <li><strong>Evaluator name:</strong> Enter the name of the person performing the final evaluation on this package.</li>
-          <li><strong>Organization name:</strong> Enter the name of the organization that the person named above represents.</li>
-        </ul>
-        <p>Upon completing the web form, the evaluator can generate a pre-formatted checklist that should be saved as a PDF (through the browser's Print function) and included as part of the package's deliverables.</p>
-        <p><strong>Please note:</strong> It is <em>strongly</em> recommended that you access this form using a browser other than Internet Explorer. Using IE may cause issues with the formatting of certain elements in the form and its output.</p>
-      </div> <!-- End Instructions div -->
+            <li><strong>Evaluator name:</strong> Enter the name of the person performing the final evaluation on this package.</li>
+            <li><strong>Organization name:</strong> Enter the name of the organization that the person named above represents.</li>
+          </ul>
+          <p>Upon completing the web form, the evaluator can generate a pre-formatted checklist that should be saved as a PDF (through the browser's Print function) and included as part of the package's deliverables.</p>
+        </div>
+      </section> <!-- End Instructions -->
 
-      <!-- Course information div -->
-      <div id="courseInfo">
-        <h2>Course and Package Information</h2>
-        <div id="courseInfoCourseName" class="infoElem">
-          <label for="courseName">Course name:</label>
-          <input type="text" id="courseName" name="courseName" required maxlength="100" size="80">
+      <!-- Course information -->
+      <section id="courseInfo">
+        <div class="section-title">
+          <h2>Course and Package Information</h2>
         </div>
-        <div id="courseInfoPackageName" class="infoElem">
-          <label for="packageName">Package name:</label>
-          <input type="text" id="packageName" name="packageName" required maxlength="100" size="80">
+        <div class="section-body">
+          <div id="courseInfoCourseName" class="infoElem">
+            <label for="courseName">Course name</label>
+            <input type="text" id="courseName" name="courseName" required="" maxlength="100" size="80" placeholder="Enter course name">
+          </div>
+          <div id="courseInfoPackageName" class="infoElem">
+            <label for="packageName">Package name</label>
+            <input type="text" id="packageName" name="packageName" required="" maxlength="100" size="80" placeholder="Enter package name">
+          </div>
         </div>
-      </div> <!-- End Course information div -->
+      </section> <!-- End Course information -->
 
       <!-- Business rules div -->
       <div id="businessRules">
 
         <!-- Design Business Rules -->
-        <div id="businessRuleSection_Design" class="businessRuleSection">
-          <h2><span class="ruleSectionName">Design</span> Business Rules</h2>
+        <section id="businessRuleSection_Design" class="businessRuleSection">
 
-          <!-- 1.1.1 -->
-          <div id="1-1-1" class="businessRule">
-            <div id="1-1-1_ruleText" class="ruleText">
-              <h3>Business Rule <span class="ruleNumber">1.1.1</span>: <span class="ruleName">Discrete Independent Content</span></h3>
-              <span class="ruleDescriptionMarkup">
-                <p>Independent LCOs shall be discrete blocks of learning content that do not make reference to placement in a hierarchy or to other LCOs anywhere in the content.</p>
-              </span>
-            </div>
-            <div id="1-1-1_radioGroup" class="radioGroup">
-              <label for="1-1-1_radioGroup">Rating:</label>
-              <input type="radio" id="1-1-1_radio_y" name="1-1-1_radio" value="Y">
-              <label for="1-1-1_radio_y">Yes</label>
-              <input type="radio" id="1-1-1_radio_n" name="1-1-1_radio" value="N">
-              <label for="1-1-1_radio_n">No</label>
-              <input type="radio" id="1-1-1_radio_na" name="1-1-1_radio" value="N/A">
-              <label for="1-1-1_radio_na">N/A</label>
-            </div>
-            <label for="1-1-1_comments">Additional comments:</label><br>
-            <textarea id="1-1-1_comments" name="1-1-1_comments" rows="3" cols="60" maxlength="512"></textarea>
-          </div> <!-- End 1.1.1 -->
+          <div class="section-title">
+            <h2><span class="ruleSectionName">Design Business Rules</span></h2>
+          </div>
 
-          <!-- 1.1.2 -->
-          <div id="1-1-2" class="businessRule">
-            <div id="1-1-2_ruleText" class="ruleText">
-              <h3>Business Rule <span class="ruleNumber">1.1.2</span>: <span class="ruleName">Consistent Content Titles</span></h3>
-              <span class="ruleDescriptionMarkup">
-                <p>All LCOs shall contain the same topic title in content packaging resources and in the instructional content presented to the learner.</p>
-              </span>
-            </div>
-            <div id="1-1-2_radioGroup" class="radioGroup">
-              <input type="radio" id="1-1-2_radio_y" name="1-1-2_radio" value="Y">
-              <label for="1-1-2_radio_y">Yes</label>
-              <input type="radio" id="1-1-2_radio_n" name="1-1-2_radio" value="N">
-              <label for="1-1-2_radio_n">No</label>
-              <input type="radio" id="1-1-2_radio_na" name="1-1-2_radio" value="N/A">
-              <label for="1-1-2_radio_na">N/A</label>
-            </div>
-            <label for="1-1-1_comments">Additional comments:</label><br>
-            <textarea id="1-1-2_comments" name="1-1-2_comments" rows="3" cols="60" maxlength="512"></textarea>
-          </div> <!-- End 1.1.2 -->
+           <!-- Design Section body -->
+          <div class="section-body">
 
-        </div> <!-- End Design Business Rules -->
+            <!-- 1.1.1 -->
+            <div id="1-1-1" class="businessRule">
+              <div id="1-1-1_ruleText" class="ruleText">
+                <h3>Business Rule <span class="ruleNumber">1.1.1</span>: <span class="ruleName">Discrete Independent Content</span></h3>
+                <div class="ruleDescriptionMarkup">
+                  <p>Independent LCOs shall be discrete blocks of learning content that do not make reference to placement in a hierarchy or to other LCOs anywhere in the content.</p>
+                </div>
+              </div>
+              <div id="1-1-1_radioGroup" class="radioGroup">
+                <label for="1-1-1_radioGroup">Rating:</label>
+                <input type="radio" id="1-1-1_radio_y" name="1-1-1_radio" value="Y">
+                <label for="1-1-1_radio_y">Yes</label>
+                <input type="radio" id="1-1-1_radio_n" name="1-1-1_radio" value="N">
+                <label for="1-1-1_radio_n">No</label>
+                <input type="radio" id="1-1-1_radio_na" name="1-1-1_radio" value="N/A">
+                <label for="1-1-1_radio_na">N/A</label>
+              </div>
+              <label for="1-1-1_comments">Additional comments:</label><br>
+              <textarea id="1-1-1_comments" name="1-1-1_comments" rows="3" cols="60" maxlength="512"></textarea>
+            </div> <!-- End 1.1.1 -->
+
+            <!-- 1.2.2 -->
+            <div id="1-2-2" class="businessRule">
+              <div id="1-2-2_ruleText" class="ruleText">
+                <h3>Business Rule <span class="ruleNumber">1.2.2</span>: <span class="ruleName">Army Metadata Fields</span></h3>
+                <div class="ruleDescriptionMarkup">
+                  <p>All SCORM 2004 3rd Edition metadata files must be formatted to include the following fields to meet Army requirements:</p>
+                  <ul>
+                    <li>General Identifier Fields: Catalog; Entry</li>
+                    <li>General Fields: Title; Language; Description; Keywords; Type of Metadata</li>
+                    <li>Life Cycle Fields: Version; Status of Package Submittal; Proponent's Role; Proponent's Name, Address and Email; Date of Submittal</li>
+                    <li>Metadata Fields: Catalog Identifier; Entry Identifier; Schema; Language</li>
+                    <li>Technical Fields: Format</li>
+                    <li>Rights Fields: Cost; Copyright and Other Restrictions</li>
+                    <li>Classification Fields: MOS and Skill Level; SQI; ASI; Task Numbers and Task Descriptions; Learning Objectives; 508 Compliant; Security Level (Foreign Disclosure)</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="1-2-2_radioGroup" class="radioGroup">
+                <label for="1-2-2_radioGroup">Rating:</label>
+                <input type="radio" id="1-2-2_radio_y" name="1-2-2_radio" value="Y">
+                <label for="1-2-2_radio_y">Yes</label>
+                <input type="radio" id="1-2-2_radio_n" name="1-2-2_radio" value="N">
+                <label for="1-2-2_radio_n">No</label>
+                <input type="radio" id="1-2-2_radio_na" name="1-2-2_radio" value="N/A">
+                <label for="1-2-2_radio_na">N/A</label>
+              </div>
+              <label for="1-2-2_comments">Additional comments:</label><br>
+              <textarea id="1-2-2_comments" name="1-2-2_comments" rows="3" cols="60" maxlength="512"></textarea>
+            </div> <!-- End 1.1.2 -->
+
+          </div> <!-- End Design Section body -->
+
+        </section> <!-- End Design Business Rules -->
 
         <!-- Development Business Rules -->
-        <div id="businessRuleSection_Development" class="businessRuleSection">
-          <h2><span class="ruleSectionName">Development</span> Business Rules</h2>
+        <section id="businessRuleSection_Development" class="businessRuleSection">
 
-          <!-- 2.1.1 -->
-          <div id="2-1-1" class="businessRule">
-            <div id="2-1-1_ruleText" class="ruleText">
-              <h3>Business Rule <span class="ruleNumber">2.1.1</span>: <span class="ruleName">Allowable File Name Characters</span></h3>
-              <span class="ruleDescriptionMarkup">
-                <p>Files in Army learning content packages shall contain only the following allowable characters from the RFC 3986 unreserved character set:</p>
-                <p><code>_ - . A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9</code></p>
-              </span>
-            </div>
-            <div id="2-1-1_radioGroup" class="radioGroup">
-              <input type="radio" id="2-1-1_radio_y" name="2-1-1_radio" value="Y">
-              <label for="2-1-1_radio_y">Yes</label>
-              <input type="radio" id="2-1-1_radio_n" name="2-1-1_radio" value="N">
-              <label for="2-1-1_radio_n">No</label>
-              <input type="radio" id="2-1-1_radio_na" name="2-1-1_radio" value="N/A">
-              <label for="2-1-1_radio_na">N/A</label>
-            </div>
-            <label for="1-1-1_comments">Additional comments:</label><br>
-            <textarea id="2-1-1_comments" name="2-1-1_comments" rows="3" cols="60" maxlength="512"></textarea>
-          </div> <!-- End 2.1.1 -->
+          <div class="section-title">
+            <h2><span class="ruleSectionName">Development Business Rules</span></h2>
+          </div>
 
-          <!-- 2.1.2 -->
-          <div id="2-1-2" class="businessRule">
-            <div id="2-1-2_ruleText" class="ruleText">
-              <h3>Business Rule <span class="ruleNumber">2.1.2</span>: <span class="ruleName">Allowable Folder Name Characters</span></h3>
-              <span class="ruleDescriptionMarkup">
-                <p>Folders in Army learning content packages shall contain only the following allowable characters from the RFC 3986 unreserved character set:</p>
-                <p><code>_ - A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9</code></p>
-              </span>
-            </div>
-            <div id="2-1-2_radioGroup" class="radioGroup">
-              <input type="radio" id="2-1-2_radio_y" name="2-1-2_radio" value="Y">
-              <label for="2-1-2_radio_y">Yes</label>
-              <input type="radio" id="2-1-2_radio_n" name="2-1-2_radio" value="N">
-              <label for="2-1-2_radio_n">No</label>
-              <input type="radio" id="2-1-2_radio_na" name="2-1-2_radio" value="N/A">
-              <label for="2-1-2_radio_na">N/A</label>
-            </div>
-            <label for="1-1-1_comments">Additional comments:</label><br>
-            <textarea id="2-1-2_comments" name="2-1-2_comments" rows="3" cols="60" maxlength="512"></textarea>
-          </div> <!-- End 2.1.2 -->
+          <!-- Development Section body -->
+          <div class="section-body">
 
-        </div> <!-- End Development Business Rules -->
+            <!-- 2.1.1 -->
+            <div id="2-1-1" class="businessRule">
+              <div id="2-1-1_ruleText" class="ruleText">
+                <h3>Business Rule <span class="ruleNumber">2.1.1</span>: <span class="ruleName">Allowable File Name Characters</span></h3>
+                <div class="ruleDescriptionMarkup">
+                  <p>Files in Army learning content packages shall contain only the following allowable characters from the RFC 3986 unreserved character set:</p>
+                  <p><code>_ - . A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9</code></p>
+                </div>
+              </div>
+              <div id="2-1-1_radioGroup" class="radioGroup">
+                <label for="2-1-1_radioGroup">Rating:</label>
+                <input type="radio" id="2-1-1_radio_y" name="2-1-1_radio" value="Y">
+                <label for="2-1-1_radio_y">Yes</label>
+                <input type="radio" id="2-1-1_radio_n" name="2-1-1_radio" value="N">
+                <label for="2-1-1_radio_n">No</label>
+                <input type="radio" id="2-1-1_radio_na" name="2-1-1_radio" value="N/A">
+                <label for="2-1-1_radio_na">N/A</label>
+              </div>
+              <label for="2-1-1_comments">Additional comments:</label><br>
+              <textarea id="2-1-1_comments" name="2-1-1_comments" rows="3" cols="60" maxlength="512"></textarea>
+            </div> <!-- End 2.1.1 -->
+
+          </div> <!-- End Development Section body -->
+
+        </section> <!-- End Development Business Rules -->
 
       </div> <!-- End Business rules div -->
 
-      <!-- Evaluation information div -->
-      <div id="evaluationInfo">
-        <h2>Evaluation Information</h2>
-        <div id="evaluationInfoEvaluatorName" class="infoElem">
-          <label for="evaluatorName">Evaluator name:</label>
-          <input type="text" id="evaluatorName" name="evaluatorName" required maxlength="80" size="80">
+      <!-- Evaluation information -->
+      <section id="evaluationInfo">
+        <div class="section-title">
+          <h2>Evaluation Information</h2>
         </div>
-        <div id="evaluationInfoOrgName" class="infoElem">
-          <label for="orgName">Organization name:</label>
-          <input type="text" id="orgName" name="orgName" required maxlength="80" size="80">
+        <div class="section-body">
+          <div id="evaluationInfoEvaluatorName" class="infoElem">
+            <label for="evaluatorName">Evaluator name</label>
+            <input type="text" id="evaluatorName" name="evaluatorName" required="" maxlength="80" size="80" placeholder="Enter evaluator name">
+          </div>
+          <div id="evaluationInfoOrgName" class="infoElem">
+            <label for="orgName">Organization name</label>
+            <input type="text" id="orgName" name="orgName" required="" maxlength="80" size="80" placeholder="Enter evaluator organization">
+          </div>
         </div>
-      </div>
-      <!-- End Evaluation information div -->
+      </section> <!-- End Evaluation information -->
 
       <!-- Submit div -->
       <div id="submitDiv">
-        <p>The output from this form serves as your organization's attestation that all of the above information is true.</p>
-        <button id="generateChecklist" type="button" onclick="window.open('mockChecklistOutput.html')">Open Mock Output Page</button>
+        <p><strong>By submitting this checklist, you certify on behalf of your organization that all of the above information is true.</strong></p>
+        <!-- <button id="generateChecklist" type="button" disabled onclick="window.open('mockChecklistOutput.html')">Generate Checklist</button> -->
+        <button id="generateChecklist" type="button" onclick="window.open('mockChecklistOutput.html')">Open Mock Output</button>
       </div> <!-- End Submit div -->
 
-    </div> <!-- End Main div -->
+    </div> <!-- End Main div-->
 
     <!-- script includes -->
-    <script src="../js/jquery-3.4.0.min.js"></script>
-    <!-- <script src="../js/businessRules.js"></script>
-    <script src="../js/checklistOutput.js"></script>
-    <script src="../js/checklistForm.js"></script> -->
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script src="js/businessRules.js"></script>
+    <script src="js/checklistOutput.js"></script>
+    <script src="js/checklistForm.js"></script>
     <!-- End script includes -->
 
     <!-- Start the show! -->
