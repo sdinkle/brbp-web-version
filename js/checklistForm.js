@@ -72,7 +72,6 @@ function constructChecklistForm() {
       brRadioDiv.append("<label for='" + ruleIdStr + "_radio_n'>No</label>");
 
       // Build the "N/A" radio item if this rule is eligible
-      console.log(brListRuleObj.ruleNA);
       if (brListRuleObj.ruleNA) {
         brRadioDiv.append("<input type='radio' id='" + ruleIdStr + "_radio_na' name='" + ruleIdStr + "_radio' value='N/A'>");
         brRadioDiv.append("<label for='" + ruleIdStr + "_radio_na'>N/A</label>");
