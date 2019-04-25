@@ -14,7 +14,8 @@ var businessRulesList =
       {
         ruleNumber: "1.1.1",
         ruleName: "Discrete Independent Content",
-        ruleDescriptionMarkup: "<p>Independent LCOs shall be discrete blocks of learning content that do not make reference to placement in a hierarchy or to other LCOs anywhere in the content.</p>"
+        ruleDescriptionMarkup: "<p>Independent LCOs shall be discrete blocks of learning content that do not make reference to placement in a hierarchy or to other LCOs anywhere in the content.</p>",
+        ruleNA: true
       },
       {
         ruleNumber: "1.1.2",
@@ -105,12 +106,14 @@ var businessRulesList =
       {
         ruleNumber: "2.1.9",
         ruleName: "Bookmarking Requirement",
-        ruleDescriptionMarkup: "<p>Non-assessment LCOs shall contain functionality to bookmark the learner's progress whenever the learner exits the content.</p>"
+        ruleDescriptionMarkup: "<p>Non-assessment LCOs shall contain functionality to bookmark the learner's progress whenever the learner exits the content.</p>",
+        ruleNA: true
       },
       {
         ruleNumber: "2.1.10",
         ruleName: "Assessment Data Obfuscation",
-        ruleDescriptionMarkup: "<p>Credit-producing assessment learning content must obfuscate question and answer data so that the data is not in a plaintext format easily recognizable by the learner.</p>"
+        ruleDescriptionMarkup: "<p>Credit-producing assessment learning content must obfuscate question and answer data so that the data is not in a plaintext format easily recognizable by the learner.</p>",
+        ruleNA: true
       },
       {
         ruleNumber: "2.1.11",
@@ -145,12 +148,14 @@ var businessRulesList =
       {
         ruleNumber: "2.2.5",
         ruleName: "Assessment Objective Satisfaction",
-        ruleDescriptionMarkup: "<p>SCORM 2004 3rd Edition assessment SCOs shall include the <code>imsss:primaryObjective</code> element in the manifest and set the <code>satisfiedByMeasure</code> attribute of the element to \"true\".</p>"
+        ruleDescriptionMarkup: "<p>SCORM 2004 3rd Edition assessment SCOs shall include the <code>imsss:primaryObjective</code> element in the manifest and set the <code>satisfiedByMeasure</code> attribute of the element to \"true\".</p>",
+        ruleNA: true
       },
       {
         ruleNumber: "2.2.6",
         ruleName: "Assessment Mastery Score Declaration",
-        ruleDescriptionMarkup: "<p>SCORM 2004 3rd Edition assessment SCOs shall include a <code>imsss:primaryObjective</code> element in the manifest and declare a mastery score using the <code>imsss:minNormalizedMeasure</code> element.</p>"
+        ruleDescriptionMarkup: "<p>SCORM 2004 3rd Edition assessment SCOs shall include a <code>imsss:primaryObjective</code> element in the manifest and declare a mastery score using the <code>imsss:minNormalizedMeasure</code> element.</p>",
+        ruleNA: true
       },
       {
         ruleNumber: "2.2.7",
@@ -180,7 +185,8 @@ var businessRulesList =
           "<li>cmi.interactions.n.timestamp</li>" +
           "<li>cmi.interactions.n.type</li>" +
           "<li>cmi.interactions.n.result</li>" +
-          "</code></ul>"
+          "</code></ul>",
+        ruleNA: true
       },
       {
         ruleNumber: "2.2.9",
@@ -199,7 +205,8 @@ var businessRulesList =
           "<li>cmi.completion_status</li>" +
           "<li>cmi.location</li>" +
           "<li>cmi.session_time</li>" +
-          "</code></ul>"
+          "</code></ul>",
+        ruleNA: true
       },
       {
         ruleNumber: "2.2.10",

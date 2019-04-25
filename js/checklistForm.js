@@ -71,9 +71,12 @@ function constructChecklistForm() {
       brRadioDiv.append("<input type='radio' id='" + ruleIdStr + "_radio_n' name='" + ruleIdStr + "_radio' value='N'>");
       brRadioDiv.append("<label for='" + ruleIdStr + "_radio_n'>No</label>");
 
-      // Build the "N/A" radio item
-      brRadioDiv.append("<input type='radio' id='" + ruleIdStr + "_radio_na' name='" + ruleIdStr + "_radio' value='N/A'>");
-      brRadioDiv.append("<label for='" + ruleIdStr + "_radio_na'>N/A</label>");
+      // Build the "N/A" radio item if this rule is eligible
+      console.log(brListRuleObj.ruleNA);
+      if (brListRuleObj.ruleNA) {
+        brRadioDiv.append("<input type='radio' id='" + ruleIdStr + "_radio_na' name='" + ruleIdStr + "_radio' value='N/A'>");
+        brRadioDiv.append("<label for='" + ruleIdStr + "_radio_na'>N/A</label>");
+      }
 
       // Build the textarea div.
       brDiv.append("<label for='" + ruleIdStr + "_comments'>Additional comments:</label><br>")
