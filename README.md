@@ -1,4 +1,4 @@
-# Army Business Rules Online Checklist for SCORM 2004 3rd Edition CMI v1.2
+# Army Business Rules Online Checklist for SCORM 2004 3rd Edition CMI
 This web form is an online version of the [Army BRBP SCORM 2004 CMI Checklist](https://tadlp.github.io/brbp/). It is intended for use by the ADLPA's designated point-of-contact upon completing development of a DL package before submitting it to the Army.
 
 The web form contains fields for the following information:
@@ -15,4 +15,4 @@ Upon completing the web form, the evaluator can generate a pre-formatted checkli
 
 **Please note:** It is *strongly* recommended that you access this form using a browser other than Internet Explorer.
 
-⭐ [Access the Army Business Rules Online Checklist for SCORM 2004 3rd Edition CMI v1.2](https://tadlp.github.io/online-br-checklist/)
+⭐ [Access the Army Business Rules Online Checklist for SCORM 2004 3rd Edition CMI](https://tadlp.github.io/online-br-checklist/)
