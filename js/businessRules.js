@@ -1,3 +1,5 @@
+var businessRulesVersion = "v1.3";
+
 var businessRulesList =
 [
   // Top-level objects are rules sections.

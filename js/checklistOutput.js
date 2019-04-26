@@ -26,7 +26,7 @@ function constructChecklistOutput() {
   outputHtmlString += "<body><div id='main'>";
 
   // Construct the heading section.
-  outputHtmlString += "<section id='headingSection'><h1>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI v1.3</h1>";
+  outputHtmlString += "<section id='headingSection'><h1>" + document.getElementById("pageTitle").innerHTML + "</h1>";
   outputHtmlString += "<div class='separator'></div>"
 
   // Begin constructing the course information section.
