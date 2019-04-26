@@ -101,7 +101,7 @@ var businessRulesList =
       {
         ruleNumber: "2.1.8",
         ruleName: "Error-Free Code",
-        ruleDescriptionMarkup: "<p>All code in learning content must run without producing errors.</p>"
+        ruleDescriptionMarkup: "<p>All code in learning content must not produce any file or script errors when executed in the web browser.</p>"
       },
       {
         ruleNumber: "2.1.9",
