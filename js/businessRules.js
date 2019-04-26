@@ -242,34 +242,13 @@ var businessRulesList =
       },
       {
         ruleNumber: "3.2.2",
-        ruleName: "SCORM Conformance Testing Tools",
-        ruleDescriptionMarkup: "<p>All SCORM 2004 3rd Edition content packages and SCOs must be pass the validation tests in the following conformance testing tools:</p>" +
-          "<ul>" +
-          "<li>ADL SCORM 2004 3rd Edition Conformance Test Suite</li>" +
-          "<li>SCORM Resource Validator</li>" +
-          "<li>Metadata Editor</li>" +
-          "<li>Army Multi Log Parser</li>" +
-          "</ul>"
+        ruleName: "SCORM Conformance Testing",
+        ruleDescriptionMarkup: "<p>All SCORM 2004 3rd Edition content packages and SCOs must pass all tests performed by the ADL SCORM 2004 3rd Edition Conformance Test Suite's Content Package Conformance Test.</p>"
       },
       {
-        ruleNumber: "3.2.2.1",
-        ruleName: "ADL Scorm 2004 3rd Edition Conformance Test Suite Result",
-        ruleDescriptionMarkup: "<p>All SCORM 2004 3rd Edition content packages and SCOs must produce a passing result using the ADL Scorm 2004 3rd Edition Conformance Test Suite's Content Package Conformance Test.</p>"
-      },
-      {
-        ruleNumber: "3.2.2.2",
-        ruleName: "Resource Validator Result",
-        ruleDescriptionMarkup: "<p>All SCORM 2004 3rd Edition content packages and SCOs must produce a passing result using the Resource Validator.</p>"
-      },
-      {
-        ruleNumber: "3.2.2.3",
-        ruleName: "Metadata Editor Result",
-        ruleDescriptionMarkup: "<p>All SCORM 2004 3rd Edition content packages and SCOs must produce a passing result using the Metadata Editor's Batch Validate feature.</p>"
-      },
-      {
-        ruleNumber: "3.2.2.4",
-        ruleName: "Army Multi Log Parser Result",
-        ruleDescriptionMarkup: "<p>All SCORM 2004 3rd Edition content packages and SCOs must produce a passing result using the Army Multi Log Parser.</p>"
+        ruleNumber: "3.2.3",
+        ruleName: "Army Conformance Testing",
+        ruleDescriptionMarkup: "<p>All SCORM 2004 3rd Edition content packages and SCOs must pass all tests performed by the SCORM Resource Validator.</p>"
       }
     ]
   }, /**** End Testing Business Rules ****/
@@ -280,18 +259,18 @@ var businessRulesList =
     rules: [
       {
         ruleNumber: "4.1.1",
-        ruleName: "Content Package Deliverables",
+        ruleName: "Content Package Format",
         ruleDescriptionMarkup: "<p>All LCOs must be contained in an approved content package format that the ALCMC delivery platform natively supports.</p>"
       },
       {
         ruleNumber: "4.1.2",
-        ruleName: "Gold Copy Deliverables",
-        ruleDescriptionMarkup: "<p>A \"gold copy\" of all LCOs and all file-based content that is consumable by the learner must be delivered to the Government on a physical medium such as DVD-ROM.</p>"
+        ruleName: "Content Package Deliverables",
+        ruleDescriptionMarkup: "<p>All finalized LCOs and content packages that are consumable by the learner on an ALCMC delivery platform or computer must be delivered electronically to the Government.</p>"
       },
       {
         ruleNumber: "4.1.3",
         ruleName: "Source Material Deliverables",
-        ruleDescriptionMarkup: "<p>All other contract deliverables aside from LCOs, such as development source files, answer keys and test logs, must be delivered to the Government in a usable format and include any supporting software or tools.</p>"
+        ruleDescriptionMarkup: "<p>All final contract deliverables&mdash;such as LCOs, development source files, answer keys, and test logs&mdash;must be delivered to the Government on a DVD-ROM, and include any supporting software or tools.</p>"
       },
       {
         ruleNumber: "4.2.1",
