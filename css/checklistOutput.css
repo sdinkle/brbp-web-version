@@ -128,7 +128,16 @@ th:nth-child(4) {
 .rating_none::after {
   content: "No value";
 }
+#signatureBox {
+  width: 500px;
+  height: 100px;
+  margin: 0.5em 0em;
+  border-bottom: 1px solid;
+}
 @media print {
+  .infoSection {
+    break-inside: avoid;
+  }
   .pageBreakAfter {
     break-after: page;
   }

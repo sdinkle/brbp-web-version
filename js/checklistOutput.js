@@ -150,6 +150,7 @@ function constructChecklistOutput() {
   outputHtmlString += "<div id='evaluationDate' class='info'><p>Date: ";
   outputHtmlString += new Date().toDateString();
   outputHtmlString += "</p></div>";
+  outputHtmlString += "<div id='signatureBox'></div><p>Evaluator's signature</p>";
   outputHtmlString += "</section>";
 
   // Finish constructing the webpage.
