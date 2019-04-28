@@ -112,6 +112,9 @@ input[type=text] {
 #evaluationInfo .infoElem label {
   width: 20%;
 }
+.infoSection, #submitDiv {
+  display: none;
+}
 #submitDiv {
   text-align: center;
 }
