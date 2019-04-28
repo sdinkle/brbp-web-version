@@ -3,7 +3,7 @@ function constructChecklistForm() {
   // Update document and page title to reflect current rules version.
   document.title = document.getElementById("pageTitle").innerHTML = "Army Business Rules Checklist for SCORM 2004 3rd Edition CMI " + businessRulesVersion;
 
-  // Make info sections visible.
+  // Make info and submit sections and visible.
   $(".infoSection, #submitDiv").show();
 
   // Declare variables for the various divs. These will serve as temporary handles during iteration.
