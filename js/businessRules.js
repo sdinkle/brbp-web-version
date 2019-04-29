@@ -59,13 +59,13 @@ var businessRulesList =
         ruleName: "Army Metadata Fields",
         ruleDescriptionMarkup: "<p>All SCORM 2004 3rd Edition metadata files must be formatted to include the following fields to meet Army requirements:</p>" +
           "<ul>" +
-          "<li>General Identifier Fields: Catalog; Entry</li>" +
-          "<li>General Fields: Title; Language; Description; Keywords; Type of Metadata</li>" +
-          "<li>Life Cycle Fields: Version; Status of Package Submittal; Proponent's Role; Proponent's Name, Address and Email; Date of Submittal</li>" +
-          "<li>Metadata Fields: Catalog Identifier; Entry Identifier; Schema; Language</li>" +
-          "<li>Technical Fields: Format</li>" +
-          "<li>Rights Fields: Cost; Copyright and Other Restrictions</li>" +
-          "<li>Classification Fields: MOS and Skill Level; SQI; ASI; Task Numbers and Task Descriptions; Learning Objectives; 508 Compliant; Security Level (Foreign Disclosure)</li>" +
+          "<li><strong>General Identifier Fields:</strong> Catalog; Entry</li>" +
+          "<li><strong>General Fields:</strong> Title; Language; Description; Keywords; Type of Metadata</li>" +
+          "<li><strong>Life Cycle Fields:</strong> Version; Status of Package Submittal; Proponent's Role; Proponent's Name, Address and Email; Date of Submittal</li>" +
+          "<li><strong>Metadata Fields:</strong> Catalog Identifier; Entry Identifier; Schema; Language</li>" +
+          "<li><strong>Technical Fields:</strong> Format</li>" +
+          "<li><strong>Rights Fields:</strong> Cost; Copyright and Other Restrictions</li>" +
+          "<li><strong>Classification Fields:</strong> MOS and Skill Level; SQI; ASI; Task Numbers and Task Descriptions; Learning Objectives; 508 Compliant; Security Level (Foreign Disclosure)</li>" +
           "</ul>"
       }
     ]
