@@ -135,7 +135,7 @@ th:nth-child(4) {
   border-bottom: 1px solid;
 }
 @media print {
-  .infoSection {
+  .infoSection, tr {
     break-inside: avoid;
   }
   .pageBreakAfter {

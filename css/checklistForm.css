@@ -89,9 +89,6 @@ code {
 #instructions, #courseInfo, #evaluationInfo {
   border-bottom: 1px solid;
 }
-#courseInfo, #evaluationInfo {
-  padding-bottom: 10px;
-}
 #courseInfo {
   margin: 20px 0px;
 }
@@ -145,7 +142,7 @@ input[type=text] {
   margin: 10px 0px;
 }
 .radioGroup {
-  margin-bottom: 4px;
+  margin: 10px 0px;
 }
 .radioGroup label {
   padding-right: 0.6em;
