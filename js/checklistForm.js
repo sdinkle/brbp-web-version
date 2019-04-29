@@ -96,22 +96,18 @@ function constructChecklistForm() {
 
   } // End businessRulesList loop.
 
-  // Add the toggleExamNA function to the isExam radio in the course info section.
+  // Add the toggleExamNA function to the isExam radio in the course info section, then select "No" to trigger the function.
   // Use a closure to pass the radio as a parameter to the event-setting function.
   $("input[type=radio][name=isExam_radio]").change(function () {
     return toggleExamNA(this.value);
   });
-
-  // Select "No" option for the above radio to trigger the function.
   $("#isExam_radio_n").click();
 
-  // Add the toggleIntroNA function to the isIntro radio in the course info section.
+  // Add the toggleIntroNA function to the isIntro radio in the course info section, then select "No" to trigger the function.
   // Use a closure to pass the radio as a parameter to the event-setting function.
   $("input[type=radio][name=isIntro_radio]").change(function () {
     return toggleIntroNA(this.value);
   });
-
-  // Select "No" option for the above radio to trigger the function.
   $("#isIntro_radio_n").click();
 
   // Make info and submit sections visible.
@@ -186,7 +182,7 @@ function toggleIntroNA(val) {
 
   // Depending on the governing radio item's value, rule 1.1.1 will either be disabled or enabled.
   switch (val) {
-    
+
     // Disable the rule.
     case "Y":
       setRuleDisabledStatus("1-1-1", true, "This is an introductory content package.");
@@ -205,12 +201,14 @@ function toggleIntroNA(val) {
 // commentStr: Holds comment to be displayed if isDisabled is true. Not needed if isDisabled is false.
 function setRuleDisabledStatus(rule, isDisabled, commentStr) {
   if (isDisabled) {
+
     // Disable the rule.
     $("#" + rule).addClass("grayedOut");
     $("#" + rule + "_radio_y, #" + rule + "_radio_n").prop("checked", false).prop("disabled", true);
     $("#" + rule + "_radio_na").prop("checked", true);
     $("#" + rule + "_comments").prop("value", commentStr).prop("disabled", true).attr("style", "").css("resize", "none");
   } else {
+
     // Enable the rule.
     $("#" + rule).removeClass("grayedOut");
     $("#" + rule + "_radio_y, #" + rule + "_radio_n").prop("disabled", false);
