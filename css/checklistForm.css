@@ -154,6 +154,7 @@ input[type=text] {
   display: none;
 }
 textarea {
+  font: inherit;
   color: inherit;
 }
 #instructions .section-title {
