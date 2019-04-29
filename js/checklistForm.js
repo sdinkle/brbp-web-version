@@ -154,7 +154,7 @@ function toggleExamNA(val) {
   for (var i = 0; i < brsEnabled.length; i++) {
     $("#" + brsEnabled[i]).removeClass("brNA");
     $("#" + brsEnabled[i] + "_radio_y, #" + brsEnabled[i] + "_radio_n").prop("disabled", false);
-    $("#" + brsEnabled[i] + "_radio_na").prop("checked", false);
+    $("#" + brsEnabled[i] + "_radio_n").prop("checked", true);
     $("#" + brsEnabled[i] + "_comments").prop("value", "").prop("disabled", false);
   }
 } // End toggleExamNA(val)
