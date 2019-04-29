@@ -110,6 +110,11 @@ function constructChecklistForm() {
   });
   $("#isIntro_radio_n").click();
 
+  // Add key press validation to the text boxes and textareas.
+  $("input[type=text], textarea").keypress(function (e) {
+    return validateKeypress(e);
+  });
+
   // Make info and submit sections visible.
   $(".infoSection, #submitDiv").show();
 
@@ -216,6 +221,15 @@ function setRuleDisabledStatus(rule, isDisabled, commentStr) {
     $("#" + rule + "_comments").prop("value", "").prop("disabled", false).css("resize", "both");
   }
 } // End setRuleDisabledStatus(rule, isDisabled, commentStr)
+
+// Function to screen key presses and filter out unwanted characters from text input.
+// evt: Holds the event that fired the function. We use it to grab the pressed key.
+function validateKeypress(evt) {
+  if (evt.key.match(/[^\s\w\-!@#$%\^&*()+=,.?/;:'"\\]/)) {
+    evt.preventDefault();
+    console.log("You can't enter " + evt.key);
+  }
+}
 
 // Rudimentary form validation based on 4 info fields having something in them
 // TODO: Add validation based on info fields + all BRs evaluated
