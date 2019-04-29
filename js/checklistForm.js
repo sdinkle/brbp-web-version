@@ -95,7 +95,7 @@ function constructChecklistForm() {
 
   } // End businessRulesList loop.
 
-  // Add the toggleExamNA function to the course info radio.
+  // Add the toggleExamNA function to the isExam radio in the course info section.
   // Use a closure to pass the radio as a parameter to the event-setting function.
   $("input[type=radio][name=isExam_radio]").change(function () {
     return toggleExamNA(this.value);
@@ -103,6 +103,15 @@ function constructChecklistForm() {
 
   // Select "No" option for the above radio to trigger the function.
   $("#isExam_radio_n").click();
+
+  // Add the toggleIntroNA function to the isIntro radio in the course info section.
+  // Use a closure to pass the radio as a parameter to the event-setting function.
+  $("input[type=radio][name=isIntro_radio]").change(function () {
+    return toggleIntroNA(this.value);
+  });
+
+  // Select "No" option for the above radio to trigger the function.
+  $("#isIntro_radio_n").click();
 
   // Make info and submit sections visible.
   $(".infoSection, #submitDiv").show();
@@ -115,7 +124,8 @@ function convertRuleNumToIdStr(ruleNum) {
   return ruleNum.replace(/\./g, "-");
 } // End convertRuleNumToIdStr(ruleNum)
 
-// Function to disable certain rules and set them to N/A depending on whether this is a scoring or non-scoring package.
+// Function to disable certain rules marked as assessment- or non-assessment-only and set them to N/A depending on whether this is a scoring or non-scoring package.
+// val: Holds the value of the currently selected radio button item.
 function toggleExamNA(val) {
 
   // Declare variables to be used in this function. One will point to brAssessment and the other will point to brNonAssessment.
@@ -132,6 +142,15 @@ function toggleExamNA(val) {
       brsDisabled = brNonAssessment;
       brsEnabled = brAssessment;
       commentStrSnip = "n ";
+
+      // Ensure that the isIntro radio item is set to "No".
+      $("#isIntro_radio_n").click();
+
+      // Disable the isIntro radio item.
+      $("#isIntro_radioGroup").addClass("grayedOut");
+      $("#isIntro_radio_y").prop("checked", false).prop("disabled", true);
+      $("#isIntro_radio_n").prop("checked", true).prop("disabled", true);
+
       break;
 
     // Disable assessment rules, enable non-assessment rules.
@@ -139,12 +158,18 @@ function toggleExamNA(val) {
       brsDisabled = brAssessment;
       brsEnabled = brNonAssessment;
       commentStrSnip = " non-";
+
+      // Enable the isIntro radio item.
+      $("#isIntro_radioGroup").removeClass("grayedOut");
+      $("#isIntro_radio_y").prop("disabled", false);
+      $("#isIntro_radio_n").prop("disabled", false);
+
       break;
   }
 
   // Disable the appropriate set of rules.
   for (var i = 0; i < brsDisabled.length; i++) {
-    $("#" + brsDisabled[i]).addClass("brNA");
+    $("#" + brsDisabled[i]).addClass("grayedOut");
     $("#" + brsDisabled[i] + "_radio_y, #" + brsDisabled[i] + "_radio_n").prop("checked", false).prop("disabled", true);
     $("#" + brsDisabled[i] + "_radio_na").prop("checked", true);
     $("#" + brsDisabled[i] + "_comments").prop("value", "This is a" + commentStrSnip + "assessment package.").prop("disabled", true);
@@ -152,12 +177,33 @@ function toggleExamNA(val) {
 
   // Enable the appropriate set of rules.
   for (var i = 0; i < brsEnabled.length; i++) {
-    $("#" + brsEnabled[i]).removeClass("brNA");
+    $("#" + brsEnabled[i]).removeClass("grayedOut");
     $("#" + brsEnabled[i] + "_radio_y, #" + brsEnabled[i] + "_radio_n").prop("disabled", false);
     $("#" + brsEnabled[i] + "_radio_n").prop("checked", true);
     $("#" + brsEnabled[i] + "_comments").prop("value", "").prop("disabled", false);
   }
 } // End toggleExamNA(val)
+
+// Function to disable rule 1.1.1 and set it to N/A depending on whether this is an introductory content package.
+// val: Holds the value of the currently selected radio button item.
+function toggleIntroNA(val) {
+  switch (val) {
+    case "Y":
+      // Disable the rule.
+      $("#1-1-1").addClass("grayedOut");
+      $("#1-1-1_radio_y, #1-1-1_radio_n").prop("checked", false).prop("disabled", true);
+      $("#1-1-1_radio_na").prop("checked", true);
+      $("#1-1-1_comments").prop("value", "This is an introductory content package.").prop("disabled", true);
+      break;
+    case "N":
+      // Enable the rule.
+      $("#1-1-1").removeClass("grayedOut");
+      $("#1-1-1_radio_y, #1-1-1_radio_n").prop("disabled", false);
+      $("#1-1-1_radio_n").prop("checked", true);
+      $("#1-1-1_comments").prop("value", "").prop("disabled", false);
+      break;
+  }
+} // End toggleIntroNA(val)
 
 // Rudimentary form validation based on 4 info fields having something in them
 // TODO: Add validation based on info fields + all BRs evaluated
