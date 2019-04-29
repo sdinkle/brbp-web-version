@@ -18,7 +18,7 @@ function constructChecklistOutput() {
   // Declare the string that contains the page HTML and begin constructing the webpage.
   var outputHtmlString = "<!DOCTYPE HTML><html><head>";
 
-  // Set title to form "BRBP_<packageName>".
+  // Set title of window to "BRBP_<packageName>".
   outputHtmlString += "<title>BRBP_" + $('#packageName').val() + "</title>";
 
   // Continue constructing the webpage.

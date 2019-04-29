@@ -25,7 +25,8 @@ function constructChecklistForm() {
     var brListSecObj = businessRulesList[i];
 
     // Create the id name for the current businessRuleSection div.
-    var ruleSectionNameIdStr = "businessRuleSection_" + brListSecObj.ruleSectionName;
+    // Trim any spaces from the section name, then replace any remaining spaces with underscores.
+    var ruleSectionNameIdStr = ("businessRuleSection_" + (brListSecObj.ruleSectionName).trim()).replace(/\s/g, "_");
 
     // Begin building the businessRuleSection div.
     brsDiv.append("<section id='" + ruleSectionNameIdStr + "' class='businessRuleSection'>");
@@ -73,7 +74,7 @@ function constructChecklistForm() {
       brRadioDiv.append("<input type='radio' id='" + ruleIdStr + "_radio_n' name='" + ruleIdStr + "_radio' value='N' checked>");
       brRadioDiv.append("<label for='" + ruleIdStr + "_radio_n'>No</label>");
 
-      // Build the "N/A" radio item if this rule is eligible
+      // Build the "N/A" radio item if this rule applies in a specific context.
       if (brListRuleObj.ruleSpecificity) {
 
         // Store this business rule into a list depending on whether it's an assessment or non-assessment rule.

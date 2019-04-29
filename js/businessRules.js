@@ -17,7 +17,7 @@ var businessRulesList =
   // ruleNumber: A string representing the number of the rule. Always in the form "n.n.[...].n"
   // ruleName: A string representing the name of the rule.
   // ruleDescriptionMarkup: An HTML-formatted string containing the rule description. <p> tags encouraged to separate multiline rules. <ul> tags may be used as well. Double-quotes will need to be escaped.
-  // ruleSpecificity: A string that states whether a given rule is specific to certain content package types. A value of "assessment" indicates a rule that only applies to assessments, and a value of "non-assessment" indicates a rule that only applies to non-assessments. A value of "non-intro" indicates a rule that does not apply to introductory content.
+  // ruleSpecificity: A string that states whether a given rule is specific to certain content package types and therefore can have a value of "N/A". A value of "assessment" indicates a rule that only applies to assessments, and a value of "non-assessment" indicates a rule that only applies to non-assessments. A value of "non-intro" indicates a rule that does not apply to introductory content.
 
   /**** Design Business Rules ****/
   {
@@ -230,7 +230,7 @@ var businessRulesList =
 
   /**** Testing Business Rules ****/
   {
-    ruleSectionName: "Testing",
+    ruleSectionName: "Content Testing",
     rules: [
       {
         ruleNumber: "3.1.1",
