@@ -70,7 +70,7 @@ function constructChecklistForm() {
       brRadioDiv.append("<label for='" + ruleIdStr + "_radio_y'>Yes</label>");
 
       // Build the "No" radio item.
-      brRadioDiv.append("<input type='radio' id='" + ruleIdStr + "_radio_n' name='" + ruleIdStr + "_radio' value='N'>");
+      brRadioDiv.append("<input type='radio' id='" + ruleIdStr + "_radio_n' name='" + ruleIdStr + "_radio' value='N' checked>");
       brRadioDiv.append("<label for='" + ruleIdStr + "_radio_n'>No</label>");
 
       // Build the "N/A" radio item if this rule is eligible
@@ -97,7 +97,12 @@ function constructChecklistForm() {
 
   // Add the toggleExamNA function to the course info radio.
   // Use a closure to pass the radio as a parameter to the event-setting function.
-  $("input[type=radio][name=isExam_radio]").change(function () { return toggleExamNA(this.value); });
+  $("input[type=radio][name=isExam_radio]").change(function () {
+    return toggleExamNA(this.value);
+  });
+
+  // Select "No" option for the above radio to trigger the function.
+  $("#isExam_radio_n").click();
 
   // Make info and submit sections visible.
   $(".infoSection, #submitDiv").show();
