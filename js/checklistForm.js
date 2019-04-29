@@ -186,12 +186,14 @@ function toggleIntroNA(val) {
 
   // Depending on the governing radio item's value, rule 1.1.1 will either be disabled or enabled.
   switch (val) {
+    
+    // Disable the rule.
     case "Y":
-      // Disable the rule.
       setRuleDisabledStatus("1-1-1", true, "This is an introductory content package.");
       break;
+
+    // Enable the rule.
     case "N":
-      // Enable the rule.
       setRuleDisabledStatus("1-1-1", false);
       break;
   }
@@ -207,15 +209,15 @@ function setRuleDisabledStatus(rule, isDisabled, commentStr) {
     $("#" + rule).addClass("grayedOut");
     $("#" + rule + "_radio_y, #" + rule + "_radio_n").prop("checked", false).prop("disabled", true);
     $("#" + rule + "_radio_na").prop("checked", true);
-    $("#" + rule + "_comments").prop("value", commentStr).prop("disabled", true);
+    $("#" + rule + "_comments").prop("value", commentStr).prop("disabled", true).attr("style", "").css("resize", "none");
   } else {
     // Enable the rule.
     $("#" + rule).removeClass("grayedOut");
     $("#" + rule + "_radio_y, #" + rule + "_radio_n").prop("disabled", false);
     $("#" + rule + "_radio_n").prop("checked", true);
-    $("#" + rule + "_comments").prop("value", "").prop("disabled", false);
+    $("#" + rule + "_comments").prop("value", "").prop("disabled", false).css("resize", "both");
   }
-}
+} // End setRuleDisabledStatus(rule, isDisabled, commentStr)
 
 // Rudimentary form validation based on 4 info fields having something in them
 // TODO: Add validation based on info fields + all BRs evaluated
