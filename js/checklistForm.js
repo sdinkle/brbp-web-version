@@ -74,12 +74,12 @@ function constructChecklistForm() {
       brRadioDiv.append("<label for='" + ruleIdStr + "_radio_n'>No</label>");
 
       // Build the "N/A" radio item if this rule is eligible
-      if (brListRuleObj.ruleNA) {
+      if (brListRuleObj.ruleSpecificity) {
 
         // Store this business rule into a list depending on whether it's an assessment or non-assessment rule.
-        if (brListRuleObj.ruleNA === "assessment") {
+        if (brListRuleObj.ruleSpecificity === "assessment") {
           brAssessment.push(ruleIdStr);
-        } else if (brListRuleObj.ruleNA === "non-assessment") {
+        } else if (brListRuleObj.ruleSpecificity === "non-assessment") {
           brNonAssessment.push(ruleIdStr);
         }
 
@@ -134,7 +134,7 @@ function toggleExamNA(val) {
   // commentStrSnip: Holds a small snippet of string data that will be used to construct the comment message.
   var brsDisabled, brsEnabled, commentStrSnip;
 
-  // Depending on the radio value, either the assessment or non-assessment rules will be disabled.
+  // Depending on the governing radio item's value, either the assessment or non-assessment rules will be disabled.
   switch (val) {
 
     // Disable non-assessment rules, enable assessment rules.
@@ -169,41 +169,52 @@ function toggleExamNA(val) {
 
   // Disable the appropriate set of rules.
   for (var i = 0; i < brsDisabled.length; i++) {
-    $("#" + brsDisabled[i]).addClass("grayedOut");
-    $("#" + brsDisabled[i] + "_radio_y, #" + brsDisabled[i] + "_radio_n").prop("checked", false).prop("disabled", true);
-    $("#" + brsDisabled[i] + "_radio_na").prop("checked", true);
-    $("#" + brsDisabled[i] + "_comments").prop("value", "This is a" + commentStrSnip + "assessment package.").prop("disabled", true);
+    setRuleDisabledStatus(brsDisabled[i], true, "This is a" + commentStrSnip + "assessment package.");
   }
 
   // Enable the appropriate set of rules.
   for (var i = 0; i < brsEnabled.length; i++) {
-    $("#" + brsEnabled[i]).removeClass("grayedOut");
-    $("#" + brsEnabled[i] + "_radio_y, #" + brsEnabled[i] + "_radio_n").prop("disabled", false);
-    $("#" + brsEnabled[i] + "_radio_n").prop("checked", true);
-    $("#" + brsEnabled[i] + "_comments").prop("value", "").prop("disabled", false);
+    setRuleDisabledStatus(brsEnabled[i], false);
   }
 } // End toggleExamNA(val)
 
 // Function to disable rule 1.1.1 and set it to N/A depending on whether this is an introductory content package.
+// Should another rule that doesn't apply to intro content ever be created, this function would need to be repurposed to account for multiple rules.
 // val: Holds the value of the currently selected radio button item.
 function toggleIntroNA(val) {
+
+  // Depending on the governing radio item's value, rule 1.1.1 will either be disabled or enabled.
   switch (val) {
     case "Y":
       // Disable the rule.
-      $("#1-1-1").addClass("grayedOut");
-      $("#1-1-1_radio_y, #1-1-1_radio_n").prop("checked", false).prop("disabled", true);
-      $("#1-1-1_radio_na").prop("checked", true);
-      $("#1-1-1_comments").prop("value", "This is an introductory content package.").prop("disabled", true);
+      setRuleDisabledStatus("1-1-1", true, "This is an introductory content package.");
       break;
     case "N":
       // Enable the rule.
-      $("#1-1-1").removeClass("grayedOut");
-      $("#1-1-1_radio_y, #1-1-1_radio_n").prop("disabled", false);
-      $("#1-1-1_radio_n").prop("checked", true);
-      $("#1-1-1_comments").prop("value", "").prop("disabled", false);
+      setRuleDisabledStatus("1-1-1", false);
       break;
   }
 } // End toggleIntroNA(val)
+
+// Helper function to disable or enable a rule.
+// rule: Holds hypenated name of business rule ID.
+// isDisabled: True if the rule is being disabled, false if being enabled.
+// commentStr: Holds comment to be displayed if isDisabled is true. Not needed if isDisabled is false.
+function setRuleDisabledStatus(rule, isDisabled, commentStr) {
+  if (isDisabled) {
+    // Disable the rule.
+    $("#" + rule).addClass("grayedOut");
+    $("#" + rule + "_radio_y, #" + rule + "_radio_n").prop("checked", false).prop("disabled", true);
+    $("#" + rule + "_radio_na").prop("checked", true);
+    $("#" + rule + "_comments").prop("value", commentStr).prop("disabled", true);
+  } else {
+    // Enable the rule.
+    $("#" + rule).removeClass("grayedOut");
+    $("#" + rule + "_radio_y, #" + rule + "_radio_n").prop("disabled", false);
+    $("#" + rule + "_radio_n").prop("checked", true);
+    $("#" + rule + "_comments").prop("value", "").prop("disabled", false);
+  }
+}
 
 // Rudimentary form validation based on 4 info fields having something in them
 // TODO: Add validation based on info fields + all BRs evaluated

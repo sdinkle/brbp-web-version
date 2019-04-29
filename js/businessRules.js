@@ -17,7 +17,7 @@ var businessRulesList =
   // ruleNumber: A string representing the number of the rule. Always in the form "n.n.[...].n"
   // ruleName: A string representing the name of the rule.
   // ruleDescriptionMarkup: An HTML-formatted string containing the rule description. <p> tags encouraged to separate multiline rules. <ul> tags may be used as well. Double-quotes will need to be escaped.
-  // ruleNA: A string that states whether a given rule can be non-applicable. A value of "assessment" indicates a rule that only applies to assessments, and a value of "non-assessment" indicates a rule that only applies to non-assessments.
+  // ruleSpecificity: A string that states whether a given rule is specific to certain content package types. A value of "assessment" indicates a rule that only applies to assessments, and a value of "non-assessment" indicates a rule that only applies to non-assessments. A value of "non-intro" indicates a rule that does not apply to introductory content.
 
   /**** Design Business Rules ****/
   {
@@ -27,7 +27,7 @@ var businessRulesList =
         ruleNumber: "1.1.1",
         ruleName: "Discrete Independent Content",
         ruleDescriptionMarkup: "<p>Independent LCOs shall be discrete blocks of learning content that do not make reference to placement in a hierarchy or to other LCOs anywhere in the content.</p>",
-        ruleNA: true
+        ruleSpecificity: "non-intro"
       },
       {
         ruleNumber: "1.1.2",
@@ -119,13 +119,13 @@ var businessRulesList =
         ruleNumber: "2.1.9",
         ruleName: "Bookmarking Requirement",
         ruleDescriptionMarkup: "<p>Non-assessment LCOs shall contain functionality to bookmark the learner's progress whenever the learner exits the content.</p>",
-        ruleNA: "non-assessment"
+        ruleSpecificity: "non-assessment"
       },
       {
         ruleNumber: "2.1.10",
         ruleName: "Assessment Data Obfuscation",
         ruleDescriptionMarkup: "<p>Credit-producing assessment learning content must obfuscate question and answer data so that the data is not in a plaintext format easily recognizable by the learner.</p>",
-        ruleNA: "assessment"
+        ruleSpecificity: "assessment"
       },
       {
         ruleNumber: "2.1.11",
@@ -161,13 +161,13 @@ var businessRulesList =
         ruleNumber: "2.2.5",
         ruleName: "Assessment Objective Satisfaction",
         ruleDescriptionMarkup: "<p>SCORM 2004 3rd Edition assessment SCOs shall include the <code>imsss:primaryObjective</code> element in the manifest and set the <code>satisfiedByMeasure</code> attribute of the element to \"true\".</p>",
-        ruleNA: "assessment"
+        ruleSpecificity: "assessment"
       },
       {
         ruleNumber: "2.2.6",
         ruleName: "Assessment Mastery Score Declaration",
         ruleDescriptionMarkup: "<p>SCORM 2004 3rd Edition assessment SCOs shall include a <code>imsss:primaryObjective</code> element in the manifest and declare a mastery score using the <code>imsss:minNormalizedMeasure</code> element.</p>",
-        ruleNA: "assessment"
+        ruleSpecificity: "assessment"
       },
       {
         ruleNumber: "2.2.7",
@@ -198,7 +198,7 @@ var businessRulesList =
           "<li>cmi.interactions.n.type</li>" +
           "<li>cmi.interactions.n.result</li>" +
           "</code></ul>",
-        ruleNA: "assessment"
+        ruleSpecificity: "assessment"
       },
       {
         ruleNumber: "2.2.9",
@@ -218,7 +218,7 @@ var businessRulesList =
           "<li>cmi.location</li>" +
           "<li>cmi.session_time</li>" +
           "</code></ul>",
-        ruleNA: "non-assessment"
+        ruleSpecificity: "non-assessment"
       },
       {
         ruleNumber: "2.2.10",
