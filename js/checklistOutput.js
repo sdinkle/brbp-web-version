@@ -200,4 +200,4 @@ function getCommentsMarkup(commentElement) {
   // Replace any LFs or CRLFs with a closing followed by an opening <p> tag.
   var lineBreakRegex = /\r?\n+/g;
   return commentsStr.replace(lineBreakRegex,"</p><p>");
-}
+} // End getCommentsMarkup(commentElement)

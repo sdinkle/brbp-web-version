@@ -90,7 +90,7 @@ code {
   border-bottom: 1px solid;
 }
 #courseInfo, #evaluationInfo {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 #courseInfo {
   margin: 20px 0px;
@@ -123,7 +123,7 @@ input[type=text] {
   font-size: 1.25em;
 }
 .businessRuleSection {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   margin: 20px auto;
   border-bottom: 1px solid;
 }
@@ -138,6 +138,9 @@ input[type=text] {
   border: none;
   padding-bottom: 0;
 }
+.brNA {
+  color: #bbb;
+}
 .ruleText {
   margin: 10px 0px;
 }
@@ -149,6 +152,12 @@ input[type=text] {
 }
 .radioGroup input[type=radio] {
   margin-right: 0.2em;
+}
+.radioGroup .radio_na {
+  display: none;
+}
+textarea {
+  color: inherit;
 }
 #instructions .section-title {
   background: #324e84;
