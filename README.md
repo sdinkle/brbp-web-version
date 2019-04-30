@@ -13,7 +13,7 @@ The web form contains fields for the following information:
 * **Evaluator name:** Enter the full name of the person performing the final evaluation on this package.
 * **Organization name:** Enter the name of the organization that the person above represents.
 
-Upon completing the web form, you can generate a pre-formatted checklist that should be saved as a PDF through the browser's Print function, electronically signed (using software such as Adobe Reader), and included as part of the package's deliverables.
+Upon completing the web form, you can generate a pre-formatted checklist that should be saved as a PDF through the browser's Print function, electronically signed (using software such as Adobe Reader), and included as part of the package's deliverables. [View a completed checklist generated using Google Chrome and electronically signed using Adobe Reader.](examples/BRBP_CCC%20Module%201%20Exam.pdf)
 
 When creating more than one checklist, you can simply leave the generated checklist open and change the information on the web form. When you select "Generate Checklist" again, the checklist will update with the new information. Use this method to quickly generate multiple checklists at a time.
 
