@@ -226,7 +226,11 @@ function setRuleDisabledStatus(rule, isDisabled, commentStr) {
 // evt: Holds the event that fired the function. We use it to grab the pressed key.
 function validateKeypress(evt) {
   if (evt.key.match(/[^\s\w\-!@#$%\^&*()+=,.?/;:'"\\]/)) {
+
+    // Prevent the input.
     evt.preventDefault();
+
+    // TODO: Display some kind of helpful message.
     console.log("You can't enter " + evt.key);
   }
 }

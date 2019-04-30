@@ -16,7 +16,7 @@ function openChecklistOutputPopup() {
 function constructChecklistOutput() {
 
   // Declare the string that contains the page HTML and begin constructing the webpage.
-  var outputHtmlString = "<!DOCTYPE HTML><html><head>";
+  var outputHtmlString = "<!DOCTYPE html><html><head>";
 
   // Set title of window to "BRBP_<packageName>".
   outputHtmlString += "<title>BRBP_" + $('#packageName').val() + "</title>";
