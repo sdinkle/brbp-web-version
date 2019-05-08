@@ -141,6 +141,18 @@ input[type=text] {
 .ruleText {
   margin: 10px 0px;
 }
+.ruleVerify {
+  font-size: 0.8em;
+}
+.ruleVerify span {
+  background: #ffd09f;
+  padding: 0.4em;
+  border-radius: 0.8em;
+  margin-right: 0.35em;
+}
+.grayedOut .ruleVerify span {
+  background: #ffe8cf;
+}
 .radioGroup {
   margin: 10px 0px;
 }

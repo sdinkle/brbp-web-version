@@ -8,8 +8,9 @@ function constructChecklistForm() {
   // brSecDiv: Holds the businessRuleSection div.
   // brDiv: Holds the businessRule div.
   // brRuleTextDiv: Holds the ruleText div.
+  // brRuleVerifyDiv: Holds the ruleVerify div.
   // brRadioDiv: Holds the radioGroup div.
-  var brsDiv, brSecDiv, brDiv, brRuleTextDiv, brRadioDiv;
+  var brsDiv, brSecDiv, brDiv, brRuleTextDiv, brRuleVerifyDiv, brRadioDiv;
 
   // Grab businessRules div.
   brsDiv = $('#businessRules');
@@ -58,6 +59,16 @@ function constructChecklistForm() {
       // Add the inner elements to the ruleText div. Populate the ruleNumber, ruleName, and ruleDescriptionMarkup spans.
       brRuleTextDiv.append("<h3>Business Rule <span class='ruleNumber'>" + brListRuleObj.ruleNumber + "</span>: <span class='ruleName'>" + brListRuleObj.ruleName + "</span></h3>");
       brRuleTextDiv.append("<div class='ruleDescriptionMarkup'>" + brListRuleObj.ruleDescriptionMarkup + "</div>");
+
+      // Begin building the verification div.
+      brDiv.append("<div id='" + ruleIdStr + "_ruleVerify' class='ruleVerify'>");
+      brRuleVerifyDiv = $("#" + ruleIdStr + "_ruleVerify");
+      brRuleVerifyDiv.append("Verification: ");
+
+      // Add each verification tag to the current ruleVerify div.
+      for (var k = 0; k < brListRuleObj.ruleVerify.length; k++) {
+        brRuleVerifyDiv.append("<span>" + brListRuleObj.ruleVerify[k]);
+      }
 
       // Begin building the radio group div.
       brDiv.append("<div id='" + ruleIdStr + "_radioGroup' class='radioGroup'>");
