@@ -1,29 +1,36 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI (MOCKUP)</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link rel="shortcut icon" href="../img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="../css/checklistForm.css">
+    <link rel="stylesheet" type="text/css" href="../css/util/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/checklistForm.css"> -->
+
+    <title>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI (MOCKUP)</title>
   </head>
-  <body>
+  <body class="bg-light">
 
     <!-- Header -->
     <header>
-      <div class="header-container">
-        <img src="../img/armyu_tadlp.png" alt="The Army Distributed Learning Program">
-        <h1>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI (MOCKUP)</h1>
-      </div>
+      <nav class="navbar navbar-expand-md fixed-top bg-dark shadow">
+        <div class="navbar-brand">
+          <img class="d-inline-block" src="../img/armyu_tadlp.png" alt="The Army Distributed Learning Program" width="34">
+          <span id="pageTitle" class="navbar-text text-white">Army Business Rules Checklist for SCORM 2004 3rd Edition CMI (MOCKUP)</span>
+        </div>
+      </nav>
     </header>
 
     <!-- Main div -->
-    <div id="main">
+    <div id="main" style="padding-top:5rem">
 
       <!-- Instructions -->
-      <section id="instructions">
-        <div class="section-title">
-          <h2>Instructions</h2>
+      <section id="instructions" class="container bg-white border rounded shadow-sm my-3">
+        <div class="section-title row bg-primary px-3 py-2">
+          <h2 class="text-white">Instructions</h2>
         </div>
-        <div class="section-body">
+        <div class="section-body border-top row px-3 pt-3">
           <p>This web form is an online version of the <a href="https://tadlp.github.io/brbp/docs/brbp-checklist" target="_blank">Army BRBP SCORM 2004 CMI Checklist</a>. It is intended for use by the ADLPA's designated point-of-contact upon completing development of a DL package before submitting it to the Army.</p>
           <p>The web form contains fields for the following information:</p>
           <ul>
@@ -42,18 +49,20 @@
       </section> <!-- End Instructions -->
 
       <!-- Course information -->
-      <section id="courseInfo">
-        <div class="section-title">
-          <h2>Course and Package Information</h2>
+      <section id="courseInfo" class="infoSection container border rounded shadow-sm my-3">
+        <div class="section-title row bg-info px-3 py-2">
+          <h2 class="text-white">Course and Package Information</h2>
         </div>
-        <div class="section-body">
-          <div id="courseInfoCourseName" class="infoElem">
+        <div class="section-body container my-3">
+          <div id="courseInfoCourseName" class="infoElem row my-3">
             <label for="courseName">Course name</label>
-            <input type="text" id="courseName" name="courseName" required="" maxlength="100" size="80" placeholder="Enter course name">
+            <div class="input-group">
+              <input type="text" id="courseName" class="form-control" name="courseName" required="" maxlength="100" placeholder="Enter course name">
+            </div>
           </div>
-          <div id="courseInfoPackageName" class="infoElem">
+          <div id="courseInfoPackageName" class="infoElem row my-3">
             <label for="packageName">Package name</label>
-            <input type="text" id="packageName" name="packageName" required="" maxlength="100" size="80" placeholder="Enter package name">
+            <input type="text" id="packageName" class="form-control" name="packageName" required="" maxlength="100" size="80" placeholder="Enter package name">
           </div>
         </div>
       </section> <!-- End Course information -->
@@ -62,38 +71,48 @@
       <div id="businessRules">
 
         <!-- Design Business Rules -->
-        <section id="businessRuleSection_Design" class="businessRuleSection">
+        <section id="businessRuleSection_Design" class="businessRuleSection container border rounded shadow-sm my-3">
 
-          <div class="section-title">
-            <h2><span class="ruleSectionName">Design Business Rules</span></h2>
+          <div class="section-title row bg-secondary px-3 py-2">
+            <h2><span class="ruleSectionName text-white">Design Business Rules</span></h2>
           </div>
 
            <!-- Design Section body -->
           <div class="section-body">
 
             <!-- 1.1.1 -->
-            <div id="1-1-1" class="businessRule">
+            <div id="1-1-1" class="businessRule container border-top px-1 py-3">
               <div id="1-1-1_ruleText" class="ruleText">
                 <h3>Business Rule <span class="ruleNumber">1.1.1</span>: <span class="ruleName">Discrete Independent Content</span></h3>
                 <div class="ruleDescriptionMarkup">
                   <p>Independent LCOs shall be discrete blocks of learning content that do not make reference to placement in a hierarchy or to other LCOs anywhere in the content.</p>
                 </div>
               </div>
-              <div id="1-1-1_radioGroup" class="radioGroup">
-                <label for="1-1-1_radioGroup">Rating:</label>
-                <input type="radio" id="1-1-1_radio_y" name="1-1-1_radio" value="Y">
-                <label for="1-1-1_radio_y">Yes</label>
-                <input type="radio" id="1-1-1_radio_n" name="1-1-1_radio" value="N">
-                <label for="1-1-1_radio_n">No</label>
-                <input type="radio" id="1-1-1_radio_na" name="1-1-1_radio" value="N/A">
-                <label for="1-1-1_radio_na">N/A</label>
+              <div id="1-1-1_radioGroup" class="radioGroup container">
+                <label class="row my-0" for="1-1-1_radioGroup">Rating:</label>
+                <div class="row">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="1-1-1_radio_y" name="1-1-1_radio" value="Y">
+                    <label class="form-check-label" for="1-1-1_radio_y">Yes</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="1-1-1_radio_n" name="1-1-1_radio" value="N">
+                    <label class="form-check-label" for="1-1-1_radio_n">No</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="1-1-1_radio_na" name="1-1-1_radio" value="N/A">
+                    <label class="form-check-label" for="1-1-1_radio_na">N/A</label>
+                  </div>
+                </div>
               </div>
-              <label for="1-1-1_comments">Additional comments:</label><br>
-              <textarea id="1-1-1_comments" name="1-1-1_comments" rows="3" cols="60" maxlength="512"></textarea>
+              <div class="mt-3">
+                <label for="1-1-1_comments">Additional comments:</label>
+                <textarea id="1-1-1_comments" name="1-1-1_comments" class="form-control" maxlength="512"></textarea>
+              </div>
             </div> <!-- End 1.1.1 -->
 
             <!-- 1.2.2 -->
-            <div id="1-2-2" class="businessRule">
+            <div id="1-2-2" class="businessRule container border-top px-1 py-3">
               <div id="1-2-2_ruleText" class="ruleText">
                 <h3>Business Rule <span class="ruleNumber">1.2.2</span>: <span class="ruleName">Army Metadata Fields</span></h3>
                 <div class="ruleDescriptionMarkup">
@@ -119,7 +138,7 @@
                 <label for="1-2-2_radio_na">N/A</label>
               </div>
               <label for="1-2-2_comments">Additional comments:</label><br>
-              <textarea id="1-2-2_comments" name="1-2-2_comments" rows="3" cols="60" maxlength="512"></textarea>
+              <textarea id="1-2-2_comments" name="1-2-2_comments" class="form-control" maxlength="512"></textarea>
             </div> <!-- End 1.1.2 -->
 
           </div> <!-- End Design Section body -->
@@ -127,17 +146,17 @@
         </section> <!-- End Design Business Rules -->
 
         <!-- Development Business Rules -->
-        <section id="businessRuleSection_Development" class="businessRuleSection">
+        <section id="businessRuleSection_Development" class="businessRuleSection container border rounded shadow-sm my-3">
 
-          <div class="section-title">
-            <h2><span class="ruleSectionName">Development Business Rules</span></h2>
+          <div class="section-title row bg-secondary px-3 py-2">
+            <h2><span class="ruleSectionName text-white">Development Business Rules</span></h2>
           </div>
 
           <!-- Development Section body -->
           <div class="section-body">
 
             <!-- 2.1.1 -->
-            <div id="2-1-1" class="businessRule">
+            <div id="2-1-1" class="businessRule container border-top px-1 py-3">
               <div id="2-1-1_ruleText" class="ruleText">
                 <h3>Business Rule <span class="ruleNumber">2.1.1</span>: <span class="ruleName">Allowable File Name Characters</span></h3>
                 <div class="ruleDescriptionMarkup">
@@ -155,7 +174,7 @@
                 <label for="2-1-1_radio_na">N/A</label>
               </div>
               <label for="2-1-1_comments">Additional comments:</label><br>
-              <textarea id="2-1-1_comments" name="2-1-1_comments" rows="3" cols="60" maxlength="512"></textarea>
+              <textarea id="2-1-1_comments" name="2-1-1_comments" class="form-control" maxlength="512"></textarea>
             </div> <!-- End 2.1.1 -->
 
           </div> <!-- End Development Section body -->
@@ -165,36 +184,36 @@
       </div> <!-- End Business rules div -->
 
       <!-- Evaluation information -->
-      <section id="evaluationInfo">
-        <div class="section-title">
-          <h2>Evaluation Information</h2>
+      <section id="evaluationInfo" class="infoSection container border rounded shadow-sm my-3">
+        <div class="section-title row bg-info px-3 py-2">
+          <h2 class="text-white">Evaluation Information</h2>
         </div>
-        <div class="section-body">
-          <div id="evaluationInfoEvaluatorName" class="infoElem">
+        <div class="section-body container my-3">
+          <div id="evaluationInfoEvaluatorName" class="infoElem row my-3">
             <label for="evaluatorName">Evaluator name</label>
-            <input type="text" id="evaluatorName" name="evaluatorName" required="" maxlength="80" size="80" placeholder="Enter evaluator name">
+            <input type="text" id="evaluatorName" class="form-control" name="evaluatorName" required="" maxlength="80" placeholder="Enter evaluator name">
           </div>
-          <div id="evaluationInfoOrgName" class="infoElem">
+          <div id="evaluationInfoOrgName" class="infoElem row my-3">
             <label for="orgName">Organization name</label>
-            <input type="text" id="orgName" name="orgName" required="" maxlength="80" size="80" placeholder="Enter evaluator organization">
+            <input type="text" id="orgName" class="form-control" name="orgName" required="" maxlength="80" placeholder="Enter evaluator organization">
           </div>
         </div>
       </section> <!-- End Evaluation information -->
 
       <!-- Submit div -->
-      <div id="submitDiv">
+      <div id="submitDiv" class="container my-3">
         <p><strong>By submitting this checklist, you certify on behalf of your organization that all of the above information is true.</strong></p>
         <!-- <button id="generateChecklist" type="button" disabled onclick="window.open('mockChecklistOutput.html')">Generate Checklist</button> -->
-        <button id="generateChecklist" type="button" onclick="window.open('mockChecklistOutput.html')">Open Mock Output</button>
+        <button id="generateChecklist" class="btn btn-success btn-lg" type="button" onclick="window.open('mockChecklistOutput.html')">Open Mock Output</button>
       </div> <!-- End Submit div -->
 
     </div> <!-- End Main div-->
 
     <!-- script includes -->
-    <script src="js/jquery-3.4.0.min.js"></script>
-    <script src="js/businessRules.js"></script>
-    <script src="js/checklistOutput.js"></script>
-    <script src="js/checklistForm.js"></script>
+    <script src="../js/util/jquery-3.4.0.min.js"></script>
+    <script src="../js/businessRules.js"></script>
+    <script src="../js/checklistOutput.js"></script>
+    <script src="../js/checklistForm.js"></script>
     <!-- End script includes -->
 
     <!-- Start the show! -->

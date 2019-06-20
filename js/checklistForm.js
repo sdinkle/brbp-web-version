@@ -10,7 +10,7 @@ function constructChecklistForm() {
   // brRuleTextDiv: Holds the ruleText div.
   // brRuleVerifyDiv: Holds the ruleVerify div.
   // brRadioDiv: Holds the radioGroup div.
-  var brsDiv, brSecDiv, brDiv, brRuleTextDiv, brRuleVerifyDiv, brRadioDiv;
+  var brsDiv, brSecDiv, brDiv, brRuleTextDiv, brRuleVerifyDiv, brRadioDiv, brRadioGroupRadiosDiv, brTextAreaDiv;
 
   // Grab businessRules div.
   brsDiv = $('#businessRules');
@@ -30,11 +30,11 @@ function constructChecklistForm() {
     var ruleSectionNameIdStr = ("businessRuleSection_" + (brListSecObj.ruleSectionName).trim()).replace(/\s/g, "_");
 
     // Begin building the businessRuleSection div.
-    brsDiv.append("<section id='" + ruleSectionNameIdStr + "' class='businessRuleSection'>");
+    brsDiv.append("<section id='" + ruleSectionNameIdStr + "' class='businessRuleSection container border rounded shadow-sm my-3'>");
 
     // Populate ruleSectionName span.
     brSecDiv = $("#" + ruleSectionNameIdStr);
-    brSecDiv.append('<div class="section-title"><h2><span class="ruleSectionName">' + brListSecObj["ruleSectionName"] + ' Business Rules</h2></div>');
+    brSecDiv.append('<div class="section-title row bg-secondary px-3 py-2"><h2><span class="ruleSectionName text-white">' + brListSecObj["ruleSectionName"] + ' Business Rules</h2></div>');
     brSecDiv.append('<div class="section-body">');
     brSecDiv = $("#" + ruleSectionNameIdStr + " > .section-body");
 
@@ -49,7 +49,7 @@ function constructChecklistForm() {
       var ruleIdStr = convertRuleNumToIdStr(brListRuleObj.ruleNumber);
 
       // Begin building the businessRule div.
-      brSecDiv.append("<div id='" + ruleIdStr + "' class='businessRule'>");
+      brSecDiv.append("<div id='" + ruleIdStr + "' class='businessRule container border-top px-1 py-3'>");
       brDiv = $("#" + ruleIdStr);
 
       // Begin building the ruleText div.
@@ -71,19 +71,32 @@ function constructChecklistForm() {
       }
 
       // Begin building the radio group div.
-      brDiv.append("<div id='" + ruleIdStr + "_radioGroup' class='radioGroup'>");
+      brDiv.append("<div id='" + ruleIdStr + "_radioGroup' class='radioGroup container'>");
       brRadioDiv = $("#" + ruleIdStr + "_radioGroup");
 
       // Build the "Rating" label.
-      brRadioDiv.append("<label for='" + ruleIdStr + "_radioGroup'>Rating:</label>");
+      brRadioDiv.append("<label id='" + ruleIdStr + "_radioGroupLabel' class='row my-0' for='" + ruleIdStr + "_radioGroup'>Rating:</label>");
 
+      // TODO: Build out the row div for the radios
+      brRadioDiv.append("<div id='" + ruleIdStr + "_radioGroupRadios' class='row'>");
+      brRadioGroupRadiosDiv = $("#" + ruleIdStr + "_radioGroupRadios");
+
+      // Encase each radio with form-check and form-check-inline divs
       // Build the "Yes" radio item.
-      brRadioDiv.append("<input type='radio' id='" + ruleIdStr + "_radio_y' name='" + ruleIdStr + "_radio' value='Y'>");
-      brRadioDiv.append("<label for='" + ruleIdStr + "_radio_y'>Yes</label>");
+      brRadioGroupRadiosDiv.append(
+        $("<div class='form-check form-check-inline'>")
+        .append(
+          "<input class='form-check-input' type='radio' id='" + ruleIdStr + "_radio_y' name='" + ruleIdStr + "_radio' value='Y'><label class='form-check-label' for='" + ruleIdStr + "_radio_y'>Yes</label>"
+        )
+      );
 
       // Build the "No" radio item.
-      brRadioDiv.append("<input type='radio' id='" + ruleIdStr + "_radio_n' name='" + ruleIdStr + "_radio' value='N' checked>");
-      brRadioDiv.append("<label for='" + ruleIdStr + "_radio_n'>No</label>");
+      brRadioGroupRadiosDiv.append(
+        $("<div class='form-check form-check-inline'>")
+        .append(
+          "<input class='form-check-input' type='radio' id='" + ruleIdStr + "_radio_n' name='" + ruleIdStr + "_radio' value='N' checked><label class='form-check-label' for='" + ruleIdStr + "_radio_n'>No</label>"
+        )
+      );
 
       // Build the "N/A" radio item if this rule applies in a specific context.
       if (brListRuleObj.ruleSpecificity) {
@@ -95,13 +108,19 @@ function constructChecklistForm() {
           brNonAssessment.push(ruleIdStr);
         }
 
-        brRadioDiv.append("<input type='radio' id='" + ruleIdStr + "_radio_na' class='radio_na' name='" + ruleIdStr + "_radio' value='N/A' disabled>");
-        brRadioDiv.append("<label class='radio_na' for='" + ruleIdStr + "_radio_na'>N/A</label>");
+        brRadioGroupRadiosDiv.append(
+          $("<div class='form-check form-check-inline'>")
+          .append(
+            "<input class='form-check-input d-none' type='radio' id='" + ruleIdStr + "_radio_na' name='" + ruleIdStr + "_radio' value='N/A'><label class='form-check-label d-none' for='" + ruleIdStr + "_radio_na'>N/A</label>"
+          )
+        );
       }
 
       // Build the textarea div.
-      brDiv.append("<label for='" + ruleIdStr + "_comments'>Additional comments:</label><br>")
-      brDiv.append("<textarea id='" + ruleIdStr + "_comments' name='" + ruleIdStr + "_comments' rows='3' cols='60' maxlength='512'></textarea>");
+      brDiv.append("<div id='" + ruleIdStr + "_textarea' class='mt-3'>");
+      brTextAreaDiv = $("#" + ruleIdStr + "_textarea");
+      brTextAreaDiv.append("<label for='" + ruleIdStr + "_comments'>Additional comments:</label>")
+      brTextAreaDiv.append("<textarea id='" + ruleIdStr + "_comments' name='" + ruleIdStr + "_comments' class='form-control' maxlength='512'></textarea>");
 
     } // End businessRuleSection loop.
 
@@ -160,7 +179,7 @@ function toggleExamNA(val) {
       $("#isIntro_radio_n").click();
 
       // Disable the isIntro radio item.
-      $("#isIntro_radioGroup").addClass("grayedOut");
+      $("#isIntro_radioGroup").addClass("disabled");
       $("#isIntro_radio_y").prop("checked", false).prop("disabled", true);
       $("#isIntro_radio_n").prop("checked", true).prop("disabled", true);
 
@@ -173,7 +192,7 @@ function toggleExamNA(val) {
       commentStrSnip = " non-";
 
       // Enable the isIntro radio item.
-      $("#isIntro_radioGroup").removeClass("grayedOut");
+      $("#isIntro_radioGroup").removeClass("disabled");
       $("#isIntro_radio_y").prop("disabled", false);
       $("#isIntro_radio_n").prop("disabled", false);
 
@@ -219,14 +238,14 @@ function setRuleDisabledStatus(rule, isDisabled, commentStr) {
   if (isDisabled) {
 
     // Disable the rule.
-    $("#" + rule).addClass("grayedOut");
+    $("#" + rule).addClass("text-black-50");
     $("#" + rule + "_radio_y, #" + rule + "_radio_n").prop("checked", false).prop("disabled", true);
     $("#" + rule + "_radio_na").prop("checked", true);
     $("#" + rule + "_comments").prop("value", commentStr).prop("disabled", true).attr("style", "").css("resize", "none");
   } else {
 
     // Enable the rule.
-    $("#" + rule).removeClass("grayedOut");
+    $("#" + rule).removeClass("text-black-50");
     $("#" + rule + "_radio_y, #" + rule + "_radio_n").prop("disabled", false);
     $("#" + rule + "_radio_n").prop("checked", true);
     $("#" + rule + "_comments").prop("value", "").prop("disabled", false).css("resize", "both");
