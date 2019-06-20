@@ -5,30 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="shortcut icon" href="img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="css/checklistForm.css">
     <link rel="stylesheet" type="text/css" href="css/util/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/checklistForm.css"> -->
 
     <title>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI</title>
   </head>
-  <body>
+  <body class="bg-light">
 
     <!-- Header -->
     <header>
-      <div class="header-container">
-        <img src="img/armyu_tadlp.png" alt="The Army Distributed Learning Program">
-        <h1 id="pageTitle">Army Business Rules Checklist for SCORM 2004 3rd Edition CMI</h1>
-      </div>
+      <nav class="navbar navbar-expand-md fixed-top bg-dark shadow">
+        <div class="navbar-brand">
+          <img class="d-inline-block" src="img/armyu_tadlp.png" alt="The Army Distributed Learning Program" width="34">
+          <span id="pageTitle" class="navbar-text text-white">Army Business Rules Checklist for SCORM 2004 3rd Edition CMI</span>
+        </div>
+      </nav>
     </header>
 
     <!-- Main div -->
-    <div id="main">
+    <main id="main" style="padding-top:5rem">
 
       <!-- Instructions -->
-      <section id="instructions">
-        <div class="section-title">
-          <h2>Instructions</h2>
+      <section id="instructions" class="container bg-white border rounded shadow-sm my-4">
+        <div class="section-title row bg-primary px-3 py-2">
+          <h2 class="text-white">Instructions</h2>
         </div>
-        <div class="section-body">
+        <div class="section-body border-top row px-3 pt-3">
           <p>This web form is an online version of the <a href="https://tadlp.github.io/brbp/docs/brbp-checklist" target="_blank">Army BRBP SCORM 2004 CMI Checklist</a>. It is intended for use by the ADLPA's designated point-of-contact upon completing development of a DL package before submitting it to the Army.</p>
           <p>The web form contains fields for the following information:</p>
           <ul>
@@ -53,32 +55,44 @@
       </section> <!-- End Instructions -->
 
       <!-- Course information -->
-      <section id="courseInfo" class="infoSection">
-        <div class="section-title">
-          <h2>Course and Package Information</h2>
+      <section id="courseInfo" class="infoSection container border rounded shadow-sm my-3">
+        <div class="section-title row bg-info px-3 py-2">
+          <h2 class="text-white">Course and Package Information</h2>
         </div>
-        <div class="section-body">
-          <div id="courseInfoCourseName" class="infoElem">
+        <div class="section-body container my-3">
+          <div id="courseInfoCourseName" class="infoElem row my-3">
             <label for="courseName">Course name</label>
-            <input type="text" id="courseName" name="courseName" required maxlength="100" size="80" placeholder="Enter course name">
+            <input type="text" id="courseName" class="form-control" name="courseName" required="" maxlength="100" placeholder="Enter course name">
           </div>
-          <div id="courseInfoPackageName" class="infoElem">
+          <div id="courseInfoPackageName" class="infoElem row my-3">
             <label for="packageName">Package name</label>
-            <input type="text" id="packageName" name="packageName" required maxlength="100" size="80" placeholder="Enter package name">
+            <input type="text" id="packageName" class="form-control" name="packageName" required="" maxlength="100" size="80" placeholder="Enter package name">
           </div>
-          <div id="isExam_radioGroup" class="radioGroup">
-            <label for="isExam_radio">Does this content package include a scoring assessment?</label>
-            <input type="radio" id="isExam_radio_y" name="isExam_radio" value="Y">
-            <label for="isExam_radio_y">Yes</label>
-            <input type="radio" id="isExam_radio_n" name="isExam_radio" value="N">
-            <label for="isExam_radio_n">No</label>
+          <div id="isExam_radioGroup" class="radioGroup container my-3 px-0">
+            <label class="row" for="isExam_radio">Does this content package include a scoring assessment?</label>
+            <div class="row">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="isExam_radio_y" name="isExam_radio" value="Y">
+                <label class="form-check-label" for="isExam_radio_y">Yes</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="isExam_radio_n" name="isExam_radio" value="N">
+                <label class="form-check-label" for="isExam_radio_n">No</label>
+              </div>
+            </div>
           </div>
-          <div id="isIntro_radioGroup" class="radioGroup">
-            <label for="isIntro_radio">If not, does this content package serve as an introduction to a module or course?</label>
-            <input type="radio" id="isIntro_radio_y" name="isIntro_radio" value="Y">
-            <label for="isIntro_radio_y">Yes</label>
-            <input type="radio" id="isIntro_radio_n" name="isIntro_radio" value="N">
-            <label for="isIntro_radio_n">No</label>
+          <div id="isIntro_radioGroup" class="radioGroup container my-3 px-0">
+            <label class="row" for="isIntro_radio">If not, does this content package serve as an introduction to a module or course?</label>
+            <div class="row">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="isIntro_radio_y" name="isIntro_radio" value="Y">
+                <label class="form-check-label" for="isIntro_radio_y">Yes</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="isIntro_radio_n" name="isIntro_radio" value="N">
+                <label class="form-check-label" for="isIntro_radio_n">No</label>
+              </div>
+            </div>
           </div>
         </div>
       </section> <!-- End Course information -->
@@ -86,45 +100,47 @@
       <!-- Business rules div -->
       <div id="businessRules">
         <!-- This is where the magic happens -->
-        <section id="loadingScript" class="businessRuleSection">
-          <div class="section-body">
-            <h3>Loading the checklist. Please wait...</h3>
+        <section id="loadingScript" class="businessRuleSection container border rounded shadow-sm my-3">
+          <div class="section-title row bg-secondary px-3 py-2">
+            <h3 class="text-white">Loading the checklist. Please wait...</h3>
+          </div>
+          <div class="section-body border-top row px-3 pt-3">
             <p>If nothing appears here after several seconds, make sure that JavaScript is enabled and allowed to run on this page.</p>
           </div>
         </section>
       </div> <!-- End Business rules div -->
 
       <!-- Evaluation information -->
-      <section id="evaluationInfo" class="infoSection">
-        <div class="section-title">
-          <h2>Evaluation Information</h2>
+      <section id="evaluationInfo" class="infoSection container border rounded shadow-sm my-3">
+        <div class="section-title row bg-info px-3 py-2">
+          <h2 class="text-white">Evaluation Information</h2>
         </div>
-        <div class="section-body">
-          <div id="evaluationInfoEvaluatorName" class="infoElem">
+        <div class="section-body container my-3">
+          <div id="evaluationInfoEvaluatorName" class="infoElem row my-3">
             <label for="evaluatorName">Evaluator name</label>
-            <input type="text" id="evaluatorName" name="evaluatorName" required="" maxlength="80" size="80" placeholder="Enter evaluator name">
+            <input type="text" id="evaluatorName" class="form-control" name="evaluatorName" required="" maxlength="80" placeholder="Enter evaluator name">
           </div>
-          <div id="evaluationInfoOrgName" class="infoElem">
+          <div id="evaluationInfoOrgName" class="infoElem row my-3">
             <label for="orgName">Organization name</label>
-            <input type="text" id="orgName" name="orgName" required="" maxlength="80" size="80" placeholder="Enter evaluator organization">
+            <input type="text" id="orgName" class="form-control" name="orgName" required="" maxlength="80" placeholder="Enter evaluator organization">
           </div>
         </div>
       </section> <!-- End Evaluation information -->
 
       <!-- Submit div -->
-      <div id="submitDiv">
+      <div id="submitDiv" class="container text-center my-3">
         <p><strong>By submitting this checklist, you certify on behalf of your organization that all of the above information is true.</strong></p>
-        <button id="generateChecklist" type="button" disabled onclick="openChecklistOutputPopup()">Generate Checklist</button>
+        <button id="generateChecklist" class="btn btn-success btn-lg shadow mb-5" type="button" disabled onclick="openChecklistOutputPopup()">Generate Checklist</button>
       </div> <!-- End Submit div -->
 
-    </div> <!-- End Main div-->
+    </main> <!-- End Main div-->
 
     <!-- script includes -->
+    <script src="js/util/jquery-3.4.0.min.js"></script>
+    <script src="js/util/bootstrap.bundle.min.js"></script>
     <script src="js/businessRules.js"></script>
     <script src="js/checklistOutput.js"></script>
     <script src="js/checklistForm.js"></script>
-    <script src="js/util/jquery-3.4.0.min.js"></script>
-    <script src="js/util/bootstrap.bundle.min.js"></script>
     <!-- End script includes -->
 
     <!-- Start the show! -->
