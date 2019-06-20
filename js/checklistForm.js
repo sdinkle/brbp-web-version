@@ -63,11 +63,11 @@ function constructChecklistForm() {
       // Begin building the verification div.
       brDiv.append("<div id='" + ruleIdStr + "_ruleVerify' class='ruleVerify'>");
       brRuleVerifyDiv = $("#" + ruleIdStr + "_ruleVerify");
-      brRuleVerifyDiv.append("Verification: ");
+      brRuleVerifyDiv.append("Verification:");
 
       // Add each verification tag to the current ruleVerify div.
       for (var k = 0; k < brListRuleObj.ruleVerify.length; k++) {
-        brRuleVerifyDiv.append("<span>" + brListRuleObj.ruleVerify[k]);
+        brRuleVerifyDiv.append("<span class='badge badge-info ml-1'>" + brListRuleObj.ruleVerify[k]);
       }
 
       // Begin building the radio group div.
