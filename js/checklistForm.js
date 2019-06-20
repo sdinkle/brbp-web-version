@@ -76,19 +76,11 @@ function constructChecklistForm() {
 
       // Build the "Rating" label.
       brRadioDiv.append("<label id='" + ruleIdStr + "_radioGroupLabel' class='row my-0' for='" + ruleIdStr + "_radioGroup'>Rating:</label>");
-<<<<<<< HEAD
 
       // TODO: Build out the row div for the radios
       brRadioDiv.append("<div id='" + ruleIdStr + "_radioGroupRadios' class='row'>");
       brRadioGroupRadiosDiv = $("#" + ruleIdStr + "_radioGroupRadios");
 
-=======
-
-      // TODO: Build out the row div for the radios
-      brRadioDiv.append("<div id='" + ruleIdStr + "_radioGroupRadios' class='row'>");
-      brRadioGroupRadiosDiv = $("#" + ruleIdStr + "_radioGroupRadios");
-
->>>>>>> 9c855275150bc49ab74a90856d1f284a08a73d99
       // Encase each radio with form-check and form-check-inline divs
       // Build the "Yes" radio item.
       brRadioGroupRadiosDiv.append(
