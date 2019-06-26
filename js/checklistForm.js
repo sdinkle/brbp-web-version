@@ -16,7 +16,7 @@ function constructChecklistForm() {
   brsDiv = $('#businessRules');
 
   // Remove any existing elements.
-  brsDiv.html("");
+  brsDiv.empty();
 
   // Populate businessRules div with businessRuleSection divs.
   // Iterate over each section object in businessRulesList.
@@ -71,7 +71,7 @@ function constructChecklistForm() {
       }
 
       // Begin building the radio group div.
-      brDiv.append("<div id='" + ruleIdStr + "_radioGroup' class='radioGroup container'>");
+      brDiv.append("<div id='" + ruleIdStr + "_radioGroup' class='radioGroup container my-3'>");
       brRadioDiv = $("#" + ruleIdStr + "_radioGroup");
 
       // Build the "Rating" label.
@@ -109,9 +109,9 @@ function constructChecklistForm() {
         }
 
         brRadioGroupRadiosDiv.append(
-          $("<div class='form-check form-check-inline'>")
+          $("<div class='form-check form-check-inline d-none'>")
           .append(
-            "<input class='form-check-input d-none' type='radio' id='" + ruleIdStr + "_radio_na' name='" + ruleIdStr + "_radio' value='N/A'><label class='form-check-label d-none' for='" + ruleIdStr + "_radio_na'>N/A</label>"
+            "<input class='form-check-input' type='radio' id='" + ruleIdStr + "_radio_na' name='" + ruleIdStr + "_radio' value='N/A'><label class='form-check-label' for='" + ruleIdStr + "_radio_na'>N/A</label>"
           )
         );
       }
