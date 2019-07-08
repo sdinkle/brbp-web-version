@@ -1,0 +1,7 @@
+html {
+  overflow: scroll;
+}
+
+#instructions, #courseInfo, #businessRules, #evaluationInfo, #submitDiv {
+  display: none;
+}

@@ -6,6 +6,7 @@
 
     <link rel="shortcut icon" href="img/favicon.png">
     <link rel="stylesheet" type="text/css" href="css/util/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/checklistForm.css"> -->
 
     <title>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI</title>
@@ -25,8 +26,18 @@
     <!-- Main div -->
     <main id="main" style="padding-top:5rem">
 
+      <!-- Loading message -->
+      <section id="loadingScript" class="businessRuleSection container bg-white border rounded shadow-sm my-3">
+        <div class="section-title row bg-secondary px-3 py-2">
+          <h2 class="text-white">Loading the checklist. Please wait...</h3>
+        </div>
+        <div class="section-body border-top row px-3 pt-3">
+          <p>If nothing appears here after several seconds, make sure that JavaScript is enabled and allowed to run on this page.</p>
+        </div>
+      </section>
+
       <!-- Instructions -->
-      <section id="instructions" class="container bg-white border rounded shadow-sm my-4">
+      <section id="instructions" class="container bg-white border rounded shadow-sm my-3">
         <div class="section-title row bg-primary px-3 py-2">
           <h2 class="text-white">Instructions</h2>
         </div>
@@ -110,14 +121,6 @@
       <!-- Business rules div -->
       <div id="businessRules">
         <!-- This is where the magic happens -->
-        <section id="loadingScript" class="businessRuleSection container border rounded shadow-sm my-3">
-          <div class="section-title row bg-secondary px-3 py-2">
-            <h3 class="text-white">Loading the checklist. Please wait...</h3>
-          </div>
-          <div class="section-body border-top row px-3 pt-3">
-            <p>If nothing appears here after several seconds, make sure that JavaScript is enabled and allowed to run on this page.</p>
-          </div>
-        </section>
       </div> <!-- End Business rules div -->
 
       <!-- Evaluation information -->

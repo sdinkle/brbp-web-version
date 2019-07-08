@@ -145,8 +145,11 @@ function constructChecklistForm() {
     return validateKeypress(e);
   });
 
+  // Make loading section invisible.
+  $("#loadingScript").hide();
+
   // Make info and submit sections visible.
-  $(".infoSection, #submitDiv").show();
+  $("#instructions, #courseInfo, #businessRules, #evaluationInfo, #submitDiv").show();
 
 } // End constructChecklistForm()
 
