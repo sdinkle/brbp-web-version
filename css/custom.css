@@ -1,7 +1,25 @@
 html {
   overflow: scroll;
 }
-
+.bg-brbp-primary {
+  background-color: #314232 !important;
+}
+#pageTitle {
+  font-weight: 600;
+}
 #instructions, #courseInfo, #businessRules, #evaluationInfo, #submitDiv {
   display: none;
+}
+.bg-brbp-secondary {
+  background-color: #324e84 !important;
+}
+.bg-brbp-tertiary {
+  background-color: #205c3b !important;
+}
+.badge-brbp {
+  color: #24292e;
+  background-color: #ffd09f;
+}
+.disabled {
+  opacity: 0.66;
 }

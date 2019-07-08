@@ -34,7 +34,7 @@ function constructChecklistForm() {
 
     // Populate ruleSectionName span.
     brSecDiv = $("#" + ruleSectionNameIdStr);
-    brSecDiv.append('<div class="section-title row bg-secondary px-3 py-2"><h2><span class="ruleSectionName text-white">' + brListSecObj["ruleSectionName"] + ' Business Rules</h2></div>');
+    brSecDiv.append('<div class="section-title row bg-brbp-primary px-3 py-2"><h2><span class="ruleSectionName text-white">' + brListSecObj["ruleSectionName"] + ' Business Rules</h2></div>');
     brSecDiv.append('<div class="section-body">');
     brSecDiv = $("#" + ruleSectionNameIdStr + " > .section-body");
 
@@ -67,7 +67,7 @@ function constructChecklistForm() {
 
       // Add each verification tag to the current ruleVerify div.
       for (var k = 0; k < brListRuleObj.ruleVerify.length; k++) {
-        brRuleVerifyDiv.append("<span class='badge badge-info ml-1'>" + brListRuleObj.ruleVerify[k]);
+        brRuleVerifyDiv.append("<span class='badge badge-brbp ml-1'>" + brListRuleObj.ruleVerify[k]);
       }
 
       // Begin building the radio group div.
@@ -245,14 +245,14 @@ function setRuleDisabledStatus(rule, isDisabled, commentStr) {
   if (isDisabled) {
 
     // Disable the rule.
-    $("#" + rule).addClass("text-black-50");
+    $("#" + rule).addClass("disabled");
     $("#" + rule + "_radio_y, #" + rule + "_radio_n").prop("checked", false).prop("disabled", true);
     $("#" + rule + "_radio_na").prop("checked", true);
     $("#" + rule + "_comments").prop("value", commentStr).prop("disabled", true).attr("style", "").css("resize", "none");
   } else {
 
     // Enable the rule.
-    $("#" + rule).removeClass("text-black-50");
+    $("#" + rule).removeClass("disabled");
     $("#" + rule + "_radio_y, #" + rule + "_radio_n").prop("disabled", false);
     $("#" + rule + "_radio_n").prop("checked", true);
     $("#" + rule + "_comments").prop("value", "").prop("disabled", false).css("resize", "both");
