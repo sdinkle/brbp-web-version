@@ -131,14 +131,18 @@ function constructChecklistForm() {
   $("input[type=radio][name=isExam_radio]").change(function () {
     return toggleExamNA(this.value);
   });
-  $("#isExam_radio_n").click();
+  // $("#isExam_radio_n").click();
+  // Bugfix: Directly invoke event function to prevent misfired click on initial page load
+  toggleExamNA(document.getElementById("isExam_radio_n").value);
 
   // Add the toggleIntroNA function to the isIntro radio in the course info section, then select "No" to trigger the function.
   // Use a closure to pass the radio as a parameter to the event-setting function.
   $("input[type=radio][name=isIntro_radio]").change(function () {
     return toggleIntroNA(this.value);
   });
-  $("#isIntro_radio_n").click();
+  // $("#isIntro_radio_n").click();
+  // Bugfix: Directly invoke event function to prevent misfired click on initial page load
+  toggleExamNA(document.getElementById("isIntro_radio_n").value);
 
   // Add key press validation to the text boxes and textareas.
   $("input[type=text], textarea").keypress(function (e) {
