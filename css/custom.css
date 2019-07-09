@@ -1,14 +1,14 @@
 html {
   overflow: scroll;
 }
-.bg-brbp-primary {
-  background-color: #314232 !important;
-}
 #pageTitle {
   font-weight: 600;
 }
 #instructions, #courseInfo, #businessRules, #evaluationInfo, #submitDiv {
   display: none;
+}
+.bg-brbp-primary {
+  background-color: #314232 !important;
 }
 .bg-brbp-secondary {
   background-color: #324e84 !important;
@@ -21,5 +21,29 @@ html {
   background-color: #ffd09f;
 }
 .disabled {
-  opacity: 0.66;
+  opacity: 0.5;
+}
+.callout {
+  background-color: #f3f4f7;
+  border-left: 0.33rem solid;
+  padding: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.callout p {
+  margin-bottom: 0;
+}
+.callout-tip {
+  background-color: #328de514;
+  border-left: 0.33rem solid #328de5;
+}
+.callout-tip h4 {
+  color: #328de5f8;
+}
+.callout-warning {
+  background-color: #f53d3214;
+  border-left: 0.33rem solid #f53d32;
+}
+.callout-warning h4 {
+  color: #f53d32f8;
 }
