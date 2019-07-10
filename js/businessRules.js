@@ -272,6 +272,8 @@ var businessRulesList =
           "<li>cmi.session_time</li>" +
           "<li>cmi.interactions.n.correct_response.n.pattern</li>" +
           "<li>cmi.interactions.n.learner_response</li>" +
+          "<li>cmi.interactions.n.latency</li>" +
+          "<li>cmi.interactions.n.timestamp</li>" +
           "<li>cmi.interactions.n.type</li>" +
           "<li>cmi.interactions.n.result</li>" +
           "</code></ul>",
