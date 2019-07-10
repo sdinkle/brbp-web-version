@@ -1,10 +1,10 @@
 html {
-  overflow: scroll;
+  overflow-y: scroll;
 }
 #pageTitle {
   font-weight: 600;
 }
-#instructions, #courseInfo, #businessRules, #evaluationInfo, #submitDiv {
+#instructions, #courseInfo, #businessRules, #evaluationInfo, #submitDiv, #navFooter {
   display: none;
 }
 .ruleText h3 {
@@ -21,6 +21,9 @@ code {
 }
 .bg-brbp-tertiary {
   background-color: #205c3b !important;
+}
+.bg-brbp-footer {
+  background-color: #20232a !important;
 }
 .badge-brbp {
   color: #24292e;
@@ -62,4 +65,8 @@ code {
 }
 .callout-rule h4 {
   color: #ff8100f8;
+}
+footer .copyright, .rulesInfo {
+  color: hsla(0,0%,100%,.4);
+  text-align: center;
 }

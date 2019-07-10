@@ -1,7 +1,7 @@
 function constructChecklistForm() {
 
   // Update document and page title to reflect current rules version.
-  document.title = document.getElementById("pageTitle").innerHTML = "Army Business Rules Checklist for SCORM 2004 3rd Edition CMI " + businessRulesVersion;
+  document.title = document.getElementById("pageTitle").innerHTML = "Army Business Rules Checklist for SCORM 2004 3rd Edition CMI v" + businessRulesVersion;
 
   // Declare variables for the various divs. These will serve as temporary handles during iteration.
   // brsDiv: Holds the outer businessRules div.
@@ -149,11 +149,15 @@ function constructChecklistForm() {
     return validateKeypress(e);
   });
 
+  // Populate the footer rules information.
+  $("#footerVersion").text(businessRulesVersion);
+  $("#footerLastModified").text(businessRulesLastUpdated);
+
   // Make loading section invisible.
   $("#loadingScript").hide();
 
   // Make info and submit sections visible.
-  $("#instructions, #courseInfo, #businessRules, #evaluationInfo, #submitDiv").show();
+  $("#instructions, #courseInfo, #businessRules, #evaluationInfo, #submitDiv, #navFooter").show();
 
 } // End constructChecklistForm()
 

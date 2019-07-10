@@ -1,5 +1,6 @@
 // Current version of the business rules as outlined in the Business Rules and Best Practices Guide.
-var businessRulesVersion = "v1.3";
+var businessRulesVersion = "1.3";
+var businessRulesLastUpdated = "10 Jul 2019";
 
 // Create two variables to hold arrays for assessment and non-assessment rules.
 // These will store the computed (i.e. hyphenated) names of each business rule.
