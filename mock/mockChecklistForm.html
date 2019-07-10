@@ -6,7 +6,7 @@
 
     <link rel="shortcut icon" href="../img/favicon.png">
     <link rel="stylesheet" type="text/css" href="../css/util/bootstrap.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/checklistForm.css"> -->
+    <link rel="stylesheet" type="text/css" href="../css/custom.css">
 
     <title>Army Business Rules Checklist for SCORM 2004 3rd Edition CMI (MOCKUP)</title>
   </head>
@@ -14,7 +14,7 @@
 
     <!-- Header -->
     <header>
-      <nav class="navbar navbar-expand-md fixed-top bg-dark shadow">
+      <nav class="navbar navbar-expand-md fixed-top bg-brbp-primary shadow">
         <div class="navbar-brand">
           <img class="d-inline-block" src="../img/armyu_tadlp.png" alt="The Army Distributed Learning Program" width="34">
           <span id="pageTitle" class="navbar-text text-white">Army Business Rules Checklist for SCORM 2004 3rd Edition CMI (MOCKUP)</span>
@@ -26,8 +26,8 @@
     <div id="main" style="padding-top:5rem">
 
       <!-- Instructions -->
-      <section id="instructions" class="container bg-white border rounded shadow-sm my-4">
-        <div class="section-title row bg-primary px-3 py-2">
+      <section id="instructions" class="container bg-white border rounded shadow-sm my-3">
+        <div class="section-title row bg-brbp-secondary px-3 py-2">
           <h2 class="text-white">Instructions</h2>
         </div>
         <div class="section-body border-top row px-3 pt-3">
@@ -39,6 +39,10 @@
               <li><strong>Course name:</strong> Enter the name of the course to which the package being evaluated belongs.</li>
               <li><strong>Package name:</strong> Enter the name of the package being evaluated. It is advised to keep this short but clear. For example, if the course is called "Captain's Career Course", use wording such as "CCC Module 1 Exam" or "CCC Module 1 Lesson 1" rather than full package titles.</li>
               <li>Answer the questions presented in order to automatically disable rules that do not apply to the content package.</li>
+              <ul>
+                <li><strong>Does this content package include an auto-scoring assessment that reports a score to the host Learning System?</strong> Select Yes if completion of this package reports a numerical score to the Learning System that will be displayed to the learner and/or instructor outside of the content (e.g. in a transcript). This is typically true of pretest or posttest packages, but may also be true for other content packages, depending on instructional needs.</li>
+                <li><strong>If not, does this content package serve as an introduction to a module or course?</strong> Many courses contain some form of introductory content that explains to a learner what they can expect from a course; these packages frequently make reference to course structure, such as module or lesson numbers, and therefore are exempt from Business Rule 1.1.1. Select Yes if this package serves as an introduction to any instructional content.</li>
+              </ul>
             </ul>
             <li><strong>Business Rules:</strong> Each of the business rules outlined in the Army Business Rules and Best Practices Guide for SCORM 2004 CMI DL Development is presented with the following:</li>
               <ul>
@@ -55,29 +59,33 @@
             <li>Once you have signed the checklist, include it as part of the package's deliverables.</li>
           </ul>
           <p><a href="examples/BRBP_CCC Module 1 Exam.pdf" target="_blank">View a completed checklist generated using Google Chrome and electronically signed using Adobe Reader.</a></p>
-          <p><strong>Tip:</strong> When creating more than one checklist, you can simply leave the generated checklist open and change the information on the web form. When you select the <strong>Generate Checklist</strong> button again, the checklist will update with the new information. Use this method to quickly generate multiple checklists at a time.</p>
-          <p><strong>Please note:</strong> To minimize the risk of visual irregularities, you should ensure that you access this form using an up-to-date web browser. For best results, it is recommended that you use Google Chrome. It is <em>strongly</em> recommended that you access this form using a browser other than Internet Explorer.</p>
+          <div class="callout callout-tip">
+            <h4>Tip</h4>
+            <p>When creating more than one checklist, you can simply leave the generated checklist open and change the information on the web form. When you select the <strong>Generate Checklist</strong> button again, the checklist will update with the new information. Use this method to quickly generate multiple checklists at a time.</p>
+          </div>
+          <div class="callout callout-warning">
+            <h4>Warning</h4>
+            <p>To minimize the risk of visual irregularities, you should ensure that you access this form using an up-to-date web browser. It is <em>strongly</em> recommended that you access this form using a browser other than Internet Explorer. For best results, Google Chrome is recommended.</p>
+          </div>
         </div>
       </section> <!-- End Instructions -->
 
       <!-- Course information -->
       <section id="courseInfo" class="infoSection container border rounded shadow-sm my-3">
-        <div class="section-title row bg-info px-3 py-2">
+        <div class="section-title row bg-brbp-tertiary px-3 py-2">
           <h2 class="text-white">Course and Package Information</h2>
         </div>
         <div class="section-body container my-3">
           <div id="courseInfoCourseName" class="infoElem row my-3">
             <label for="courseName">Course name</label>
-            <div class="input-group">
-              <input type="text" id="courseName" class="form-control" name="courseName" required="" maxlength="100" placeholder="Enter course name">
-            </div>
+            <input type="text" id="courseName" class="form-control" name="courseName" required="" maxlength="100" placeholder="Enter course name">
           </div>
           <div id="courseInfoPackageName" class="infoElem row my-3">
             <label for="packageName">Package name</label>
             <input type="text" id="packageName" class="form-control" name="packageName" required="" maxlength="100" size="80" placeholder="Enter package name">
           </div>
           <div id="isExam_radioGroup" class="radioGroup container my-3 px-0">
-            <label class="row" for="isExam_radio">Does this content package include a scoring assessment?</label>
+            <label class="row" for="isExam_radio">Does this content package include an auto-scoring assessment that reports a score to the host Learning System?</label>
             <div class="row">
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" id="isExam_radio_y" name="isExam_radio" value="Y">
@@ -111,7 +119,7 @@
         <!-- Design Business Rules -->
         <section id="businessRuleSection_Design" class="businessRuleSection container border rounded shadow-sm my-3">
 
-          <div class="section-title row bg-secondary px-3 py-2">
+          <div class="section-title row bg-brbp-primary px-3 py-2">
             <h2><span class="ruleSectionName text-white">Design Business Rules</span></h2>
           </div>
 
@@ -122,12 +130,12 @@
             <div id="1-1-1" class="businessRule container border-top px-1 py-3">
               <div id="1-1-1_ruleText" class="ruleText">
                 <h3>Business Rule <span class="ruleNumber">1.1.1</span>: <span class="ruleName">Discrete Independent Content</span></h3>
-                <div class="ruleDescriptionMarkup">
+                <div class="ruleDescriptionMarkup callout callout-rule">
                   <p>Independent LCOs shall be discrete blocks of learning content that do not make reference to placement in a hierarchy or to other LCOs anywhere in the content.</p>
                 </div>
               </div>
               <div id="1-1-1_ruleVerify" class="ruleVerify">
-                Verification:<span class="badge badge-info ml-1">Visual</span>
+                Verification:<span class="badge badge-brbp ml-1">Visual</span>
               </div>
               <div id="1-1-1_radioGroup" class="radioGroup container my-3">
                 <label class="row my-0" for="1-1-1_radioGroup">Rating:</label>
@@ -156,7 +164,7 @@
             <div id="1-2-2" class="businessRule container border-top px-1 py-3">
               <div id="1-2-2_ruleText" class="ruleText">
                 <h3>Business Rule <span class="ruleNumber">1.2.2</span>: <span class="ruleName">Army Metadata Fields</span></h3>
-                <div class="ruleDescriptionMarkup">
+                <div class="ruleDescriptionMarkup callout callout-rule">
                   <p>All SCORM 2004 3rd Edition metadata files must be formatted to include the following fields to meet Army requirements:</p>
                   <ul>
                     <li>General Identifier Fields: Catalog; Entry</li>
@@ -170,7 +178,7 @@
                 </div>
               </div>
               <div id="1-2-2_ruleVerify" class="ruleVerify">
-                Verification:<span class="badge badge-info ml-1">ADL CTS MD</span><span class="badge badge-info ml-1">SCORM RV MD</span>
+                Verification:<span class="badge badge-brbp ml-1">ADL CTS MD</span><span class="badge badge-brbp ml-1">SCORM RV MD</span>
               </div>
               <div id="1-2-2_radioGroup" class="radioGroup container my-3">
                 <label class="row my-0" for="1-2-2_radioGroup">Rating:</label>
@@ -198,7 +206,7 @@
         <!-- Development Business Rules -->
         <section id="businessRuleSection_Development" class="businessRuleSection container border rounded shadow-sm my-3">
 
-          <div class="section-title row bg-secondary px-3 py-2">
+          <div class="section-title row bg-brbp-primary px-3 py-2">
             <h2><span class="ruleSectionName text-white">Development Business Rules</span></h2>
           </div>
 
@@ -209,13 +217,13 @@
             <div id="2-1-1" class="businessRule container border-top px-1 py-3">
               <div id="2-1-1_ruleText" class="ruleText">
                 <h3>Business Rule <span class="ruleNumber">2.1.1</span>: <span class="ruleName">Allowable File Name Characters</span></h3>
-                <div class="ruleDescriptionMarkup">
+                <div class="ruleDescriptionMarkup callout callout-rule">
                   <p>Files in Army learning content packages shall contain only the following allowable characters from the RFC 3986 unreserved character set:</p>
                   <p><code>_ - . A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9</code></p>
                 </div>
               </div>
               <div id="2-1-1_ruleVerify" class="ruleVerify">
-                Verification:<span class="badge badge-info ml-1">ADL CTS CP</span>
+                Verification:<span class="badge badge-brbp ml-1">ADL CTS CP</span>
               </div>
               <div id="2-1-1_radioGroup" class="radioGroup container my-3">
                 <label class="row my-0" for="2-1-1_radioGroup">Rating:</label>
@@ -244,7 +252,7 @@
 
       <!-- Evaluation information -->
       <section id="evaluationInfo" class="infoSection container border rounded shadow-sm my-3">
-        <div class="section-title row bg-info px-3 py-2">
+        <div class="section-title row bg-brbp-tertiary px-3 py-2">
           <h2 class="text-white">Evaluation Information</h2>
         </div>
         <div class="section-body container my-3">
@@ -263,7 +271,7 @@
       <div id="submitDiv" class="container text-center my-3">
         <p><strong>By submitting this checklist, you certify on behalf of your organization that all of the above information is true.</strong></p>
         <!-- <button id="generateChecklist" type="button" disabled onclick="window.open('mockChecklistOutput.html')">Generate Checklist</button> -->
-        <button id="generateChecklist" class="btn btn-success btn-lg shadow mb-5" type="button" onclick="window.open('mockChecklistOutput.html')">Open Mock Output</button>
+        <button id="generateChecklist" class="btn btn-outline-success btn-lg shadow mb-5" type="button" onclick="window.open('mockChecklistOutput.html')">Open Mock Output</button>
       </div> <!-- End Submit div -->
 
     </div> <!-- End Main div-->
@@ -277,9 +285,10 @@
     <!-- End script includes -->
 
     <!-- Start the show! -->
-    <!-- <script>
-      $( constructChecklistForm() );
-    </script> -->
+    <script>
+      // $( constructChecklistForm() );
+      $("#instructions, #courseInfo, #businessRules, #evaluationInfo, #submitDiv").show();
+    </script>
 
   </body>
 </html>

@@ -58,7 +58,7 @@ function constructChecklistForm() {
 
       // Add the inner elements to the ruleText div. Populate the ruleNumber, ruleName, and ruleDescriptionMarkup spans.
       brRuleTextDiv.append("<h3>Business Rule <span class='ruleNumber'>" + brListRuleObj.ruleNumber + "</span>: <span class='ruleName'>" + brListRuleObj.ruleName + "</span></h3>");
-      brRuleTextDiv.append("<div class='ruleDescriptionMarkup'>" + brListRuleObj.ruleDescriptionMarkup + "</div>");
+      brRuleTextDiv.append("<div class='ruleDescriptionMarkup callout callout-rule'>" + brListRuleObj.ruleDescriptionMarkup + "</div>");
 
       // Begin building the verification div.
       brDiv.append("<div id='" + ruleIdStr + "_ruleVerify' class='ruleVerify'>");

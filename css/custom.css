@@ -7,6 +7,12 @@ html {
 #instructions, #courseInfo, #businessRules, #evaluationInfo, #submitDiv {
   display: none;
 }
+.ruleText h3 {
+  margin-bottom: 1rem;
+}
+code {
+  color: inherit;
+}
 .bg-brbp-primary {
   background-color: #314232 !important;
 }
@@ -25,25 +31,32 @@ html {
 }
 .callout {
   background-color: #f3f4f7;
-  border-left: 0.33rem solid;
-  padding: 0.5rem;
+  border-left: 0.5rem solid;
+  padding: 0.5rem 1.5rem 0.5rem 0.75rem;
   margin-top: 0;
   margin-bottom: 1rem;
 }
-.callout p {
+.callout p:last-child, ul:last-child {
   margin-bottom: 0;
 }
 .callout-tip {
   background-color: #328de514;
-  border-left: 0.33rem solid #328de5;
+  border-left: 0.5rem solid #328de5;
 }
 .callout-tip h4 {
   color: #328de5f8;
 }
 .callout-warning {
   background-color: #f53d3214;
-  border-left: 0.33rem solid #f53d32;
+  border-left: 0.5rem solid #f53d32;
 }
 .callout-warning h4 {
   color: #f53d32f8;
+}
+.callout-rule {
+  background-color: #ff810014;
+  border-left: 0.5rem solid #ff8100;
+}
+.callout-rule h4 {
+  color: #ff8100f8;
 }
