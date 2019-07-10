@@ -259,20 +259,19 @@ var businessRulesList =
           "<p><strong>Method Calls (call at least once):</strong></p>" +
           "<ul><code>" +
           "<li>Initialize</li>" +
+          "<li>Terminate</li>" +
           "<li>GetLastError</li>" +
           "<li>Commit</li>" +
-          "<li>Terminate</li>" +
           "</code></ul>" +
           "<p><strong>Data Model Elements (set a valid value at least once):</strong></p>" +
           "<ul><code>" +
           "<li>cmi.exit</li>" +
+          "<li>cmi.success_status</li>" +
           "<li>cmi.completion_status</li>" +
-          "<li>cmi.scaled_score</li>" +
+          "<li>cmi.score.scaled</li>" +
           "<li>cmi.session_time</li>" +
-          "<li>cmi.interactions.n.correct.response.n.pattern</li>" +
+          "<li>cmi.interactions.n.correct_response.n.pattern</li>" +
           "<li>cmi.interactions.n.learner_response</li>" +
-          "<li>cmi.interactions.n.latency</li>" +
-          "<li>cmi.interactions.n.timestamp</li>" +
           "<li>cmi.interactions.n.type</li>" +
           "<li>cmi.interactions.n.result</li>" +
           "</code></ul>",
@@ -288,8 +287,8 @@ var businessRulesList =
           "<p><strong>Method Calls (call at least once):</strong></p>" +
           "<ul><code>" +
           "<li>Initialize</li>" +
-          "<li>Commit</li>" +
           "<li>Terminate</li>" +
+          "<li>Commit</li>" +
           "</code></ul>" +
           "<p><strong>Data Model Elements (set a valid value at least once):</strong></p>" +
           "<ul><code>" +

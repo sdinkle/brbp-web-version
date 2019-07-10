@@ -36,8 +36,11 @@ code {
   margin-top: 0;
   margin-bottom: 1rem;
 }
-.callout p:last-child, ul:last-child {
-  margin-bottom: 0;
+.callout p:last-child {
+  margin-bottom: 0.15rem;
+}
+.callout ul:last-child {
+  margin-bottom: 0.5rem;
 }
 .callout-tip {
   background-color: #328de514;
