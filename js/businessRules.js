@@ -260,8 +260,8 @@ var businessRulesList =
           "<ul><code>" +
           "<li>Initialize</li>" +
           "<li>GetLastError</li>" +
-          "<li>Terminate</li>" +
           "<li>Commit</li>" +
+          "<li>Terminate</li>" +
           "</code></ul>" +
           "<p><strong>Data Model Elements (set a valid value at least once):</strong></p>" +
           "<ul><code>" +
