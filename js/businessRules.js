@@ -289,8 +289,8 @@ var businessRulesList =
           "<p><strong>Method Calls (call at least once):</strong></p>" +
           "<ul><code>" +
           "<li>Initialize</li>" +
-          "<li>Terminate</li>" +
           "<li>Commit</li>" +
+          "<li>Terminate</li>" +
           "</code></ul>" +
           "<p><strong>Data Model Elements (set a valid value at least once):</strong></p>" +
           "<ul><code>" +
