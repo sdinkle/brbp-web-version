@@ -66,7 +66,14 @@ code {
 .callout-rule h4 {
   color: #ff8100f8;
 }
-footer .copyright, .rulesInfo {
+footer section {
+  margin-bottom: 0.25rem;
   color: hsla(0,0%,100%,.4);
   text-align: center;
+}
+footer a, a:hover {
+  color: #205c3b;
+}
+#rulesInfo {
+  font-size: 0.75rem;
 }
