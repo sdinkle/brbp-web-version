@@ -26,21 +26,21 @@
     <main id="main" style="padding-top:5rem">
 
       <!-- Loading message -->
-      <section id="loadingScript" class="businessRuleSection container bg-white border rounded shadow-sm my-3">
-        <div class="section-title row bg-secondary px-3 py-2">
+      <section id="loadingScript" class="container bg-white border rounded shadow-sm my-3">
+        <div class="row bg-secondary px-3 py-2">
           <h2 class="text-white">Loading the checklist. Please wait...</h2>
         </div>
-        <div class="section-body border-top row px-3 pt-3">
+        <div class="border-top row px-3 pt-3">
           <p>If nothing appears here after several seconds, make sure that JavaScript is enabled and allowed to run on this page.</p>
         </div>
       </section>
 
       <!-- Instructions -->
       <section id="instructions" class="container bg-white border rounded shadow-sm my-3">
-        <div class="section-title row bg-brbp-secondary px-3 py-2">
+        <div class="row bg-brbp-secondary px-3 py-2">
           <h2 class="text-white">Instructions</h2>
         </div>
-        <div class="section-body border-top row px-3 pt-3">
+        <div class="border-top row px-3 pt-3">
           <p>This web form is an online version of the <a href="https://tadlp.github.io/brbp/docs/brbp-checklist" target="_blank">Army BRBP SCORM 2004 CMI Checklist</a>. It is intended for use by the ADLPA's designated point-of-contact upon completing development of a DL package before submitting it to the Army.</p>
           <p>The web form contains fields for the following information:</p>
           <ul>
@@ -82,19 +82,19 @@
 
       <!-- Course information -->
       <section id="courseInfo" class="infoSection container border rounded shadow-sm my-3">
-        <div class="section-title row bg-brbp-tertiary px-3 py-2">
+        <div class="row bg-brbp-tertiary px-3 py-2">
           <h2 class="text-white">Course and Package Information</h2>
         </div>
-        <div class="section-body container my-3">
-          <div id="courseInfoCourseName" class="infoElem row my-3">
+        <div class="container my-3">
+          <div id="courseInfoCourseName" class="row my-3">
             <label for="courseName">Course name</label>
             <input type="text" id="courseName" class="form-control" name="courseName" required="" maxlength="100" placeholder="Enter course name">
           </div>
-          <div id="courseInfoPackageName" class="infoElem row my-3">
+          <div id="courseInfoPackageName" class="row my-3">
             <label for="packageName">Package name</label>
             <input type="text" id="packageName" class="form-control" name="packageName" required="" maxlength="100" size="80" placeholder="Enter package name">
           </div>
-          <div id="isExam_radioGroup" class="radioGroup container my-3 px-0">
+          <div id="isExam_radioGroup" class="container my-3 px-0">
             <label class="row" for="isExam_radio">Does this content package include an auto-scoring assessment that reports a score to the host Learning System?</label>
             <div class="row">
               <div class="form-check form-check-inline">
@@ -107,7 +107,7 @@
               </div>
             </div>
           </div>
-          <div id="isIntro_radioGroup" class="radioGroup container my-3 px-0">
+          <div id="isIntro_radioGroup" class="container my-3 px-0">
             <label class="row" for="isIntro_radio">If not, does this content package serve as an introduction to a module or course?</label>
             <div class="row">
               <div class="form-check form-check-inline">
@@ -130,15 +130,15 @@
 
       <!-- Evaluation information -->
       <section id="evaluationInfo" class="infoSection container border rounded shadow-sm my-3">
-        <div class="section-title row bg-brbp-tertiary px-3 py-2">
+        <div class="row bg-brbp-tertiary px-3 py-2">
           <h2 class="text-white">Evaluation Information</h2>
         </div>
-        <div class="section-body container my-3">
-          <div id="evaluationInfoEvaluatorName" class="infoElem row my-3">
+        <div class="container my-3">
+          <div id="evaluationInfoEvaluatorName" class="row my-3">
             <label for="evaluatorName">Evaluator name</label>
             <input type="text" id="evaluatorName" class="form-control" name="evaluatorName" required="" maxlength="80" placeholder="Enter evaluator name">
           </div>
-          <div id="evaluationInfoOrgName" class="infoElem row my-3">
+          <div id="evaluationInfoOrgName" class="row my-3">
             <label for="orgName">Organization name</label>
             <input type="text" id="orgName" class="form-control" name="orgName" required="" maxlength="80" placeholder="Enter evaluator organization">
           </div>
@@ -148,17 +148,17 @@
       <!-- Submit div -->
       <div id="submitDiv" class="container text-center my-3">
         <p><strong>By submitting this checklist, you certify on behalf of your organization that all of the above information is true.</strong></p>
-        <button id="generateChecklist" class="btn btn-outline-success btn-lg shadow mb-5" type="button" disabled onclick="openChecklistOutputPopup()">Generate Checklist</button>
+        <button id="generateChecklist" class="btn btn-outline-success btn-lg mb-5" type="button" disabled onclick="openChecklistOutputPopup()">Generate Checklist</button>
       </div> <!-- End Submit div -->
 
     </main> <!-- End Main div-->
 
     <!-- Footer -->
     <footer id="navFooter" class="bg-brbp-footer p-4">
-      <section id="copyright">
+      <section id="footerCopyright">
         Maintained by the <a href="https://www.atsc.army.mil/tadlp/">U.S. Army University Directorate of Distributed Learning</a>
       </section>
-      <section id="rulesInfo">
+      <section id="footerRulesInfo">
         Army SCORM Business Rules Version <span id="footerVersion"></span><br>
         Last updated <span id="footerLastModified"></span>
       </div>

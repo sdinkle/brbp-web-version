@@ -30,11 +30,11 @@ function constructChecklistForm() {
     var ruleSectionNameIdStr = ("businessRuleSection_" + (brListSecObj.ruleSectionName).trim()).replace(/\s/g, "_");
 
     // Begin building the businessRuleSection div.
-    brsDiv.append("<section id='" + ruleSectionNameIdStr + "' class='businessRuleSection container border rounded shadow-sm my-3'>");
+    brsDiv.append("<section id='" + ruleSectionNameIdStr + "' class='container border rounded shadow-sm my-3'>");
 
     // Populate ruleSectionName span.
     brSecDiv = $("#" + ruleSectionNameIdStr);
-    brSecDiv.append('<div class="section-title row bg-brbp-primary px-3 py-2"><h2><span class="ruleSectionName text-white">' + brListSecObj["ruleSectionName"] + ' Business Rules</h2></div>');
+    brSecDiv.append('<div class="row bg-brbp-primary px-3 py-2"><h2><span class="ruleSectionName text-white">' + brListSecObj["ruleSectionName"] + ' Business Rules</h2></div>');
     brSecDiv.append('<div class="section-body">');
     brSecDiv = $("#" + ruleSectionNameIdStr + " > .section-body");
 
@@ -49,7 +49,7 @@ function constructChecklistForm() {
       var ruleIdStr = convertRuleNumToIdStr(brListRuleObj.ruleNumber);
 
       // Begin building the businessRule div.
-      brSecDiv.append("<div id='" + ruleIdStr + "' class='businessRule container border-top px-1 py-3'>");
+      brSecDiv.append("<div id='" + ruleIdStr + "' class='container border-top px-1 py-3'>");
       brDiv = $("#" + ruleIdStr);
 
       // Begin building the ruleText div.
@@ -67,11 +67,11 @@ function constructChecklistForm() {
 
       // Add each verification tag to the current ruleVerify div.
       for (var k = 0; k < brListRuleObj.ruleVerify.length; k++) {
-        brRuleVerifyDiv.append("<span class='badge badge-brbp ml-1'>" + brListRuleObj.ruleVerify[k]);
+        brRuleVerifyDiv.append("<span class='badge badge-brbp ml-1 shadow-sm'>" + brListRuleObj.ruleVerify[k]);
       }
 
       // Begin building the radio group div.
-      brDiv.append("<div id='" + ruleIdStr + "_radioGroup' class='radioGroup container my-3'>");
+      brDiv.append("<div id='" + ruleIdStr + "_radioGroup' class='container my-3'>");
       brRadioDiv = $("#" + ruleIdStr + "_radioGroup");
 
       // Build the "Rating" label.
@@ -286,9 +286,9 @@ $('input[type=text]').keyup(function(e) {
       numValid++;
     }
     if(numValid == 4) {
-      $('#generateChecklist').prop('disabled', false);
+      $('#generateChecklist').prop('disabled', false).addClass("btn-success shadow").removeClass("btn-outline-success");
     } else {
-      $('#generateChecklist').prop('disabled', true);
+      $('#generateChecklist').prop('disabled', true).addClass("btn-outline-success").removeClass("btn-success shadow");
     }
   }
 });

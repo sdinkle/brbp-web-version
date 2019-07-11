@@ -27,14 +27,14 @@
 
       <!-- Instructions -->
       <section id="instructions" class="container bg-white border rounded shadow-sm my-3">
-        <div class="section-title row bg-brbp-secondary px-3 py-2">
+        <div class="row bg-brbp-secondary px-3 py-2">
           <h2 class="text-white">Instructions</h2>
         </div>
-        <div class="section-body border-top row px-3 pt-3">
+        <div class="border-top row px-3 pt-3">
           <p>This web form is an online version of the <a href="https://tadlp.github.io/brbp/docs/brbp-checklist" target="_blank">Army BRBP SCORM 2004 CMI Checklist</a>. It is intended for use by the ADLPA's designated point-of-contact upon completing development of a DL package before submitting it to the Army.</p>
-          <p>The web form contains fields for the following information:</p>
+          <p>The web form contains fields for the following sections:</p>
           <ul>
-            <li><strong>Course and Package Information:</strong> This section addresses information about the content package being evaluated and contains the following:
+            <li><strong>Course and Package Information:</strong> This section addresses information about the content package being evaluated and contains the following:</li>
             <ul>
               <li><strong>Course name:</strong> Enter the name of the course to which the package being evaluated belongs.</li>
               <li><strong>Package name:</strong> Enter the name of the package being evaluated. It is advised to keep this short but clear. For example, if the course is called "Captain's Career Course", use wording such as "CCC Module 1 Exam" or "CCC Module 1 Lesson 1" rather than full package titles.</li>
@@ -71,20 +71,20 @@
       </section> <!-- End Instructions -->
 
       <!-- Course information -->
-      <section id="courseInfo" class="infoSection container border rounded shadow-sm my-3">
-        <div class="section-title row bg-brbp-tertiary px-3 py-2">
+      <section id="courseInfo" class="container border rounded shadow-sm my-3">
+        <div class="row bg-brbp-tertiary px-3 py-2">
           <h2 class="text-white">Course and Package Information</h2>
         </div>
-        <div class="section-body container my-3">
-          <div id="courseInfoCourseName" class="infoElem row my-3">
+        <div class="container my-3">
+          <div id="courseInfoCourseName" class="row my-3">
             <label for="courseName">Course name</label>
             <input type="text" id="courseName" class="form-control" name="courseName" required="" maxlength="100" placeholder="Enter course name">
           </div>
-          <div id="courseInfoPackageName" class="infoElem row my-3">
+          <div id="courseInfoPackageName" class="row my-3">
             <label for="packageName">Package name</label>
             <input type="text" id="packageName" class="form-control" name="packageName" required="" maxlength="100" size="80" placeholder="Enter package name">
           </div>
-          <div id="isExam_radioGroup" class="radioGroup container my-3 px-0">
+          <div id="isExam_radioGroup" class="container my-3 px-0">
             <label class="row" for="isExam_radio">Does this content package include an auto-scoring assessment that reports a score to the host Learning System?</label>
             <div class="row">
               <div class="form-check form-check-inline">
@@ -97,7 +97,7 @@
               </div>
             </div>
           </div>
-          <div id="isIntro_radioGroup" class="radioGroup container my-3 px-0">
+          <div id="isIntro_radioGroup" class="container my-3 px-0">
             <label class="row" for="isIntro_radio">If not, does this content package serve as an introduction to a module or course?</label>
             <div class="row">
               <div class="form-check form-check-inline">
@@ -117,17 +117,17 @@
       <div id="businessRules">
 
         <!-- Design Business Rules -->
-        <section id="businessRuleSection_Design" class="businessRuleSection container border rounded shadow-sm my-3">
+        <section id="businessRuleSection_Design" class="container border rounded shadow-sm my-3">
 
-          <div class="section-title row bg-brbp-primary px-3 py-2">
-            <h2><span class="ruleSectionName text-white">Design Business Rules</span></h2>
+          <div class="row bg-brbp-primary px-3 py-2">
+            <h2><span class="text-white">Design Business Rules</span></h2>
           </div>
 
            <!-- Design Section body -->
-          <div class="section-body">
+          <div>
 
             <!-- 1.1.1 -->
-            <div id="1-1-1" class="businessRule container border-top px-1 py-3">
+            <div id="1-1-1" class="container border-top px-1 py-3">
               <div id="1-1-1_ruleText" class="ruleText">
                 <h3>Business Rule <span class="ruleNumber">1.1.1</span>: <span class="ruleName">Discrete Independent Content</span></h3>
                 <div class="ruleDescriptionMarkup callout callout-rule shadow-sm">
@@ -135,9 +135,9 @@
                 </div>
               </div>
               <div id="1-1-1_ruleVerify" class="ruleVerify">
-                Verification:<span class="badge badge-brbp ml-1">Visual</span>
+                Verification:<span class="badge badge-brbp ml-1 shadow-sm">Visual</span>
               </div>
-              <div id="1-1-1_radioGroup" class="radioGroup container my-3">
+              <div id="1-1-1_radioGroup" class="container my-3">
                 <label class="row my-0" for="1-1-1_radioGroup">Rating:</label>
                 <div id="1-1-1_radioGroupRadios" class="row">
                   <div class="form-check form-check-inline">
@@ -161,7 +161,7 @@
             </div> <!-- End 1.1.1 -->
 
             <!-- 1.2.2 -->
-            <div id="1-2-2" class="businessRule container border-top px-1 py-3">
+            <div id="1-2-2" class="container border-top px-1 py-3">
               <div id="1-2-2_ruleText" class="ruleText">
                 <h3>Business Rule <span class="ruleNumber">1.2.2</span>: <span class="ruleName">Army Metadata Fields</span></h3>
                 <div class="ruleDescriptionMarkup callout callout-rule shadow-sm">
@@ -178,9 +178,9 @@
                 </div>
               </div>
               <div id="1-2-2_ruleVerify" class="ruleVerify">
-                Verification:<span class="badge badge-brbp ml-1">ADL CTS MD</span><span class="badge badge-brbp ml-1">SCORM RV MD</span>
+                Verification:<span class="badge badge-brbp ml-1 shadow-sm">ADL CTS MD</span><span class="badge badge-brbp ml-1 shadow-sm">SCORM RV MD</span>
               </div>
-              <div id="1-2-2_radioGroup" class="radioGroup container my-3">
+              <div id="1-2-2_radioGroup" class="container my-3">
                 <label class="row my-0" for="1-2-2_radioGroup">Rating:</label>
                 <div id="1-2-2_radioGroupRadios" class="row">
                   <div class="form-check form-check-inline">
@@ -206,15 +206,15 @@
         <!-- Development Business Rules -->
         <section id="businessRuleSection_Development" class="businessRuleSection container border rounded shadow-sm my-3">
 
-          <div class="section-title row bg-brbp-primary px-3 py-2">
+          <div class="row bg-brbp-primary px-3 py-2">
             <h2><span class="ruleSectionName text-white">Development Business Rules</span></h2>
           </div>
 
           <!-- Development Section body -->
-          <div class="section-body">
+          <div>
 
             <!-- 2.1.1 -->
-            <div id="2-1-1" class="businessRule container border-top px-1 py-3">
+            <div id="2-1-1" class="container border-top px-1 py-3">
               <div id="2-1-1_ruleText" class="ruleText">
                 <h3>Business Rule <span class="ruleNumber">2.1.1</span>: <span class="ruleName">Allowable File Name Characters</span></h3>
                 <div class="ruleDescriptionMarkup callout callout-rule shadow-sm">
@@ -223,9 +223,9 @@
                 </div>
               </div>
               <div id="2-1-1_ruleVerify" class="ruleVerify">
-                Verification:<span class="badge badge-brbp ml-1">ADL CTS CP</span>
+                Verification:<span class="badge badge-brbp ml-1 shadow-sm">ADL CTS CP</span>
               </div>
-              <div id="2-1-1_radioGroup" class="radioGroup container my-3">
+              <div id="2-1-1_radioGroup" class="container my-3">
                 <label class="row my-0" for="2-1-1_radioGroup">Rating:</label>
                 <div id="2-1-1_radioGroupRadios" class="row">
                   <div class="form-check form-check-inline">
@@ -251,16 +251,16 @@
       </div> <!-- End Business rules div -->
 
       <!-- Evaluation information -->
-      <section id="evaluationInfo" class="infoSection container border rounded shadow-sm my-3">
-        <div class="section-title row bg-brbp-tertiary px-3 py-2">
+      <section id="evaluationInfo" class="container border rounded shadow-sm my-3">
+        <div class="row bg-brbp-tertiary px-3 py-2">
           <h2 class="text-white">Evaluation Information</h2>
         </div>
-        <div class="section-body container my-3">
-          <div id="evaluationInfoEvaluatorName" class="infoElem row my-3">
+        <div class="container my-3">
+          <div id="evaluationInfoEvaluatorName" class="row my-3">
             <label for="evaluatorName">Evaluator name</label>
             <input type="text" id="evaluatorName" class="form-control" name="evaluatorName" required="" maxlength="80" placeholder="Enter evaluator name">
           </div>
-          <div id="evaluationInfoOrgName" class="infoElem row my-3">
+          <div id="evaluationInfoOrgName" class="row my-3">
             <label for="orgName">Organization name</label>
             <input type="text" id="orgName" class="form-control" name="orgName" required="" maxlength="80" placeholder="Enter evaluator organization">
           </div>
@@ -271,19 +271,19 @@
       <div id="submitDiv" class="container text-center my-3">
         <p><strong>By submitting this checklist, you certify on behalf of your organization that all of the above information is true.</strong></p>
         <!-- <button id="generateChecklist" type="button" disabled onclick="window.open('mockChecklistOutput.html')">Generate Checklist</button> -->
-        <button id="generateChecklist" class="btn btn-outline-success btn-lg shadow mb-5" type="button" onclick="window.open('mockChecklistOutput.html')">Open Mock Output</button>
+        <button id="generateChecklist" class="btn btn-success btn-lg shadow mb-5" type="button" onclick="window.open('mockChecklistOutput.html')">Open Mock Output</button>
       </div> <!-- End Submit div -->
 
     </div> <!-- End Main div-->
 
     <!-- Footer -->
     <footer id="navFooter" class="bg-brbp-footer p-4">
-      <section id="copyright">
+      <section id="footerCopyright">
         Maintained by the <a href="https://www.atsc.army.mil/tadlp/">U.S. Army University Directorate of Distributed Learning</a>
       </section>
-      <section id="rulesInfo">
+      <section id="footerRulesInfo">
         Army SCORM Business Rules Version (MOCKUP)<br>
-        Last updated 10 Jul 2019
+        Last updated DD Mmm YYYY
       </div>
     </footer> <!-- End Footer -->
 
