@@ -36,7 +36,7 @@ function constructChecklistForm() {
     brSecDiv = $("#" + ruleSectionNameIdStr);
     brSecDiv.append('<div class="card shadow-sm">');
     brSecDiv = $("#" + ruleSectionNameIdStr + " > .card");
-    brSecDiv.append('<div class="card-header bg-brbp-dark-green px-3 py-2"><h2><span class="text-white">' + brListSecObj["ruleSectionName"] + ' Business Rules</h2></div>');
+    brSecDiv.append('<div class="card-header bg-brbp-dark-green px-3 py-2"><h2><span class="ruleSectionName text-white">' + brListSecObj["ruleSectionName"] + ' Business Rules</h2></div>');
     brSecDiv.append('<div class="section-body">');
     brSecDiv = $("#" + ruleSectionNameIdStr + " > .card > .section-body");
 
@@ -60,7 +60,7 @@ function constructChecklistForm() {
 
       // Begin building the ruleText div.
       brDiv = $("#" + ruleIdStr);
-      
+
       brDiv.append("<div id='" + ruleIdStr + "_ruleText' class='ruleText'>");
       brRuleTextDiv = $("#" + ruleIdStr + "_ruleText");
 

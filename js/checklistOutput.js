@@ -66,7 +66,8 @@ function constructChecklistOutput() {
   for (var i = 0; i < brSecDivList.length; i++) {
 
     // Grab each businessRule div and stuff them into a list.
-    brDivList = brSecDivList.eq(i).children().eq(1).children();
+    brDivList = brSecDivList.eq(i).children().eq(0).children().eq(1).children();
+    // console.log(brDivList);
 
     // Store current rule section name.
     rSecName = brSecDivList.eq(i).children()[0].getElementsByClassName("ruleSectionName")[0].innerHTML;
