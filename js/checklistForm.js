@@ -30,13 +30,15 @@ function constructChecklistForm() {
     var ruleSectionNameIdStr = ("businessRuleSection_" + (brListSecObj.ruleSectionName).trim()).replace(/\s/g, "_");
 
     // Begin building the businessRuleSection div.
-    brsDiv.append("<section id='" + ruleSectionNameIdStr + "' class='container border rounded shadow-sm my-3'>");
+    brsDiv.append("<section id='" + ruleSectionNameIdStr + "' class='container my-3'>");
 
     // Populate ruleSectionName span.
     brSecDiv = $("#" + ruleSectionNameIdStr);
-    brSecDiv.append('<div class="row bg-brbp-dark-green px-3 py-2"><h2><span class="ruleSectionName text-white">' + brListSecObj["ruleSectionName"] + ' Business Rules</h2></div>');
+    brSecDiv.append('<div class="card shadow-sm">');
+    brSecDiv = $("#" + ruleSectionNameIdStr + " > .card");
+    brSecDiv.append('<div class="card-header bg-brbp-dark-green px-3 py-2"><h2><span class="text-white">' + brListSecObj["ruleSectionName"] + ' Business Rules</h2></div>');
     brSecDiv.append('<div class="section-body">');
-    brSecDiv = $("#" + ruleSectionNameIdStr + " > .section-body");
+    brSecDiv = $("#" + ruleSectionNameIdStr + " > .card > .section-body");
 
     // Populate businessRuleSection div with businessRule divs.
     // Iterate over each object in current businessRulesList object's rules array.
@@ -49,10 +51,16 @@ function constructChecklistForm() {
       var ruleIdStr = convertRuleNumToIdStr(brListRuleObj.ruleNumber);
 
       // Begin building the businessRule div.
-      brSecDiv.append("<div id='" + ruleIdStr + "' class='container border-top px-1 py-3'>");
-      brDiv = $("#" + ruleIdStr);
+      // Don't add a top border to the first rule.
+      if (j == 0) {
+        brSecDiv.append("<div id='" + ruleIdStr + "' class='card-body mx-3 px-0 py-3'>");
+      } else {
+        brSecDiv.append("<div id='" + ruleIdStr + "' class='card-body border-top mx-3 px-0 py-3'>");
+      }
 
       // Begin building the ruleText div.
+      brDiv = $("#" + ruleIdStr);
+      
       brDiv.append("<div id='" + ruleIdStr + "_ruleText' class='ruleText'>");
       brRuleTextDiv = $("#" + ruleIdStr + "_ruleText");
 

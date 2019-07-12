@@ -26,97 +26,103 @@
     <main id="main" style="padding-top:5rem">
 
       <!-- Loading message -->
-      <section id="loadingScript" class="container bg-white border rounded shadow-sm my-3">
-        <div class="row bg-secondary px-3 py-2">
-          <h2 class="text-white">Loading the checklist. Please wait...</h2>
-        </div>
-        <div class="border-top row px-3 pt-3">
-          <p>If nothing appears here after several seconds, make sure that JavaScript is enabled and allowed to run on this page.</p>
+      <section id="loadingScript" class="container my-3">
+        <div class="card shadow-sm">
+          <div class="card-header bg-secondary px-3 py-2">
+            <h2 class="text-white">Loading the checklist. Please wait...</h2>
+          </div>
+          <div class="card-body px-3 pt-3 pb-1">
+            <p>If nothing appears here after several seconds, make sure that JavaScript is enabled and allowed to run on this page.</p>
+          </div>
         </div>
       </section>
 
       <!-- Instructions -->
-      <section id="instructions" class="container bg-white border rounded shadow-sm my-3">
-        <div class="row bg-brbp-green px-3 py-2">
-          <h2 class="text-white">Instructions</h2>
-        </div>
-        <div class="border-top row px-3 pt-3">
-          <p>This web form is an online version of the <a href="https://tadlp.github.io/brbp/docs/brbp-checklist" target="_blank">Army BRBP SCORM 2004 CMI Checklist</a>. It is intended for use by the ADLPA's designated point-of-contact upon completing development of a DL package before submitting it to the Army.</p>
-          <p>The web form contains fields for the following sections:</p>
-          <ul>
-            <li><strong>Course and Package Information:</strong> This section addresses information about the content package being evaluated and contains the following:
-            <ul>
-              <li><strong>Course name:</strong> Enter the name of the course to which the package being evaluated belongs.</li>
-              <li><strong>Package name:</strong> Enter the name of the package being evaluated. It is advised to keep this short but clear. For example, if the course is called "Captain's Career Course", use wording such as "CCC Module 1 Exam" or "CCC Module 1 Lesson 1" rather than full package titles.</li>
-              <li>Answer the questions presented in order to automatically disable rules that do not apply to the content package.</li>
-              <ul>
-                <li><strong>Does this content package include an auto-scoring assessment that reports a score to the host Learning System?</strong> Select Yes if completion of this package reports a numerical score to the Learning System that will be displayed to the learner and/or instructor outside of the content (e.g. in a transcript). This is typically true of pretest or posttest packages, but may also be true for other content packages, depending on instructional needs.</li>
-                <li><strong>If not, does this content package serve as an introduction to a module or course?</strong> Many courses contain some form of introductory content that explains to a learner what they can expect from a course; these packages frequently make reference to course structure, such as module or lesson numbers, and therefore are exempt from Business Rule 1.1.1. Select Yes if this package serves as an introduction to any instructional content.</li>
-              </ul>
-            </ul>
-            <li><strong>Business Rules:</strong> Each of the business rules outlined in the Army Business Rules and Best Practices Guide for SCORM 2004 CMI DL Development is presented with the following:</li>
-              <ul>
-                <li><strong>Rating:</strong> Select Yes if the rule has been satisfied or No if it has not.</li>
-                <li><strong>Additional comments:</strong> Enter any extra comments into the text field provided. If No was selected above, use this field to explain why that rating was selected.</li>
-              </ul>
-            <li><strong>Evaluator name:</strong> Enter the full name of the person performing the final evaluation on this package.</li>
-            <li><strong>Organization name:</strong> Enter the name of the organization that the person above represents.</li>
-          </ul>
-          <p>Upon completing the web form, select the <strong>Generate Checklist</strong> button to generate a pre-formatted checklist based on the information and responses you provided.</p>
-          <ul>
-            <li><strong>Save this page as a PDF through your browser's Print function.</strong></li>
-            <li>You will then have to <strong>electronically sign</strong> the document in the space provided at the bottom of the checklist using PDF-signing software such as Adobe Reader.</li>
-            <li>Once you have signed the checklist, include it as part of the package's deliverables.</li>
-          </ul>
-          <p><a href="examples/BRBP_CCC Module 1 Exam.pdf" target="_blank">View a completed checklist generated using Google Chrome and electronically signed using Adobe Reader.</a></p>
-          <div class="callout callout-green shadow-sm">
-            <h4>Tip for Creating Multiple Checklists</h4>
-            <p>When creating more than one checklist, you can simply leave the generated checklist open and change the information on the web form without closing it. When you select the <strong>Generate Checklist</strong> button again, the checklist will update with the new information. Use this method to quickly generate multiple checklists at a time.</p>
+      <section id="instructions" class="container my-3">
+        <div class="card shadow-sm">
+          <div class="card-header bg-brbp-green px-3 py-2">
+            <h2 class="text-white">Instructions</h2>
           </div>
-          <div class="callout callout-red shadow-sm">
-            <h4>Browser Compatibility Warning</h4>
-            <p>To minimize the risk of visual irregularities, you should ensure that you access this form using an up-to-date web browser. It is <em>strongly</em> recommended that you access this form using a browser other than Internet Explorer. For best results, Google Chrome is recommended.</p>
+          <div class="card-body px-3 pt-3 pb-1">
+            <p>This web form is an online version of the <a href="https://tadlp.github.io/brbp/docs/brbp-checklist" target="_blank">Army BRBP SCORM 2004 CMI Checklist</a>. It is intended for use by the ADLPA's designated point-of-contact upon completing development of a DL package before submitting it to the Army.</p>
+            <p>The web form contains fields for the following sections:</p>
+            <ul>
+              <li><strong>Course and Package Information:</strong> This section addresses information about the content package being evaluated and contains the following:
+              <ul>
+                <li><strong>Course name:</strong> Enter the name of the course to which the package being evaluated belongs.</li>
+                <li><strong>Package name:</strong> Enter the name of the package being evaluated. It is advised to keep this short but clear. For example, if the course is called "Captain's Career Course", use wording such as "CCC Module 1 Exam" or "CCC Module 1 Lesson 1" rather than full package titles.</li>
+                <li>Answer the questions presented in order to automatically disable rules that do not apply to the content package.</li>
+                <ul>
+                  <li><strong>Does this content package include an auto-scoring assessment that reports a score to the host Learning System?</strong> Select Yes if completion of this package reports a numerical score to the Learning System that will be displayed to the learner and/or instructor outside of the content (e.g. in a transcript). This is typically true of pretest or posttest packages, but may also be true for other content packages, depending on instructional needs.</li>
+                  <li><strong>If not, does this content package serve as an introduction to a module or course?</strong> Many courses contain some form of introductory content that explains to a learner what they can expect from a course; these packages frequently make reference to course structure, such as module or lesson numbers, and therefore are exempt from Business Rule 1.1.1. Select Yes if this package serves as an introduction to any instructional content.</li>
+                </ul>
+              </ul>
+              <li><strong>Business Rules:</strong> Each of the business rules outlined in the Army Business Rules and Best Practices Guide for SCORM 2004 CMI DL Development is presented with the following:</li>
+                <ul>
+                  <li><strong>Rating:</strong> Select Yes if the rule has been satisfied or No if it has not.</li>
+                  <li><strong>Additional comments:</strong> Enter any extra comments into the text field provided. If No was selected above, use this field to explain why that rating was selected.</li>
+                </ul>
+              <li><strong>Evaluator name:</strong> Enter the full name of the person performing the final evaluation on this package.</li>
+              <li><strong>Organization name:</strong> Enter the name of the organization that the person above represents.</li>
+            </ul>
+            <p>Upon completing the web form, select the <strong>Generate Checklist</strong> button to generate a pre-formatted checklist based on the information and responses you provided.</p>
+            <ul>
+              <li><strong>Save this page as a PDF through your browser's Print function.</strong></li>
+              <li>You will then have to <strong>electronically sign</strong> the document in the space provided at the bottom of the checklist using PDF-signing software such as Adobe Reader.</li>
+              <li>Once you have signed the checklist, include it as part of the package's deliverables.</li>
+            </ul>
+            <p><a href="examples/BRBP_CCC Module 1 Exam.pdf" target="_blank">View a completed checklist generated using Google Chrome and electronically signed using Adobe Reader.</a></p>
+            <div class="callout callout-green shadow-sm">
+              <h4>Tip for Creating Multiple Checklists</h4>
+              <p>When creating more than one checklist, you can simply leave the generated checklist open and change the information on the web form without closing it. When you select the <strong>Generate Checklist</strong> button again, the checklist will update with the new information. Use this method to quickly generate multiple checklists at a time.</p>
+            </div>
+            <div class="callout callout-red shadow-sm">
+              <h4>Browser Compatibility Warning</h4>
+              <p>To minimize the risk of visual irregularities, you should ensure that you access this form using an up-to-date web browser. It is <em>strongly</em> recommended that you access this form using a browser other than Internet Explorer. For best results, Google Chrome is recommended.</p>
+            </div>
           </div>
         </div>
       </section> <!-- End Instructions -->
 
       <!-- Course information -->
-      <section id="courseInfo" class="container border rounded shadow-sm my-3">
-        <div class="row bg-brbp-green px-3 py-2">
-          <h2 class="text-white">Course and Package Information</h2>
-        </div>
-        <div class="container my-3">
-          <div id="courseInfoCourseName" class="row my-3">
-            <label for="courseName">Course name</label>
-            <input type="text" id="courseName" class="form-control" name="courseName" required="" maxlength="100" placeholder="Enter course name">
+      <section id="courseInfo" class="container my-3">
+        <div class="card shadow-sm">
+          <div class="card-header bg-brbp-green px-3 py-2">
+            <h2 class="text-white">Course and Package Information</h2>
           </div>
-          <div id="courseInfoPackageName" class="row my-3">
-            <label for="packageName">Package name</label>
-            <input type="text" id="packageName" class="form-control" name="packageName" required="" maxlength="100" size="80" placeholder="Enter package name">
-          </div>
-          <div id="isExam_radioGroup" class="container my-3 px-0">
-            <label class="row" for="isExam_radio">Does this content package include an auto-scoring assessment that reports a score to the host Learning System?</label>
-            <div class="row">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="isExam_radio_y" name="isExam_radio" value="Y">
-                <label class="form-check-label" for="isExam_radio_y">Yes</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="isExam_radio_n" name="isExam_radio" value="N" checked>
-                <label class="form-check-label" for="isExam_radio_n">No</label>
+          <div class="card-body px-3 pt-3 pb-1">
+            <div id="courseInfoCourseName" class="mb-3">
+              <label for="courseName">Course name</label>
+              <input type="text" id="courseName" class="form-control" name="courseName" required="" maxlength="100" placeholder="Enter course name">
+            </div>
+            <div id="courseInfoPackageName" class="my-3">
+              <label for="packageName">Package name</label>
+              <input type="text" id="packageName" class="form-control" name="packageName" required="" maxlength="100" size="80" placeholder="Enter package name">
+            </div>
+            <div id="isExam_radioGroup" class="container my-3">
+              <label class="row" for="isExam_radio">Does this content package include an auto-scoring assessment that reports a score to the host Learning System?</label>
+              <div class="row">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" id="isExam_radio_y" name="isExam_radio" value="Y">
+                  <label class="form-check-label" for="isExam_radio_y">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" id="isExam_radio_n" name="isExam_radio" value="N" checked>
+                  <label class="form-check-label" for="isExam_radio_n">No</label>
+                </div>
               </div>
             </div>
-          </div>
-          <div id="isIntro_radioGroup" class="container my-3 px-0">
-            <label class="row" for="isIntro_radio">If not, does this content package serve as an introduction to a module or course?</label>
-            <div class="row">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="isIntro_radio_y" name="isIntro_radio" value="Y">
-                <label class="form-check-label" for="isIntro_radio_y">Yes</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="isIntro_radio_n" name="isIntro_radio" value="N" checked>
-                <label class="form-check-label" for="isIntro_radio_n">No</label>
+            <div id="isIntro_radioGroup" class="container my-3">
+              <label class="row" for="isIntro_radio">If not, does this content package serve as an introduction to a module or course?</label>
+              <div class="row">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" id="isIntro_radio_y" name="isIntro_radio" value="Y">
+                  <label class="form-check-label" for="isIntro_radio_y">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" id="isIntro_radio_n" name="isIntro_radio" value="N" checked>
+                  <label class="form-check-label" for="isIntro_radio_n">No</label>
+                </div>
               </div>
             </div>
           </div>
@@ -129,18 +135,20 @@
       </div> <!-- End Business rules div -->
 
       <!-- Evaluation information -->
-      <section id="evaluationInfo" class="container border rounded shadow-sm my-3">
-        <div class="row bg-brbp-green px-3 py-2">
-          <h2 class="text-white">Evaluation Information</h2>
-        </div>
-        <div class="container my-3">
-          <div id="evaluationInfoEvaluatorName" class="row my-3">
-            <label for="evaluatorName">Evaluator name</label>
-            <input type="text" id="evaluatorName" class="form-control" name="evaluatorName" required="" maxlength="80" placeholder="Enter evaluator name">
+      <section id="evaluationInfo" class="container my-3">
+        <div class="card shadow-sm">
+          <div class="card-header bg-brbp-green px-3 py-2">
+            <h2 class="text-white">Evaluation Information</h2>
           </div>
-          <div id="evaluationInfoOrgName" class="row my-3">
-            <label for="orgName">Organization name</label>
-            <input type="text" id="orgName" class="form-control" name="orgName" required="" maxlength="80" placeholder="Enter evaluator organization">
+          <div class="card-body px-3 pt-3 pb-1">
+            <div id="evaluationInfoEvaluatorName" class="mb-3">
+              <label for="evaluatorName">Evaluator name</label>
+              <input type="text" id="evaluatorName" class="form-control" name="evaluatorName" required="" maxlength="80" placeholder="Enter evaluator name">
+            </div>
+            <div id="evaluationInfoOrgName" class="my-3">
+              <label for="orgName">Organization name</label>
+              <input type="text" id="orgName" class="form-control" name="orgName" required="" maxlength="80" placeholder="Enter evaluator organization">
+            </div>
           </div>
         </div>
       </section> <!-- End Evaluation information -->
