@@ -50,7 +50,7 @@ code {
   margin-bottom: 0.5rem;
 }
 .callout-red {
-  background-color: #f53d3214;
+  background-color: rgba(245, 61, 50, 0.08);
   border-left: 0.5rem solid #f53d32;
 }
 .callout-red h1,
@@ -59,11 +59,11 @@ code {
 .callout-red h4,
 .callout-red h5,
 .callout-red h6 {
-  color: #f53d32f8;
+  color: rgba(245, 61, 50, 0.97);
   font-size: 1.5rem;
 }
 .callout-green {
-  background-color: #205c3b14;
+  background-color: rgba(32, 92, 59, 0.08);
   border-left: 0.5rem solid #205c3b;
 }
 .callout-green h1,
@@ -72,11 +72,11 @@ code {
 .callout-green h4,
 .callout-green h5,
 .callout-green h6 {
-  color: #205c3bf8;
+  color: rgba(32, 92, 59, 0.97);
   font-size: 1.5rem;
 }
 .callout-orange {
-  background-color: #ff810014;
+  background-color: rgba(255, 129, 0, 0.08);
   border-left: 0.5rem solid #ff8100;
 }
 .callout-orange h1,
@@ -85,7 +85,7 @@ code {
 .callout-orange h4,
 .callout-orange h5,
 .callout-orange h6 {
-  color: #ff8100f8;
+  color: rgba(255, 129, 0, 0.97);
   font-size: 1.5rem;
 }
 footer section {
