@@ -23,9 +23,6 @@ code {
 .bg-brbp-dark-green {
   background-color: #314232 !important;
 }
-.bg-brbp-dark-blue {
-  background-color: #324e84 !important;
-}
 .bg-brbp-green {
   background-color: #205c3b !important;
 }
@@ -51,19 +48,6 @@ code {
 }
 .callout ul:last-child {
   margin-bottom: 0.5rem;
-}
-.callout-blue {
-  background-color: #328de514;
-  border-left: 0.5rem solid #328de5;
-}
-.callout-blue h1,
-.callout-blue h2,
-.callout-blue h3,
-.callout-blue h4,
-.callout-blue h5,
-.callout-blue h6 {
-  color: #328de5f8;
-  font-size: 1.5rem;
 }
 .callout-red {
   background-color: #f53d3214;
