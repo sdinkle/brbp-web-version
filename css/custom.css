@@ -10,19 +10,22 @@ html {
 #businessRules h3 {
   margin-bottom: 1rem;
 }
+a, a:hover {
+  color: #205c3b;
+}
 code {
   color: inherit;
 }
-.bg-brbp-primary {
+.bg-brbp-dark-green {
   background-color: #314232 !important;
 }
-.bg-brbp-secondary {
+.bg-brbp-dark-blue {
   background-color: #324e84 !important;
 }
-.bg-brbp-tertiary {
+.bg-brbp-green {
   background-color: #205c3b !important;
 }
-.bg-brbp-footer {
+.bg-brbp-dark-grey {
   background-color: #20232a !important;
 }
 .badge-brbp {
@@ -45,34 +48,38 @@ code {
 .callout ul:last-child {
   margin-bottom: 0.5rem;
 }
-.callout-tip {
+.callout-blue {
   background-color: #328de514;
   border-left: 0.5rem solid #328de5;
 }
-.callout-tip h4 {
+.callout-blue h4 {
   color: #328de5f8;
 }
-.callout-warning {
+.callout-red {
   background-color: #f53d3214;
   border-left: 0.5rem solid #f53d32;
 }
-.callout-warning h4 {
+.callout-red h4 {
   color: #f53d32f8;
 }
-.callout-rule {
+.callout-green {
+  background-color: #205c3b14;
+  border-left: 0.5rem solid #205c3b;
+}
+.callout-green h4 {
+  color: #205c3bf8;
+}
+.callout-orange {
   background-color: #ff810014;
   border-left: 0.5rem solid #ff8100;
 }
-.callout-rule h4 {
+.callout-orange h4 {
   color: #ff8100f8;
 }
 footer section {
   margin-bottom: 0.25rem;
   color: hsla(0,0%,100%,.4);
   text-align: center;
-}
-footer a, a:hover {
-  color: #205c3b;
 }
 #footerRulesInfo {
   font-size: 0.75rem;
