@@ -3,6 +3,7 @@ html {
 }
 #pageTitle {
   font-weight: 600;
+  vertical-align: middle;
 }
 #instructions, #courseInfo, #businessRules, #evaluationInfo, #submitDiv, #navFooter {
   display: none;
@@ -110,4 +111,9 @@ footer section {
 }
 #footerRulesInfo {
   font-size: 0.75rem;
+}
+@media (max-width: 768px) {
+  #pageTitle {
+    font-size: 1rem !important;
+  }
 }
