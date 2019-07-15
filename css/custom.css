@@ -1,0 +1,103 @@
+html {
+  overflow-y: scroll;
+}
+#pageTitle {
+  font-weight: 600;
+  vertical-align: middle;
+}
+#instructions, #courseInfo, #businessRules, #evaluationInfo, #submitDiv, #navFooter {
+  display: none;
+}
+#instructions h3 {
+  font-size: 1.5rem;
+}
+#businessRules h3 {
+  margin-bottom: 1rem;
+}
+a, a:hover {
+  color: #205c3b;
+}
+code {
+  color: inherit;
+}
+.bg-brbp-dark-green {
+  background-color: #314232 !important;
+}
+.bg-brbp-green {
+  background-color: #205c3b !important;
+}
+.bg-brbp-dark-grey {
+  background-color: #20232a !important;
+}
+.badge-brbp {
+  color: #24292e;
+  background-color: #ffd09f;
+}
+.disabled {
+  opacity: 0.33;
+}
+.callout {
+  background-color: #f3f4f7;
+  border-left: 0.5rem solid;
+  padding: 0.5rem 1.5rem 0.5rem 0.75rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.callout p:last-child {
+  margin-bottom: 0.15rem;
+}
+.callout ul:last-child {
+  margin-bottom: 0.5rem;
+}
+.callout-red {
+  background-color: rgba(245, 61, 50, 0.08);
+  border-left: 0.5rem solid #f53d32;
+}
+.callout-red h1,
+.callout-red h2,
+.callout-red h3,
+.callout-red h4,
+.callout-red h5,
+.callout-red h6 {
+  color: rgba(245, 61, 50, 0.97);
+  font-size: 1.5rem;
+}
+.callout-green {
+  background-color: rgba(32, 92, 59, 0.08);
+  border-left: 0.5rem solid #205c3b;
+}
+.callout-green h1,
+.callout-green h2,
+.callout-green h3,
+.callout-green h4,
+.callout-green h5,
+.callout-green h6 {
+  color: rgba(32, 92, 59, 0.97);
+  font-size: 1.5rem;
+}
+.callout-orange {
+  background-color: rgba(255, 129, 0, 0.08);
+  border-left: 0.5rem solid #ff8100;
+}
+.callout-orange h1,
+.callout-orange h2,
+.callout-orange h3,
+.callout-orange h4,
+.callout-orange h5,
+.callout-orange h6 {
+  color: rgba(255, 129, 0, 0.97);
+  font-size: 1.5rem;
+}
+footer section {
+  margin-bottom: 0.25rem;
+  color: hsla(0,0%,100%,.4);
+  text-align: center;
+}
+#footerRulesInfo {
+  font-size: 0.75rem;
+}
+@media (max-width: 768px) {
+  #pageTitle {
+    font-size: 1rem !important;
+  }
+}
